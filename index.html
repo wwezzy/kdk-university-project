@@ -15,13 +15,20 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Task 1: Flexbox Navigation -->
     <header class="site-header">
 
         <div class="navbar">
 
             <a class="brand" href="index.html">
-                KDK University
+
+                <img
+                    class="brand-logo"
+                    src="images/kdk-logo.svg"
+                    alt="KDK University logo">
+
+                <span>KDK University</span>
+
             </a>
 
             <nav>
@@ -99,43 +106,94 @@
         </section>
 
 
-        <!-- Features -->
+        <!-- Task 2: Flexbox Card Row -->
         <section class="section">
 
-            <div class="feature-grid">
+            <div class="section-heading">
 
-                <article class="feature-card no-hover">
+                <p class="eyebrow">
+                    EXPLORE KDK
+                </p>
 
-                    <h3>Modern Education</h3>
+                <h2>
+                    University Opportunities
+                </h2>
+
+                <p>
+                    Explore the main opportunities available
+                    for students at KDK University.
+                </p>
+
+            </div>
+
+
+            <div class="flex-cards">
+
+                <!-- Card 1 -->
+                <article class="flex-card">
+
+                    <img
+                        src="images/LibraryAll.jpg"
+                        alt="KDK University library">
+
+                    <h3>
+                        Academic Programs
+                    </h3>
 
                     <p>
-                        Learn useful subjects and develop knowledge
-                        for your future profession.
+                        Explore our academic programs and choose
+                        the right direction for your future career.
                     </p>
+
+                    <a class="button" href="programs.html">
+                        View Programs
+                    </a>
 
                 </article>
 
 
-                <article class="feature-card no-hover">
+                <!-- Card 2 -->
+                <article class="flex-card">
 
-                    <h3>Student Community</h3>
+                    <img
+                        src="images/GymCelebAll.jpg"
+                        alt="KDK University sports complex">
+
+                    <h3>
+                        Campus Life
+                    </h3>
 
                     <p>
-                        Meet new people, work in teams and participate
-                        in university activities.
+                        Discover student clubs, sports,
+                        activities and university community.
                     </p>
+
+                    <a class="button" href="campus-life.html">
+                        Campus Life
+                    </a>
 
                 </article>
 
 
-                <article class="feature-card no-hover">
+                <!-- Card 3 -->
+                <article class="flex-card">
 
-                    <h3>Career Opportunities</h3>
+                    <img
+                        src="images/Campus2All.jpg"
+                        alt="KDK University campus">
+
+                    <h3>
+                        Admissions
+                    </h3>
 
                     <p>
-                        Develop practical skills and prepare for
-                        internships and future employment.
+                        Learn about admission requirements
+                        and the university application process.
                     </p>
+
+                    <a class="button" href="admissions.html">
+                        Admissions
+                    </a>
 
                 </article>
 
