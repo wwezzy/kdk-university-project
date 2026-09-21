@@ -34,7 +34,9 @@ a {
     text-decoration: none;
 }
 
+
 /* Navigation */
+
 .site-header {
     background-color: #ffffff;
     border-bottom: 1px solid #dcecf8;
@@ -47,16 +49,28 @@ a {
     width: min(1120px, 92%);
     margin: 0 auto;
     min-height: 72px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
 .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
     font-size: 1.3rem;
     font-weight: 700;
     color: #1378bd;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
 }
 
 .navbar nav {
@@ -75,7 +89,9 @@ a {
     color: #1597e5;
 }
 
+
 /* Page banners */
+
 .page-banner {
     position: relative;
     width: 100%;
@@ -103,7 +119,9 @@ a {
     object-position: center 52%;
 }
 
-/* ID selectors required by the assignment */
+
+/* ID selectors */
+
 #programs-hero {
     border-bottom: 4px solid #dff3ff;
 }
@@ -112,9 +130,13 @@ a {
     border-bottom: 4px solid #bfe8ff;
 }
 
+
+/* Banner Overlay */
+
 .banner-shade {
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
         to bottom,
         rgba(8, 35, 60, 0.06),
@@ -127,7 +149,9 @@ a {
     position: absolute;
     left: 50%;
     bottom: 34px;
+
     transform: translateX(-50%);
+
     width: min(900px, 90%);
     text-align: center;
     color: #ffffff;
@@ -135,6 +159,7 @@ a {
 
 .banner-title p {
     margin-bottom: 7px;
+
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.16em;
@@ -142,33 +167,44 @@ a {
 
 .banner-title h1 {
     margin-bottom: 0;
+
     color: #ffffff;
+
     font-size: clamp(2.4rem, 5vw, 4.2rem);
     line-height: 1;
+
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
 }
 
+
 /* Programs opening text */
+
 .programs-intro {
     width: min(850px, 88%);
     margin: 0 auto;
     padding: 78px 0 58px;
+
     text-align: center;
 }
 
 .programs-intro h2 {
     margin-bottom: 16px;
+
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .programs-intro > p:not(.eyebrow) {
     max-width: 760px;
+
     margin: 0 auto;
+
     color: #58758b;
     font-size: 1.05rem;
 }
 
+
 /* Admissions opening */
+
 .admissions-shade {
     background: linear-gradient(
         90deg,
@@ -181,50 +217,71 @@ a {
 
 .admissions-hero-content {
     position: absolute;
+
     left: max(4%, calc((100% - 1120px) / 2));
     top: 50%;
+
     transform: translateY(-50%);
+
     width: min(560px, 86%);
     color: #ffffff;
 }
 
 .admissions-hero-content h1 {
     margin-bottom: 18px;
+
     color: #ffffff;
+
     font-size: clamp(2.7rem, 6vw, 4.8rem);
     line-height: 1.02;
+
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
 }
 
 .admissions-hero-content > p:not(.hero-eyebrow) {
     max-width: 540px;
+
     color: #f2f8fc;
     font-size: 1.08rem;
 }
 
 .hero-eyebrow {
     margin-bottom: 10px;
+
     color: #d8f1ff;
+
     font-size: 0.82rem;
     font-weight: 800;
     letter-spacing: 0.14em;
 }
 
+
+/* Eyebrow */
+
 .eyebrow {
     margin-bottom: 10px;
+
     color: #1597e5;
+
     font-size: 0.82rem;
     font-weight: 800;
     letter-spacing: 0.12em;
 }
 
+
+/* Buttons */
+
 .button {
     display: inline-block;
+
     margin-top: 12px;
     padding: 12px 22px;
+
     border-radius: 10px;
+
     background-color: #1597e5;
     color: #ffffff;
+
     font-weight: 700;
 }
 
@@ -242,7 +299,9 @@ a {
     color: #0d6da9;
 }
 
+
 /* Main sections */
+
 .section {
     width: min(1120px, 92%);
     margin: 0 auto;
@@ -252,8 +311,10 @@ a {
 .soft-section {
     width: 100%;
     max-width: none;
+
     padding-left: max(4%, calc((100% - 1120px) / 2));
     padding-right: max(4%, calc((100% - 1120px) / 2));
+
     background-color: #f4fbff;
 }
 
@@ -263,11 +324,14 @@ a {
 }
 
 .section-heading h2 {
-    font-size: 2.2rem;
     margin-bottom: 10px;
+
+    font-size: 2.2rem;
 }
 
-/* Program cards */
+
+/* Program Cards */
+
 .program-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -278,15 +342,18 @@ a {
 .feature-card,
 .info-box,
 .team-card {
-    border: 1px solid #d9ebf7;
-    background-color: #ffffff;
-    border-radius: 4px;
     padding: 26px;
+
+    border: 1px solid #d9ebf7;
+    border-radius: 4px;
+
+    background-color: #ffffff;
 }
 
 .program-card:hover,
 .feature-card:hover {
     transform: translateY(-4px);
+
     box-shadow: 0 12px 30px rgba(33, 120, 168, 0.10);
 }
 
@@ -300,24 +367,31 @@ a {
 
 .program-card ul {
     padding-left: 20px;
+
     color: #49677e;
 }
 
 .program-number {
     display: inline-block;
+
     margin-bottom: 18px;
+
     color: #1597e5;
+
     font-weight: 800;
 }
 
 .program-meta {
     margin-top: 20px;
     margin-bottom: 0;
+
     font-weight: 700;
     color: #1378bd;
 }
 
+
 /* Feature cards */
+
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -328,7 +402,14 @@ a {
     transition: 0.2s ease;
 }
 
+.feature-card.no-hover:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+
 /* Admissions */
+
 .steps {
     margin: 0;
     padding-left: 28px;
@@ -351,7 +432,9 @@ a {
 .two-column {
     display: grid;
     grid-template-columns: 1.5fr 0.8fr;
+
     gap: 40px;
+
     align-items: start;
 }
 
@@ -367,22 +450,30 @@ a {
     border-top: 5px solid #1597e5;
 }
 
+
+/* Table */
+
 .table-wrapper {
     overflow-x: auto;
-    border-radius: 16px;
+
     border: 1px solid #d9ebf7;
+    border-radius: 16px;
 }
 
 table {
     width: 100%;
+
     border-collapse: collapse;
+
     background-color: #ffffff;
 }
 
 table th,
 table td {
     padding: 16px;
+
     text-align: left;
+
     border-bottom: 1px solid #e3eff7;
 }
 
@@ -395,31 +486,42 @@ table tr:last-child td {
     border-bottom: none;
 }
 
+
 /* Team block */
+
 .team-card {
     display: flex;
     align-items: center;
-    gap: 24px;
-    max-width: 720px;
 
+    gap: 24px;
+
+    max-width: 720px;
     margin-bottom: 24px;
 }
 
 .profile-image {
     width: 115px;
     height: 115px;
+
     object-fit: cover;
-    border-radius: 50%;
+
     border: 5px solid #dff3ff;
+    border-radius: 50%;
 }
 
+
 /* CTA */
+
 .cta {
     width: min(1120px, 92%);
+
     margin: 0 auto 80px;
     padding: 55px 30px;
+
     text-align: center;
+
     border-radius: 24px;
+
     background-color: #12345b;
     color: #ffffff;
 }
@@ -432,10 +534,14 @@ table tr:last-child td {
     color: #dcecf8;
 }
 
+
 /* Footer */
+
 footer {
     padding: 35px 4%;
+
     text-align: center;
+
     background-color: #0d2944;
     color: #dcecf8;
 }
@@ -444,15 +550,398 @@ footer p {
     margin: 5px 0;
 }
 
-/* Small screens */
+
+/* Campus Life Hero */
+
+.campus-hero {
+    width: min(1120px, 92%);
+
+    margin: 40px auto 0;
+    padding: 55px 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+    background-color: #eaf7ff;
+
+    border-radius: 24px;
+}
+
+.campus-hero-text h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(2.7rem, 5vw, 4.2rem);
+    line-height: 1.05;
+}
+
+.campus-hero-text > p:not(.eyebrow) {
+    color: #58758b;
+    font-size: 1.05rem;
+}
+
+.campus-hero-image img {
+    width: 100%;
+    height: 300px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* =========================
+   Contact Page
+   ========================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+.contact-info .info-box {
+    margin-bottom: 18px;
+}
+
+.contact-info .info-box h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info .info-box p {
+    margin-bottom: 6px;
+
+    color: #58758b;
+}
+
+
+/* Contact Form */
+
+.contact-form-box {
+    padding: 32px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d9ebf7;
+    border-radius: 16px;
+}
+
+.contact-form-box h2 {
+    margin-bottom: 24px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 7px;
+
+    font-weight: 700;
+    color: #12345b;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 13px 14px;
+
+    border: 1px solid #c9deec;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #16324f;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #1597e5;
+}
+
+#contact-form .button {
+    align-self: flex-start;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* Visit Campus */
+
+.visit-campus {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.visit-campus-image {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* =========================
+   Assignment 2
+   Flexbox Cards
+   ========================= */
+
+.flex-cards {
+    display: flex;
+
+    gap: 28px;
+
+    align-items: stretch;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+.flex-cards .feature-card {
+    flex: 1;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.flex-cards .feature-card img {
+    width: 100%;
+    height: 145px;
+
+    margin-bottom: 15px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.flex-cards .feature-card p {
+    flex-grow: 1;
+
+    margin-bottom: 12px;
+}
+
+.flex-cards .feature-card .button {
+    align-self: flex-start;
+
+    margin-top: 5px;
+
+    padding: 9px 16px;
+}
+
+.flex-cards .feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 28px rgba(33, 120, 168, 0.16);
+}
+
+.flex-cards .button {
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.flex-cards .button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 14px rgba(21, 151, 229, 0.25);
+}
+
+
+/* =========================
+   Assignment 2
+   Grid Areas
+   ========================= */
+
+.campus-layout {
+    display: grid;
+
+    grid-template-columns: 240px 1fr;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+    gap: 24px;
+}
+
+.grid-header {
+    grid-area: header;
+
+    padding: 25px;
+
+    background-color: #eaf7ff;
+
+    border-radius: 14px;
+}
+
+.grid-sidebar {
+    grid-area: sidebar;
+
+    padding: 25px;
+
+    background-color: #f4fbff;
+
+    border: 1px solid #d9ebf7;
+    border-radius: 14px;
+}
+
+.grid-main {
+    grid-area: main;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d9ebf7;
+    border-radius: 14px;
+}
+
+.grid-footer {
+    grid-area: footer;
+
+    padding: 18px 25px;
+
+    text-align: center;
+
+    background-color: #12345b;
+    color: #ffffff;
+
+    border-radius: 14px;
+}
+
+.grid-footer p {
+    margin: 0;
+}
+
+
+/* =========================
+   Assignment 2
+   Grid Image Gallery
+   ========================= */
+
+.campus-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.gallery-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 18px;
+
+    background: rgba(10, 42, 70, 0.78);
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    opacity: 0;
+
+    transform: translateY(100%);
+
+    transition: 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+#campus-moments {
+    scroll-margin-top: 100px;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
 @media (max-width: 850px) {
+
     .navbar {
         padding: 14px 0;
+
         flex-direction: column;
     }
 
     .navbar nav {
         justify-content: center;
+
         gap: 12px;
     }
 
@@ -464,9 +953,9 @@ footer p {
 
     .team-card {
         flex-direction: column;
+
         text-align: center;
     }
-
 
     .page-banner {
         height: 310px;
@@ -494,142 +983,19 @@ footer p {
 
     .admissions-hero-content {
         left: 7%;
+
         width: 86%;
     }
-}
 
-.feature-card.no-hover:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-/* Campus Life Hero */
-.campus-hero {
-    width: min(1120px, 92%);
-    margin: 40px auto 0;
-    padding: 55px 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
-    align-items: center;
-    background-color: #eaf7ff;
-    border-radius: 24px;
-}
-
-.campus-hero-text h1 {
-    margin-bottom: 20px;
-    font-size: clamp(2.7rem, 5vw, 4.2rem);
-    line-height: 1.05;
-}
-
-.campus-hero-text > p:not(.eyebrow) {
-    color: #58758b;
-    font-size: 1.05rem;
-}
-
-.campus-hero-image img {
-    width: 100%;
-    height: 300px;
-    display: block;
-    object-fit: cover;
-    border-radius: 18px;
-}
-
-@media (max-width: 850px) {
     .campus-hero {
         grid-template-columns: 1fr;
+
         padding: 35px 25px;
     }
 
     .campus-hero-image img {
         height: 240px;
     }
-}
-
-/* =========================
-   Contact Page
-   ========================= */
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 45px;
-    align-items: start;
-}
-
-.contact-info .info-box {
-    margin-bottom: 18px;
-}
-
-.contact-info .info-box h3 {
-    margin-bottom: 10px;
-}
-
-.contact-info .info-box p {
-    margin-bottom: 6px;
-    color: #58758b;
-}
-
-
-/* Contact Form */
-
-.contact-form-box {
-    padding: 32px;
-    background-color: #ffffff;
-    border: 1px solid #d9ebf7;
-    border-radius: 16px;
-}
-
-.contact-form-box h2 {
-    margin-bottom: 24px;
-}
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact-form label {
-    margin-bottom: 7px;
-    font-weight: 700;
-    color: #12345b;
-}
-
-#contact-form input,
-#contact-form select,
-#contact-form textarea {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 13px 14px;
-    border: 1px solid #c9deec;
-    border-radius: 8px;
-    background-color: #ffffff;
-    color: #16324f;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-}
-
-#contact-form textarea {
-    resize: vertical;
-}
-
-#contact-form input:focus,
-#contact-form select:focus,
-#contact-form textarea:focus {
-    outline: none;
-    border-color: #1597e5;
-}
-
-#contact-form .button {
-    align-self: flex-start;
-    border: none;
-    cursor: pointer;
-}
-
-
-/* Contact Page - Small Screens */
-
-@media (max-width: 850px) {
 
     .contact-grid {
         grid-template-columns: 1fr;
@@ -639,125 +1005,20 @@ footer p {
         padding: 24px;
     }
 
-}
-
-/* Visit Campus */
-
-.visit-campus {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.visit-campus-image {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 18px;
-}
-
-@media (max-width: 850px) {
     .visit-campus {
         grid-template-columns: 1fr;
     }
-}
 
-/* Assignment 2 - Flexbox Cards */
 
-.flex-cards {
-    display: flex;
-    gap: 28px;
-    align-items: stretch;
-    max-width: 1050px;
-    margin: 0 auto;
-}
+    /* Assignment 2 Flexbox */
 
-.flex-cards .feature-card {
-    flex: 1;
-    padding: 20px;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+    .flex-cards {
+        flex-direction: column;
+    }
 
-.flex-cards .feature-card img {
-    width: 100%;
-    height: 145px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
 
-.flex-cards .feature-card p {
-    flex-grow: 1;
-    margin-bottom: 12px;
-}
+    /* Assignment 2 Grid Areas */
 
-.flex-cards .feature-card .button {
-    align-self: flex-start;
-    margin-top: 5px;
-    padding: 9px 16px;
-}
-
-.flex-cards .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 28px rgba(33, 120, 168, 0.16);
-}
-
-/* Grid Areas */
-
-.campus-layout {
-    display: grid;
-
-    grid-template-columns: 240px 1fr;
-
-    grid-template-areas:
-        "header header"
-        "sidebar main"
-        "footer footer";
-
-    gap: 24px;
-}
-
-.grid-header {
-    grid-area: header;
-    padding: 25px;
-    background-color: #eaf7ff;
-    border-radius: 14px;
-}
-
-.grid-sidebar {
-    grid-area: sidebar;
-    padding: 25px;
-    background-color: #f4fbff;
-    border: 1px solid #d9ebf7;
-    border-radius: 14px;
-}
-
-.grid-main {
-    grid-area: main;
-    padding: 30px;
-    background-color: #ffffff;
-    border: 1px solid #d9ebf7;
-    border-radius: 14px;
-}
-
-.grid-footer {
-    grid-area: footer;
-    padding: 18px 25px;
-    text-align: center;
-    background-color: #12345b;
-    color: #ffffff;
-    border-radius: 14px;
-}
-
-.grid-footer p {
-    margin: 0;
-}
-
-@media (max-width: 850px) {
     .campus-layout {
         grid-template-columns: 1fr;
 
@@ -767,83 +1028,15 @@ footer p {
             "main"
             "footer";
     }
-}
 
-/* Grid Image Gallery */
 
-.campus-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+    /* Assignment 2 Gallery */
 
-.gallery-item {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 14px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.gallery-caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 18px;
-    background: rgba(10, 42, 70, 0.78);
-    color: #ffffff;
-    font-weight: 700;
-
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-item:hover .gallery-caption {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#campus-moments {
-    scroll-margin-top: 100px;
-}
-
-@media (max-width: 850px) {
     .campus-gallery {
         grid-template-columns: 1fr;
     }
 
     .gallery-item {
         height: 240px;
-    }
-}
-
-.flex-cards .button {
-    transition: background-color 0.3s ease,
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.flex-cards .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(21, 151, 229, 0.25);
-}
-
-@media (max-width: 850px) {
-    .flex-cards {
-        flex-direction: column;
     }
 }

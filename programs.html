@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,15 @@
 
     <header class="site-header">
         <div class="navbar">
-            <a class="brand" href="index.html">KDK University</a>
+
+            <a class="brand" href="index.html">
+                <img
+                    class="brand-logo"
+                    src="images/kdk-logo.svg"
+                    alt="KDK University logo"
+                >
+                <span>KDK University</span>
+            </a>
 
             <nav>
                 <a href="index.html">Home</a>
@@ -22,15 +31,21 @@
                 <a href="campus-life.html">Campus Life</a>
                 <a href="contact.html">Contact</a>
             </nav>
+
         </div>
     </header>
 
+
     <main>
+
+        <!-- Programs Hero -->
         <section id="programs-hero" class="page-banner programs-banner">
+
             <img
                 class="banner-image"
                 src="images/kdk-campus-wide.png"
-                alt="Wide view of the KDK University campus">
+                alt="Wide view of the KDK University campus"
+            >
 
             <div class="banner-shade"></div>
 
@@ -38,147 +53,595 @@
                 <p>ACADEMICS AT KDK</p>
                 <h1>Academic Programs</h1>
             </div>
+
         </section>
 
+
+        <!-- Programs Introduction -->
         <section class="programs-intro">
-            <p class="eyebrow">DISCOVER YOUR DIRECTION</p>
-            <h2>Find Your Field of Study</h2>
+
+            <p class="eyebrow">
+                DISCOVER YOUR DIRECTION
+            </p>
+
+            <h2>
+                Find Your Field of Study
+            </h2>
+
             <p>
                 Choose a future-focused degree built around practical learning,
                 modern technology and skills that prepare you for the professional world.
             </p>
-            <a class="button" href="admissions.html">View Admissions</a>
+
+            <a class="button" href="admissions.html">
+                View Admissions
+            </a>
+
         </section>
 
-        <section class="section">
+
+        <!-- Assignment 2 - Flexbox Card Row -->
+        <section class="section soft-section">
+
             <div class="section-heading">
-                <p class="eyebrow">BACHELOR'S DEGREES</p>
-                <h2>Our Programs</h2>
+
+                <p class="eyebrow">
+                    FEATURED STUDY AREAS
+                </p>
+
+                <h2>
+                    Explore Popular Programs
+                </h2>
+
+                <p>
+                    Discover several study directions and learn
+                    where each program can take you.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid flex-cards">
+
+                <article class="feature-card">
+
+                    <img
+                        src="images/soft_eng.jpg"
+                        alt="KDK University students studying together"
+                    >
+
+                    <h3>
+                        Software Engineering
+                    </h3>
+
+                    <p>
+                        Build practical skills in software development,
+                        databases and modern web technologies.
+                    </p>
+
+                    <a class="button" href="#program-list">
+                        Learn More
+                    </a>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <img
+                        src="images/com_sci.jpg"
+                        alt="KDK University learning space"
+                    >
+
+                    <h3>
+                        Computer Science
+                    </h3>
+
+                    <p>
+                        Study algorithms, operating systems and intelligent
+                        systems through hands-on projects.
+                    </p>
+
+                    <a class="button" href="#program-list">
+                        Learn More
+                    </a>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <img
+                        src="images/dig_media.jpg"
+                        alt="KDK University students collaborating"
+                    >
+
+                    <h3>
+                        Digital Media &amp; Design
+                    </h3>
+
+                    <p>
+                        Combine creativity and technology to design useful
+                        digital products and experiences.
+                    </p>
+
+                    <a class="button" href="#program-list">
+                        Learn More
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Programs List -->
+        <section class="section" id="program-list">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    BACHELOR'S DEGREES
+                </p>
+
+                <h2>
+                    Our Programs
+                </h2>
+
                 <p>
                     Students combine academic knowledge with practical projects,
                     teamwork and modern digital tools.
                 </p>
+
             </div>
+
 
             <div class="program-grid">
 
                 <article class="program-card">
-                    <h3>Software Engineering</h3>
+
+                    <h3>
+                        Software Engineering
+                    </h3>
+
                     <p>
-                        Learn to design, develop and maintain modern software systems.
+                        Learn to design, develop and maintain
+                        modern software systems.
                     </p>
+
                     <ul>
                         <li>Web Development</li>
                         <li>Databases</li>
-                        <li>Algorithms & Data Structures</li>
+                        <li>Algorithms &amp; Data Structures</li>
                     </ul>
-                    <p class="program-meta">4 years · English</p>
+
+                    <p class="program-meta">
+                        4 years · English
+                    </p>
+
                 </article>
 
+
                 <article class="program-card">
-                    <h3>Computer Science</h3>
+
+                    <h3>
+                        Computer Science
+                    </h3>
+
                     <p>
-                        Build a strong foundation in computing, algorithms and intelligent systems.
+                        Build a strong foundation in computing,
+                        algorithms and intelligent systems.
                     </p>
+
                     <ul>
                         <li>Programming Fundamentals</li>
                         <li>Operating Systems</li>
                         <li>Artificial Intelligence</li>
                     </ul>
-                    <p class="program-meta">4 years · English</p>
+
+                    <p class="program-meta">
+                        4 years · English
+                    </p>
+
                 </article>
 
+
                 <article class="program-card">
-                    <h3>Cybersecurity</h3>
+
+                    <h3>
+                        Cybersecurity
+                    </h3>
+
                     <p>
-                        Learn how to protect networks, applications and digital information.
+                        Learn how to protect networks,
+                        applications and digital information.
                     </p>
+
                     <ul>
                         <li>Network Security</li>
                         <li>Cryptography</li>
                         <li>Digital Forensics</li>
                     </ul>
-                    <p class="program-meta">4 years · English</p>
+
+                    <p class="program-meta">
+                        4 years · English
+                    </p>
+
                 </article>
 
+
                 <article class="program-card">
-                    <h3>Data Science</h3>
+
+                    <h3>
+                        Data Science
+                    </h3>
+
                     <p>
-                        Turn data into useful insights with statistics, programming and machine learning.
+                        Turn data into useful insights with statistics,
+                        programming and machine learning.
                     </p>
+
                     <ul>
                         <li>Python Programming</li>
                         <li>Machine Learning</li>
                         <li>Data Visualization</li>
                     </ul>
-                    <p class="program-meta">4 years · English</p>
+
+                    <p class="program-meta">
+                        4 years · English
+                    </p>
+
                 </article>
 
+
                 <article class="program-card">
-                    <h3>Business Analytics</h3>
+
+                    <h3>
+                        Business Analytics
+                    </h3>
+
                     <p>
-                        Combine business knowledge with data analysis and digital strategy.
+                        Combine business knowledge with
+                        data analysis and digital strategy.
                     </p>
+
                     <ul>
                         <li>Business Intelligence</li>
                         <li>Data Analytics</li>
                         <li>Project Management</li>
                     </ul>
-                    <p class="program-meta">4 years · English</p>
+
+                    <p class="program-meta">
+                        4 years · English
+                    </p>
+
                 </article>
 
+
                 <article class="program-card">
-                    <h3>Digital Media & Design</h3>
+
+                    <h3>
+                        Digital Media &amp; Design
+                    </h3>
+
                     <p>
-                        Develop creative and technical skills for modern digital products.
+                        Develop creative and technical skills
+                        for modern digital products.
                     </p>
+
                     <ul>
                         <li>UI/UX Design</li>
                         <li>Web Design</li>
                         <li>Digital Media</li>
                     </ul>
-                    <p class="program-meta">4 years · English</p>
+
+                    <p class="program-meta">
+                        4 years · English
+                    </p>
+
                 </article>
 
             </div>
+
         </section>
 
-        <section class="section soft-section">
+
+        <!-- Assignment 2 - Grid Areas -->
+        <section class="section">
+
+            <div class="campus-layout">
+
+                <div class="grid-header">
+
+                    <p class="eyebrow">
+                        PROGRAM GUIDE
+                    </p>
+
+                    <h2>
+                        Choose the Right Direction
+                    </h2>
+
+                </div>
+
+
+                <aside class="grid-sidebar">
+
+                    <h3>
+                        Study Areas
+                    </h3>
+
+                    <ul>
+                        <li>Software Development</li>
+                        <li>Computer Science</li>
+                        <li>Cybersecurity</li>
+                        <li>Data &amp; Analytics</li>
+                        <li>Digital Design</li>
+                    </ul>
+
+                </aside>
+
+
+                <div class="grid-main">
+
+                    <h3>
+                        Build Skills for Your Future
+                    </h3>
+
+                    <p>
+                        Compare the programs, explore the subjects you will study
+                        and choose a direction that matches your interests
+                        and career goals.
+                    </p>
+
+                    <a class="button" href="admissions.html">
+                        Admission Details
+                    </a>
+
+                </div>
+
+
+                <div class="grid-footer">
+
+                    <p>
+                        All bachelor's programs are designed around
+                        practical learning and modern digital skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Assignment 2 - Grid Image Gallery -->
+        <section class="section soft-section" id="program-gallery">
+
             <div class="section-heading">
-                <p class="eyebrow">WHY KDK?</p>
-                <h2>Learn by Doing</h2>
+
+                <p class="eyebrow">
+                    LEARNING AT KDK
+                </p>
+
+                <h2>
+                    Program Gallery
+                </h2>
+
+                <p>
+                    Explore learning spaces, student projects
+                    and campus experiences at KDK University.
+                </p>
+
             </div>
 
-            <div class="x`ture-grid">
-                <article class="feature-card">
-                    <h3>Practical Learning</h3>
-                    <p>Students work on projects and build a professional portfolio before graduation.</p>
-                </article>
 
-                <article class="feature-card">
-                    <h3>Modern Campus</h3>
-                    <p>Technology-equipped classrooms and collaborative spaces support everyday learning.</p>
-                </article>
+            <div class="campus-gallery">
 
-                <article class="feature-card">
-                    <h3>Career Opportunities</h3>
-                    <p>Internships, workshops and networking events help students prepare for their careers.</p>
-                </article>
+                <div class="gallery-item">
+                    <img
+                        src="images/images1.jpg"
+                        alt="KDK University campus experience"
+                    >
+                    <div class="gallery-caption">
+                        Campus Learning
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/team_study.jpg"
+                        alt="Students studying together"
+                    >
+                    <div class="gallery-caption">
+                        Team Study
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/library.jpg"
+                        alt="University learning space"
+                    >
+                    <div class="gallery-caption">
+                        Research &amp; Reading
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery4.jpg"
+                        alt="Students at a university event"
+                    >
+                    <div class="gallery-caption">
+                        Workshops
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery5.jpg"
+                        alt="KDK University student activity"
+                    >
+                    <div class="gallery-caption">
+                        Student Projects
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery6.jpg"
+                        alt="Students collaborating"
+                    >
+                    <div class="gallery-caption">
+                        Collaboration
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/basketball.jpg"
+                        alt="University student experience"
+                    >
+                    <div class="gallery-caption">
+                        Active Campus
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery8.jpg"
+                        alt="KDK University campus space"
+                    >
+                    <div class="gallery-caption">
+                        Modern Spaces
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gym.jpg"
+                        alt="KDK University community"
+                    >
+                    <div class="gallery-caption">
+                        KDK Community
+                    </div>
+                </div>
+
             </div>
+
         </section>
 
+
+        <!-- Why KDK -->
+        <section class="section soft-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    WHY KDK?
+                </p>
+
+                <h2>
+                    Learn by Doing
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <h3>
+                        Practical Learning
+                    </h3>
+
+                    <p>
+                        Students work on projects and build
+                        a professional portfolio before graduation.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <h3>
+                        Modern Campus
+                    </h3>
+
+                    <p>
+                        Technology-equipped classrooms and collaborative
+                        spaces support everyday learning.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <h3>
+                        Career Opportunities
+                    </h3>
+
+                    <p>
+                        Internships, workshops and networking events
+                        help students prepare for their careers.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
         <section class="cta">
-            <h2>Ready to start your journey?</h2>
-            <p>Explore admission requirements and become part of KDK University.</p>
-            <a class="button" href="admissions.html">View Admissions</a>
+
+            <h2>
+                Ready to start your journey?
+            </h2>
+
+            <p>
+                Explore admission requirements and become
+                part of KDK University.
+            </p>
+
+            <a class="button" href="admissions.html">
+                View Admissions
+            </a>
+
         </section>
+
     </main>
 
+
     <footer>
-        <p><strong>KDK University</strong></p>
-        <p>Team members: Akylzhan · Allazhar · Yerkhan</p>
-        <p>&copy; 2026 KDK University. Student project.</p>
+
+        <p>
+            <strong>KDK University</strong>
+        </p>
+
+        <p>
+            Team members: Allazhar · Akylzhan · Yerkhan
+        </p>
+
+        <p>
+            &copy; 2026 KDK University. Student project.
+        </p>
+
     </footer>
 
 </body>
+
 </html>

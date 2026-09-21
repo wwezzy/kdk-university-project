@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,17 @@
 <body>
 
     <header class="site-header">
+
         <div class="navbar">
-            <a class="brand" href="index.html">KDK University</a>
+
+            <a class="brand" href="index.html">
+                <img
+                    class="brand-logo"
+                    src="images/kdk-logo.svg"
+                    alt="KDK University logo"
+                >
+                <span>KDK University</span>
+            </a>
 
             <nav>
                 <a href="index.html">Home</a>
@@ -22,174 +32,671 @@
                 <a href="campus-life.html">Campus Life</a>
                 <a href="contact.html">Contact</a>
             </nav>
+
         </div>
+
     </header>
 
+
     <main>
+
+        <!-- Admissions Hero -->
         <section id="admissions-hero" class="page-banner admissions-banner">
+
             <img
                 class="banner-image"
                 src="images/kdk-campus-wide.png"
-                alt="KDK University campus during a graduation celebration">
+                alt="KDK University campus during a graduation celebration"
+            >
 
             <div class="banner-shade admissions-shade"></div>
 
+
             <div class="admissions-hero-content">
-                <p class="hero-eyebrow">ADMISSIONS 2026–2027</p>
-                <h1>Your Future Starts Here</h1>
+
+                <p class="hero-eyebrow">
+                    ADMISSIONS 2026–2027
+                </p>
+
+                <h1>
+                    Your Future Starts Here
+                </h1>
+
                 <p>
                     Take the first step toward studying at KDK University.
                     Applications for the 2026–2027 academic year are open.
                 </p>
-                <a class="button button-light" href="#requirements">See Requirements</a>
+
+                <a class="button button-light" href="#requirements">
+                    See Requirements
+                </a>
+
             </div>
+
         </section>
 
-        <section class="section">
+
+        <!-- Assignment 2 - Flexbox Card Row -->
+        <section class="section soft-section">
+
             <div class="section-heading">
-                <p class="eyebrow">HOW TO APPLY</p>
-                <h2>Admission Process</h2>
+
+                <p class="eyebrow">
+                    ADMISSION ESSENTIALS
+                </p>
+
+                <h2>
+                    Plan Your Application
+                </h2>
+
+                <p>
+                    Use these quick links to review the most important
+                    information before applying.
+                </p>
+
             </div>
+
+
+            <div class="feature-grid flex-cards">
+
+                <article class="feature-card">
+
+                    <img
+                        src="images/admission.jpg"
+                        alt="KDK University campus"
+                    >
+
+                    <h3>
+                        Admission Requirements
+                    </h3>
+
+                    <p>
+                        Check the documents, education requirements
+                        and examination results you may need.
+                    </p>
+
+                    <a class="button" href="#requirements">
+                        View Requirements
+                    </a>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <img
+                        src="images/gallery2.jpg"
+                        alt="KDK University students studying"
+                    >
+
+                    <h3>
+                        Tuition Information
+                    </h3>
+
+                    <p>
+                        Compare estimated annual tuition for the
+                        bachelor's programs offered by KDK University.
+                    </p>
+
+                    <a class="button" href="#tuition">
+                        View Tuition
+                    </a>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <img
+                        src="images/scholarship.jpg"
+                        alt="KDK University student event"
+                    >
+
+                    <h3>
+                        Scholarships
+                    </h3>
+
+                    <p>
+                        Explore academic, talent and social support
+                        opportunities available to eligible students.
+                    </p>
+
+                    <a class="button" href="#scholarships">
+                        View Scholarships
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Admission Process -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    HOW TO APPLY
+                </p>
+
+                <h2>
+                    Admission Process
+                </h2>
+
+            </div>
+
 
             <ol class="steps">
+
                 <li>
-                    <strong>Choose Your Program</strong>
-                    <span>Select the degree that matches your interests and career goals.</span>
+                    <strong>
+                        Choose Your Program
+                    </strong>
+
+                    <span>
+                        Select the degree that matches your interests
+                        and career goals.
+                    </span>
                 </li>
+
+
                 <li>
-                    <strong>Prepare Your Documents</strong>
-                    <span>Collect your school certificate, transcript and identification documents.</span>
+                    <strong>
+                        Prepare Your Documents
+                    </strong>
+
+                    <span>
+                        Collect your school certificate,
+                        transcript and identification documents.
+                    </span>
                 </li>
+
+
                 <li>
-                    <strong>Submit Your Application</strong>
-                    <span>Complete the application and provide the required information.</span>
+                    <strong>
+                        Submit Your Application
+                    </strong>
+
+                    <span>
+                        Complete the application and provide
+                        the required information.
+                    </span>
                 </li>
+
+
                 <li>
-                    <strong>Complete Admission Requirements</strong>
-                    <span>Provide examination results or English proficiency where required.</span>
+                    <strong>
+                        Complete Admission Requirements
+                    </strong>
+
+                    <span>
+                        Provide examination results or English
+                        proficiency where required.
+                    </span>
                 </li>
+
+
                 <li>
-                    <strong>Receive Your Decision</strong>
-                    <span>Successful applicants receive an admission offer and enrollment instructions.</span>
+                    <strong>
+                        Receive Your Decision
+                    </strong>
+
+                    <span>
+                        Successful applicants receive an admission
+                        offer and enrollment instructions.
+                    </span>
                 </li>
+
             </ol>
+
         </section>
 
+
+        <!-- Requirements -->
         <section id="requirements" class="section soft-section">
+
             <div>
-                <p class="eyebrow">REQUIREMENTS</p>
-                <h2>What You Need</h2>
+
+                <p class="eyebrow">
+                    REQUIREMENTS
+                </p>
+
+                <h2>
+                    What You Need
+                </h2>
+
                 <p>
                     General requirements for bachelor's degree applicants:
                 </p>
 
+
                 <ul class="check-list">
-                    <li>Completed secondary education</li>
-                    <li>Valid identification document</li>
-                    <li>High school certificate or diploma</li>
-                    <li>Academic transcript</li>
-                    <li>Passport-size photograph</li>
-                    <li>Entrance examination results where required</li>
-                    <li>English proficiency for English-taught programs</li>
+
+                    <li>
+                        Completed secondary education
+                    </li>
+
+                    <li>
+                        Valid identification document
+                    </li>
+
+                    <li>
+                        High school certificate or diploma
+                    </li>
+
+                    <li>
+                        Academic transcript
+                    </li>
+
+                    <li>
+                        Passport-size photograph
+                    </li>
+
+                    <li>
+                        Entrance examination results where required
+                    </li>
+
+                    <li>
+                        English proficiency for English-taught programs
+                    </li>
+
                 </ul>
+
             </div>
+
         </section>
 
+
+        <!-- Assignment 2 - Grid Areas -->
         <section class="section">
-            <div class="section-heading">
-                <p class="eyebrow">TUITION</p>
-                <h2>Program Information</h2>
-                <p>Estimated tuition for the 2026–2027 academic year.</p>
+
+            <div class="campus-layout">
+
+                <div class="grid-header">
+
+                    <p class="eyebrow">
+                        APPLICATION GUIDE
+                    </p>
+
+                    <h2>
+                        Your Admission Checklist
+                    </h2>
+
+                </div>
+
+
+                <aside class="grid-sidebar">
+
+                    <h3>
+                        Quick Checklist
+                    </h3>
+
+                    <ul>
+                        <li>Choose a program</li>
+                        <li>Prepare documents</li>
+                        <li>Check requirements</li>
+                        <li>Review tuition</li>
+                        <li>Submit application</li>
+                    </ul>
+
+                </aside>
+
+
+                <div class="grid-main">
+
+                    <h3>
+                        Prepare Before You Apply
+                    </h3>
+
+                    <p>
+                        Review the admission requirements,
+                        confirm your selected program and prepare
+                        all documents before submitting your application.
+                    </p>
+
+                    <a class="button" href="programs.html">
+                        Explore Programs
+                    </a>
+
+                </div>
+
+
+                <div class="grid-footer">
+
+                    <p>
+                        Careful preparation makes the admission
+                        process faster and easier.
+                    </p>
+
+                </div>
+
             </div>
 
+        </section>
+
+
+        <!-- Tuition -->
+        <section class="section" id="tuition">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    TUITION
+                </p>
+
+                <h2>
+                    Program Information
+                </h2>
+
+                <p>
+                    Estimated tuition for the 2026–2027 academic year.
+                </p>
+
+            </div>
+
+
             <div class="table-wrapper">
+
                 <table>
+
                     <thead>
+
                         <tr>
                             <th>Program</th>
                             <th>Duration</th>
                             <th>Language</th>
                             <th>Tuition / Year</th>
                         </tr>
+
                     </thead>
+
+
                     <tbody>
+
                         <tr>
                             <td>Software Engineering</td>
                             <td>4 years</td>
                             <td>English</td>
                             <td>2,600,000 ₸</td>
                         </tr>
+
+
                         <tr>
                             <td>Computer Science</td>
                             <td>4 years</td>
                             <td>English</td>
                             <td>2,500,000 ₸</td>
                         </tr>
+
+
                         <tr>
                             <td>Cybersecurity</td>
                             <td>4 years</td>
                             <td>English</td>
                             <td>2,700,000 ₸</td>
                         </tr>
+
+
                         <tr>
                             <td>Data Science</td>
                             <td>4 years</td>
                             <td>English</td>
                             <td>2,700,000 ₸</td>
                         </tr>
+
+
                         <tr>
                             <td>Business Analytics</td>
                             <td>4 years</td>
                             <td>English</td>
                             <td>2,400,000 ₸</td>
                         </tr>
+
+
                         <tr>
-                            <td>Digital Media & Design</td>
+                            <td>Digital Media &amp; Design</td>
                             <td>4 years</td>
                             <td>English</td>
                             <td>2,300,000 ₸</td>
                         </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
         </section>
 
-        <section class="section soft-section">
+
+        <!-- Scholarships -->
+        <section class="section soft-section" id="scholarships">
+
             <div class="section-heading">
-                <p class="eyebrow">FINANCIAL SUPPORT</p>
-                <h2>Scholarships</h2>
+
+                <p class="eyebrow">
+                    FINANCIAL SUPPORT
+                </p>
+
+                <h2>
+                    Scholarships
+                </h2>
+
             </div>
+
 
             <div class="feature-grid">
-                <article class="feature-card no-hover">
-                    <h3>Academic Excellence</h3>
-                    <p>Up to 50% tuition reduction for applicants with outstanding academic results.</p>
-                </article>
 
                 <article class="feature-card no-hover">
-                    <h3>KDK Talent Scholarship</h3>
-                    <p>Up to 30% tuition reduction for achievements in science, technology, sports or creativity.</p>
+
+                    <h3>
+                        Academic Excellence
+                    </h3>
+
+                    <p>
+                        Up to 50% tuition reduction for applicants
+                        with outstanding academic results.
+                    </p>
+
                 </article>
 
+
                 <article class="feature-card no-hover">
-                    <h3>Social Support Grant</h3>
-                    <p>Financial support may be available for eligible students based on individual circumstances.</p>
+
+                    <h3>
+                        KDK Talent Scholarship
+                    </h3>
+
+                    <p>
+                        Up to 30% tuition reduction for achievements
+                        in science, technology, sports or creativity.
+                    </p>
+
                 </article>
+
+
+                <article class="feature-card no-hover">
+
+                    <h3>
+                        Social Support Grant
+                    </h3>
+
+                    <p>
+                        Financial support may be available for
+                        eligible students based on individual circumstances.
+                    </p>
+
+                </article>
+
             </div>
+
         </section>
 
-        <section class="cta">
-            <h2>Have questions about admission?</h2>
-            <p>Our Contact page will include a form for questions and applications.</p>
-            <a class="button" href="contact.html">Contact Us</a>
+
+        <!-- Assignment 2 - Grid Image Gallery -->
+        <section class="section soft-section" id="admissions-gallery">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    START YOUR JOURNEY
+                </p>
+
+                <h2>
+                    Admissions Gallery
+                </h2>
+
+                <p>
+                    Get a glimpse of the campus,
+                    student community and university experience.
+                </p>
+
+            </div>
+
+
+            <div class="campus-gallery">
+
+                <div class="gallery-item">
+                    <img
+                        src="images/images1.jpg"
+                        alt="KDK University campus"
+                    >
+                    <div class="gallery-caption">
+                        Welcome to KDK
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/team_study.jpg"
+                        alt="Students studying together"
+                    >
+                    <div class="gallery-caption">
+                        Study Together
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/library.jpg"
+                        alt="University learning space"
+                    >
+                    <div class="gallery-caption">
+                        Academic Resources
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery4.jpg"
+                        alt="University student event"
+                    >
+                    <div class="gallery-caption">
+                        Open Events
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery5.jpg"
+                        alt="KDK University student activity"
+                    >
+                    <div class="gallery-caption">
+                        Student Experience
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery6.jpg"
+                        alt="Students collaborating"
+                    >
+                    <div class="gallery-caption">
+                        New Connections
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/basketball.jpg"
+                        alt="University student activity"
+                    >
+                    <div class="gallery-caption">
+                        Campus Activities
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gallery8.jpg"
+                        alt="KDK University campus space"
+                    >
+                    <div class="gallery-caption">
+                        Campus Spaces
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img
+                        src="images/gym.jpg"
+                        alt="KDK University community"
+                    >
+                    <div class="gallery-caption">
+                        KDK Community
+                    </div>
+                </div>
+
+            </div>
+
         </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <h2>
+                Have questions about admission?
+            </h2>
+
+            <p>
+                Our Contact page includes a form
+                for questions and applications.
+            </p>
+
+            <a class="button" href="contact.html">
+                Contact Us
+            </a>
+
+        </section>
+
     </main>
 
+
     <footer>
-        <p><strong>KDK University</strong></p>
-        <p>Team members: Akylzhan · Allazhar · Yerkhan</p>
-        <p>&copy; 2026 KDK University. Student project.</p>
+
+        <p>
+            <strong>KDK University</strong>
+        </p>
+
+        <p>
+            Team members: Allazhar · Akylzhan · Yerkhan        </p>
+
+        <p>
+            &copy; 2026 KDK University. Student project.
+        </p>
+
     </footer>
 
 </body>
+
 </html>
