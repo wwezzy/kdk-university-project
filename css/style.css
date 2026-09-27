@@ -1040,3 +1040,155 @@ footer p {
         height: 240px;
     }
 }
+
+/* Assignment 3 - Task 1: Responsive Typography */
+
+/* Mobile */
+@media (max-width: 576px) {
+    .campus-hero h1 {
+        font-size: 32px;
+    }
+
+    .campus-hero p {
+        font-size: 16px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 991px) {
+    .campus-hero h1 {
+        font-size: 42px;
+    }
+
+    .campus-hero p {
+        font-size: 18px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .campus-hero h1 {
+        font-size: 52px;
+    }
+
+    .campus-hero p {
+        font-size: 20px;
+    }
+}
+
+/* Assignment 3 - Task 2: Responsive Card Group */
+
+/* Desktop */
+@media (min-width: 992px) {
+    .flex-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .flex-cards .feature-card {
+        flex: 1;
+    }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 991px) {
+    .flex-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-cards .feature-card {
+        flex: 0 0 calc(50% - 14px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .flex-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-cards .feature-card {
+        width: 100%;
+    }
+}
+
+/* Assignment 3 - Bootstrap Carousel */
+#campusCarousel {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+#campusCarousel .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    #campusCarousel .carousel-item img {
+        height: 280px;
+    }
+}
+
+/* Assignment 3 - Bootstrap Cards */
+.card .card-img-top {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card .btn {
+    align-self: stretch;
+}
+
+/* Assignment 3 - Task 2: Responsive Card Group */
+
+.responsive-facilities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Tablet - 2 cards per row */
+@media (min-width: 577px) and (max-width: 991px) {
+    .responsive-facilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile - 1 card per row */
+@media (max-width: 576px) {
+    .responsive-facilities {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Assignment 3 - Fix Bootstrap Checkbox */
+
+#contact-form .form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact-form input.form-check-input {
+    appearance: auto;
+    -webkit-appearance: checkbox;
+    width: 16px;
+    height: 16px;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#contact-form .form-check-label {
+    margin: 0;
+    cursor: pointer;
+}

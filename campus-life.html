@@ -8,28 +8,45 @@
     <!-- KDK University Student Project -->
     <title>Campus Life - KDK University</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <header class="site-header">
-        <div class="navbar">
+    <!-- Assignment 3 - Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container">
 
-            <a href="index.html" class="brand">KDK University</a>
+        <a class="navbar-brand fw-bold" href="index.html">
+            KDK University
+        </a>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="campus-life.html" class="active">Campus Life</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="programs.html">Programs</a>
+                <a class="nav-link" href="admissions.html">Admissions</a>
+                <a class="nav-link active"
+                   aria-current="page"
+                   href="campus-life.html">Campus Life</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
         </div>
-    </header>
+
+    </div>
+</nav>
 
     <main>
 
@@ -48,7 +65,7 @@
             and opportunities to connect with our community.
         </p>
 
-        <a href="#student-life" class="button">Explore Campus Life</a>
+        <a href="#student-life" class="btn btn-primary btn-lg">Explore Campus Life</a>
 
     </div>
 
@@ -57,6 +74,60 @@
              alt="Students at KDK University campus">
     </div>
 
+</section>
+
+<!-- Assignment 3 - Bootstrap Grid: Two Columns -->
+<section class="container my-5 px-sm-2 px-md-4">
+    <div class="row align-items-center mt-lg-4">
+        <div class="col-12 col-lg-6">
+            <h2>Study and Connect</h2>
+            <p>
+                KDK University gives students opportunities to study,
+                collaborate and become part of the campus community.
+            </p>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <h2>Campus Opportunities</h2>
+            <p>
+                Students can join clubs, attend events and use modern
+                facilities throughout the university.
+            </p>
+            <div class="btn-group mt-3" role="group" aria-label="Campus options">
+    <a href="#student-life" class="btn btn-primary">Student Life</a>
+    <a href="#campus-moments" class="btn btn-outline-primary">Gallery</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Assignment 3 - Bootstrap Grid: Three Columns -->
+<section class="container mb-5">
+    <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="p-4 border rounded h-100">
+                <h3>Study</h3>
+                <p>Modern spaces help students focus and work together.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="p-4 border rounded h-100">
+                <h3>Connect</h3>
+                <p>Meet other students through clubs and campus activities.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="p-4 border rounded h-100">
+                <h3>Grow</h3>
+                <p>Develop new skills through events, projects and teamwork.</p>
+            </div>
+        </div>
+
+    </div>
 </section>
 
         <!-- Student Life -->
@@ -72,45 +143,76 @@
                 </p>
             </div>
 
-            <div class="feature-grid flex-cards">
+            <!-- Assignment 3 - Task 8: Bootstrap Cards -->
+<div class="row g-4">
 
-                <div class="feature-card">
-                    <img src="images/student-clubs.jpg" alt="KDK University student clubs">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+            <img src="images/student-clubs.jpg"
+                 class="card-img-top"
+                 alt="KDK University student clubs">
 
-                    <h3>Student Clubs</h3>
-                    <p>
-                        Join student clubs, meet people with similar interests
-                        and participate in university projects.
-                    </p>
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Student Clubs</h3>
 
-                    <a href="#campus-moments" class="button">Learn More</a>
-                </div>
+                <p class="card-text">
+                    Join student clubs, meet people with similar interests
+                    and participate in university projects.
+                </p>
 
-                <div class="feature-card">
-                    <img src="images/sports-wellness.jpg" alt="Students doing sports">
-
-                    <h3>Sports & Wellness</h3>
-                    <p>
-                        Stay active through sports activities and opportunities
-                        that support a healthy student lifestyle.
-                    </p>
-
-                    <a href="#campus-moments" class="button">Learn More</a>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/campus-events.jpg" alt="University student event">
-                    
-                    <h3>Events</h3>
-                    <p>
-                        Take part in university events, workshops,
-                        competitions and student celebrations.
-                    </p>
-
-                    <a href="#campus-moments" class="button">Learn More</a>
-                </div>
-
+                <a href="#campus-moments"
+                   class="btn btn-primary mt-auto">
+                    Learn More
+                </a>
             </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+            <img src="images/sports-wellness.jpg"
+                 class="card-img-top"
+                 alt="Students doing sports">
+
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Sports & Wellness</h3>
+
+                <p class="card-text">
+                    Stay active through sports activities and opportunities
+                    that support a healthy student lifestyle.
+                </p>
+
+                <a href="#campus-moments"
+                   class="btn btn-primary mt-auto">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+            <img src="images/campus-events.jpg"
+                 class="card-img-top"
+                 alt="University student event">
+
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Events</h3>
+
+                <p class="card-text">
+                    Take part in university events, workshops,
+                    competitions and student celebrations.
+                </p>
+
+                <a href="#campus-moments"
+                   class="btn btn-primary mt-auto">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
 
         </section>
 
@@ -127,7 +229,7 @@
                 </p>
             </div>
 
-            <div class="feature-grid">
+            <div class="feature-grid responsive-facilities">
 
                 <div class="feature-card">
                     <h3>Library</h3>
@@ -193,6 +295,8 @@
 
 </section>
 
+
+
 <!-- Assignment 2 - Grid Image Gallery -->
 <section class="section soft-section" id="campus-moments">
 
@@ -204,6 +308,116 @@
             around KDK University.
         </p>
     </div>
+
+    <!-- Assignment 3 - Bootstrap Carousel -->
+<div id="campusCarousel"
+     class="carousel slide mb-4"
+     role="region"
+     aria-label="KDK University campus gallery">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="4" aria-label="Slide 5"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="5" aria-label="Slide 6"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="6" aria-label="Slide 7"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="7" aria-label="Slide 8"></button>
+
+        <button type="button" data-bs-target="#campusCarousel"
+                data-bs-slide-to="8" aria-label="Slide 9"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="images/gallery1.jpg"
+                 class="d-block w-100"
+                 alt="KDK campus life">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery2.jpg"
+                 class="d-block w-100"
+                 alt="Students studying together">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery3.jpg"
+                 class="d-block w-100"
+                 alt="University facilities">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery4.jpg"
+                 class="d-block w-100"
+                 alt="Student event">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery5.jpg"
+                 class="d-block w-100"
+                 alt="University sports">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery6.jpg"
+                 class="d-block w-100"
+                 alt="Campus spaces">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery7.jpg"
+                 class="d-block w-100"
+                 alt="Student activities">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery8.jpg"
+                 class="d-block w-100"
+                 alt="Study area">
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/gallery9.jpg"
+                 class="d-block w-100"
+                 alt="KDK community">
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#campusCarousel"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#campusCarousel"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
     <div class="campus-gallery">
 
@@ -319,5 +533,7 @@
 
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <!-- KDK University Student Project -->
     <title>Contact - KDK University</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -92,48 +93,79 @@
                     <p class="eyebrow">SEND A MESSAGE</p>
                     <h2>Contact Form</h2>
 
+                    <!-- Assignment 3 - Task 9: Bootstrap Form -->
                     <form id="contact-form">
 
-                        <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Enter your name"
-                            required
-                        >
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
+    </div>
 
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Enter your email"
-                            required
-                        >
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+    </div>
 
-                        <label for="interest">I am interested in</label>
-                        <select id="interest" name="interest">
-                            <option value="admissions">Admissions</option>
-                            <option value="programs">Programs</option>
-                            <option value="campus-life">Campus Life</option>
-                            <option value="other">Other</option>
-                        </select>
+    <div class="mb-3">
+        <label for="interest" class="form-label">
+            I am interested in
+        </label>
 
-                        <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            placeholder="Write your message here"
-                            required
-                        ></textarea>
+        <select
+            class="form-select"
+            id="interest"
+            name="interest"
+        >
+            <option value="admissions">Admissions</option>
+            <option value="programs">Programs</option>
+            <option value="campus-life">Campus Life</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
 
-                        <button type="submit" class="button">
-                            Send Message
-                        </button>
+    <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message here"
+            required
+        ></textarea>
+    </div>
 
-                    </form>
+    <div class="form-check mb-3">
+        <input
+            class="form-check-input"
+            type="checkbox"
+            id="updates"
+        >
+
+        <label class="form-check-label" for="updates">
+            Send me university updates
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Send Message
+    </button>
+
+</form>
 
                 </div>
 
