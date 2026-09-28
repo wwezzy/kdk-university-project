@@ -1,90 +1,125 @@
 # KDK University Website
 
-A responsive multi-page university website created for the **Web Technologies 1** course. The project demonstrates the practical use of **HTML5**, **CSS3**, semantic page structure, responsive layouts, forms, tables, navigation, and collaborative Git/GitHub workflow.
+A responsive multi-page university website developed as a team project.
 
-## Live Website
+The project started with basic HTML and CSS and was gradually improved with Flexbox, CSS Grid, Media Queries and Bootstrap.
 
-**GitHub Pages:** https://wwezzy.github.io/kdk-university-project/
+## Live Demo
 
-## Project Overview
+https://wwezzy.github.io/kdk-university-project/
 
-KDK University is a fictional university website designed as a team project. The goal was to build a consistent, modern website without external UI frameworks and to demonstrate core frontend development skills using only HTML and CSS.
+## About the Project
 
-The website contains six connected pages with a shared navigation bar, common visual style, responsive sections, and a footer listing the project team.
+KDK University is a fictional university website created to practice frontend development.
 
-## Pages
+The website contains six pages:
 
-| Page | File | Description |
-| --- | --- | --- |
-| Home | `index.html` | Main landing page with hero section, introduction, feature cards, and call to action |
-| About Us | `about.html` | University information, mission, vision, values, and team members |
-| Programs | `programs.html` | Academic programs and study directions offered by KDK University |
-| Admissions | `admissions.html` | Admission process, requirements, tuition table, and scholarships |
-| Campus Life | `campus-life.html` | Student life, campus facilities, activities, and community information |
-| Contact | `contact.html` | Contact information, contact form, and campus visit section |
+- Home
+- About Us
+- Programs
+- Admissions
+- Campus Life
+- Contact
 
-## Main Features
+The project was developed by a team of three students. Each team member was responsible for different pages.
 
-- Multi-page website with consistent navigation
-- Semantic HTML structure using `header`, `nav`, `main`, `section`, `article`, and `footer`
-- Responsive layouts for desktop and smaller screens
-- Shared external CSS styling
-- Custom buttons, cards, banners, navigation states, and hover effects
-- Ordered and unordered lists
-- Admissions information table
-- Contact form with text, email, select, textarea, and submit controls
-- Images with descriptive `alt` text
-- Team information section
-- CSS Grid and Flexbox layouts
-- Box model styling with margin, padding, borders, and border radius
-- Responsive media queries
-- GitHub collaboration with branches, commits, pull requests, and GitHub Pages deployment
+## My Contribution
 
-## Technologies Used
+My main responsibility was the **Campus Life** and **Contact** pages.
 
-- **HTML5** — page structure and semantic markup
-- **CSS3** — layout, colors, typography, responsive design, Grid, Flexbox, hover and focus states
-- **Git** — version control
-- **GitHub** — team collaboration and repository management
-- **GitHub Pages** — website deployment
+I worked on:
 
-No Bootstrap, Tailwind CSS, or other external UI frameworks were used.
+- Campus Life page structure and content
+- Contact page and contact form
+- Responsive layouts for desktop, tablet and mobile
+- Flexbox layouts
+- CSS Grid layouts
+- Responsive image gallery
+- CSS Media Queries
+- Bootstrap Grid
+- Responsive Bootstrap Navbar
+- Bootstrap Cards
+- Bootstrap Carousel
+- Bootstrap Buttons
+- Bootstrap Form
+- Basic accessibility with semantic HTML, labels, alt text and ARIA attributes
+- Git and GitHub workflow
+- Testing and deployment with GitHub Pages
 
-## Project Structure
+## Technologies
 
-```text
-kdk-university-project/
-│
-├── index.html
-├── about.html
-├── programs.html
-├── admissions.html
-├── campus-life.html
-├── contact.html
-├── README.md
-│
-├── css/
-│   ├── style.css
-│   └── allazhar.css
-│
-└── images/
-    ├── kdk-campus-wide.png
-    ├── kdk-campus.png
-    ├── campus-life.png
-    └── kdk-logo.svg
-```
+- HTML5
+- CSS3
+- Flexbox
+- CSS Grid
+- Media Queries
+- Bootstrap 5
+- Git
+- GitHub
+- GitHub Pages
 
-## Team Members
+## Responsive Design
 
-| Team Member | Responsibility |
+The website supports different screen sizes.
+
+Custom CSS Media Queries are used for some sections, while Bootstrap responsive classes are used for others.
+
+For example, the Campus Life page changes its layout depending on the screen size:
+
+- Desktop: multi-column layouts
+- Tablet: reduced number of columns
+- Mobile: stacked content and hamburger navigation
+
+## Bootstrap
+
+Bootstrap was used to improve the responsive version of the project.
+
+Components and utilities used in my pages include:
+
+- Grid system
+- Navbar
+- Cards
+- Carousel
+- Buttons and button groups
+- Forms
+- Spacing utilities
+
+## My Pages
+
+### Campus Life
+
+The Campus Life page includes:
+
+- Responsive hero section
+- Student life cards
+- Campus facilities
+- Bootstrap grid sections
+- Responsive navigation
+- Image carousel
+- Image gallery
+- Mobile, tablet and desktop layouts
+
+### Contact
+
+The Contact page includes:
+
+- Contact information
+- Responsive contact form
+- Text and email inputs
+- Select field
+- Textarea
+- Checkbox
+- Bootstrap form styling
+
+## Team
+
+| Team Member | Main Pages |
 | --- | --- |
-| **Kuat Allazhar** | Home and About Us pages |
-| **Dautbekov Yerkhan** | Programs and Admissions pages |
-| **Khafiz Akylzhan** | Campus Life and Contact pages |
+| Kuat Allazhar | Home, About Us |
+| Dautbekov Yerkhan | Programs, Admissions |
+| **Khafiz Akylzhan** | **Campus Life, Contact** |
 
-The team worked in separate Git branches and integrated changes into the shared repository through GitHub.
-
-## How to Run Locally
+## Run Locally
 
 Clone the repository:
 
@@ -92,34 +127,19 @@ Clone the repository:
 git clone https://github.com/wwezzy/kdk-university-project.git
 ```
 
-Open the project folder:
+Open the project:
 
 ```bash
 cd kdk-university-project
+code .
 ```
 
-Then open `index.html` in a browser or run the project using a local development server such as the **Live Server** extension in VS Code.
+Then open `index.html` in a browser or use Live Server in VS Code.
 
-## Git Workflow
+## What I Learned
 
-Typical team workflow:
+This project gave me practical experience with building responsive web pages and working in a team repository.
 
-```bash
-git pull origin main
-git switch <your-branch>
-git add <changed-files>
-git commit -m "Describe your changes"
-git push -u origin <your-branch>
-```
+I learned how HTML and CSS work together, when to use Flexbox or CSS Grid, how Media Queries change layouts for different screen sizes, and how Bootstrap can be used to build responsive components faster.
 
-After pushing, changes can be reviewed and merged into `main` through a Pull Request.
-
-## Course
-
-**Course:** Web Technologies 1  
-**Project:** HTML & CSS Basics — Team Website  
-**Year:** 2026
-
-## Notes
-
-This project was created for educational purposes. KDK University is a fictional university used only as the subject of the coursework.
+I also practiced using Git for commits, pulling changes from other team members, resolving project changes and pushing updates to GitHub.
