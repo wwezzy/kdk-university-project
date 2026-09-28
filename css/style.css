@@ -1192,3 +1192,236 @@ footer p {
     margin: 0;
     cursor: pointer;
 }
+
+/* =========================================================
+   ASSIGNMENT 3
+   PROGRAMS + ADMISSIONS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Bootstrap Navbar Fix
+
+   The project already had a custom .navbar class before
+   Bootstrap was introduced. These rules prevent the old
+   navbar styles from breaking the Bootstrap navbar.
+   --------------------------------------------------------- */
+
+.assignment3-navbar {
+    width: 100%;
+    margin: 0;
+    min-height: 72px;
+    gap: 0;
+}
+
+.assignment3-navbar .navbar-brand {
+    color: #1378bd;
+}
+
+.assignment3-navbar .nav-link {
+    color: #35536d;
+    font-weight: 600;
+}
+
+.assignment3-navbar .nav-link:hover,
+.assignment3-navbar .nav-link.active {
+    color: #1597e5;
+}
+
+
+/* ---------------------------------------------------------
+   Assignment 3 - Task 1
+   Responsive Typography
+   --------------------------------------------------------- */
+
+/* Mobile */
+
+.assignment3-heading {
+    font-size: 1.75rem;
+}
+
+.assignment3-copy {
+    font-size: 0.95rem;
+}
+
+
+/* Tablet */
+
+@media (min-width: 577px) and (max-width: 991px) {
+
+    .assignment3-heading {
+        font-size: 2.2rem;
+    }
+
+    .assignment3-copy {
+        font-size: 1.05rem;
+    }
+}
+
+
+/* Desktop */
+
+@media (min-width: 992px) {
+
+    .assignment3-heading {
+        font-size: 2.6rem;
+    }
+
+    .assignment3-copy {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Assignment 3 - Task 2
+   Responsive Card Group
+
+   IMPORTANT:
+   This layout intentionally uses normal CSS Media Queries
+   instead of Bootstrap because Task 2 requires CSS only.
+   --------------------------------------------------------- */
+
+.mq-section {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.mq-section-heading {
+    max-width: 700px;
+    margin-bottom: 32px;
+}
+
+.mq-card-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.mq-card {
+    padding: 26px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d9ebf7;
+    border-radius: 14px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.mq-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(33, 120, 168, 0.10);
+}
+
+.mq-card h3 {
+    margin-bottom: 10px;
+}
+
+.mq-card p {
+    margin-bottom: 0;
+    color: #58758b;
+}
+
+
+/* Tablet: 2 cards per row */
+
+@media (min-width: 577px) and (max-width: 991px) {
+
+    .mq-card-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Mobile: cards stacked vertically */
+
+@media (max-width: 576px) {
+
+    .mq-section {
+        padding: 50px 0;
+    }
+
+    .mq-card-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Light Background Section
+   Spacing is handled with Bootstrap utilities such as py-5.
+   --------------------------------------------------------- */
+
+.kdk-soft-bg {
+    background-color: #f4fbff;
+}
+
+
+/* ---------------------------------------------------------
+   Assignment 3 - Bootstrap Carousel
+   --------------------------------------------------------- */
+
+.assignment3-carousel {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+}
+
+.assignment3-carousel .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* Mobile carousel */
+
+@media (max-width: 576px) {
+
+    .assignment3-carousel .carousel-item img {
+        height: 280px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Admissions Bootstrap Form
+   --------------------------------------------------------- */
+
+.admissions-form-card {
+    background-color: #ffffff;
+
+    border: 1px solid #d9ebf7;
+    border-radius: 16px;
+}
+
+
+/* Better visible focus for accessibility */
+
+#admissions-form .form-control:focus,
+#admissions-form .form-select:focus,
+#admissions-form .form-check-input:focus {
+    border-color: #1597e5;
+
+    box-shadow:
+        0 0 0 0.25rem
+        rgba(21, 151, 229, 0.15);
+}
+
+
+/* ---------------------------------------------------------
+   Assignment 3 CTA
+   --------------------------------------------------------- */
+
+.kdk-cta {
+    background-color: #12345b;
+}

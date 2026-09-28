@@ -4,42 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>KDK University | Programs</title>
 
+    <!-- Assignment 3 - Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Shared project styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- ========================================
+         Assignment 3 - Bootstrap Navbar
+         ======================================== -->
+
     <header class="site-header">
-        <div class="navbar">
 
-            <a class="brand" href="index.html">
-                <img
-                    class="brand-logo"
-                    src="images/kdk-logo.svg"
-                    alt="KDK University logo"
+        <nav
+            class="navbar navbar-expand-lg bg-white assignment3-navbar"
+            aria-label="Main navigation"
+        >
+            <div class="container">
+
+                <a
+                    class="navbar-brand d-flex align-items-center gap-2 fw-bold"
+                    href="index.html"
                 >
-                <span>KDK University</span>
-            </a>
+                    <img
+                        src="images/kdk-logo.svg"
+                        alt="KDK University logo"
+                        class="brand-logo"
+                    >
+                    KDK University
+                </a>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a class="active" href="programs.html">Programs</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="campus-life.html">Campus Life</a>
-                <a href="contact.html">Contact</a>
-            </nav>
 
-        </div>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#programsNavbar"
+                    aria-controls="programsNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="programsNavbar"
+                >
+                    <div class="navbar-nav ms-auto">
+
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+
+                        <a class="nav-link" href="about.html">
+                            About Us
+                        </a>
+
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="programs.html"
+                        >
+                            Programs
+                        </a>
+
+                        <a class="nav-link" href="admissions.html">
+                            Admissions
+                        </a>
+
+                        <a class="nav-link" href="campus-life.html">
+                            Campus Life
+                        </a>
+
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
     </header>
 
 
     <main>
 
-        <!-- Programs Hero -->
-        <section id="programs-hero" class="page-banner programs-banner">
+        <!-- ========================================
+             Programs Hero
+             ======================================== -->
+
+        <section
+            id="programs-hero"
+            class="page-banner programs-banner"
+        >
 
             <img
                 class="banner-image"
@@ -50,363 +120,432 @@
             <div class="banner-shade"></div>
 
             <div class="banner-title">
-                <p>ACADEMICS AT KDK</p>
-                <h1>Academic Programs</h1>
-            </div>
-
-        </section>
-
-
-        <!-- Programs Introduction -->
-        <section class="programs-intro">
-
-            <p class="eyebrow">
-                DISCOVER YOUR DIRECTION
-            </p>
-
-            <h2>
-                Find Your Field of Study
-            </h2>
-
-            <p>
-                Choose a future-focused degree built around practical learning,
-                modern technology and skills that prepare you for the professional world.
-            </p>
-
-            <a class="button" href="admissions.html">
-                View Admissions
-            </a>
-
-        </section>
-
-
-        <!-- Assignment 2 - Flexbox Card Row -->
-        <section class="section soft-section">
-
-            <div class="section-heading">
-
-                <p class="eyebrow">
-                    FEATURED STUDY AREAS
-                </p>
-
-                <h2>
-                    Explore Popular Programs
-                </h2>
 
                 <p>
-                    Discover several study directions and learn
-                    where each program can take you.
+                    ACADEMICS AT KDK
                 </p>
 
-            </div>
-
-
-            <div class="feature-grid flex-cards">
-
-                <article class="feature-card">
-
-                    <img
-                        src="images/soft_eng.jpg"
-                        alt="KDK University students studying together"
-                    >
-
-                    <h3>
-                        Software Engineering
-                    </h3>
-
-                    <p>
-                        Build practical skills in software development,
-                        databases and modern web technologies.
-                    </p>
-
-                    <a class="button" href="#program-list">
-                        Learn More
-                    </a>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <img
-                        src="images/com_sci.jpg"
-                        alt="KDK University learning space"
-                    >
-
-                    <h3>
-                        Computer Science
-                    </h3>
-
-                    <p>
-                        Study algorithms, operating systems and intelligent
-                        systems through hands-on projects.
-                    </p>
-
-                    <a class="button" href="#program-list">
-                        Learn More
-                    </a>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <img
-                        src="images/dig_media.jpg"
-                        alt="KDK University students collaborating"
-                    >
-
-                    <h3>
-                        Digital Media &amp; Design
-                    </h3>
-
-                    <p>
-                        Combine creativity and technology to design useful
-                        digital products and experiences.
-                    </p>
-
-                    <a class="button" href="#program-list">
-                        Learn More
-                    </a>
-
-                </article>
+                <h1>
+                    Academic Programs
+                </h1>
 
             </div>
 
         </section>
 
 
-        <!-- Programs List -->
-        <section class="section" id="program-list">
+        <!-- ========================================
+             Assignment 3 - Task 1
+             Responsive Typography
+             ======================================== -->
 
-            <div class="section-heading">
+        <section class="container py-5">
 
-                <p class="eyebrow">
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-lg-8 text-center">
+
+                    <p class="eyebrow mb-2">
+                        DISCOVER YOUR DIRECTION
+                    </p>
+
+                    <h2 class="assignment3-heading mb-3">
+                        Find Your Field of Study
+                    </h2>
+
+                    <p class="assignment3-copy mb-4">
+                        Choose a future-focused degree built around
+                        practical learning, modern technology and skills
+                        that prepare you for the professional world.
+                    </p>
+
+                    <!-- Assignment 3 - Bootstrap Button -->
+                    <a
+                        class="btn btn-primary btn-lg"
+                        href="admissions.html"
+                    >
+                        View Admissions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             Assignment 3 - Tasks 3, 4 and 8
+             Bootstrap Grid + Spacing + Cards
+             Three Columns: col-lg-4
+             ======================================== -->
+
+        <section class="kdk-soft-bg py-5">
+
+            <div class="container px-sm-2 px-md-4">
+
+                <div class="mb-4">
+
+                    <p class="eyebrow mb-2">
+                        FEATURED STUDY AREAS
+                    </p>
+
+                    <h2 class="mb-2">
+                        Explore Popular Programs
+                    </h2>
+
+                    <p class="mb-0">
+                        Discover several study directions and learn
+                        where each program can take you.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4 mt-lg-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="card h-100 shadow-sm">
+
+                            <img
+                                src="images/soft_eng.jpg"
+                                class="card-img-top"
+                                alt="Students studying software engineering"
+                            >
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h3 class="card-title">
+                                    Software Engineering
+                                </h3>
+
+                                <p class="card-text">
+                                    Build practical skills in software
+                                    development, databases and modern
+                                    web technologies.
+                                </p>
+
+                                <a
+                                    href="#program-list"
+                                    class="btn btn-primary mt-auto"
+                                >
+                                    Learn More
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="card h-100 shadow-sm">
+
+                            <img
+                                src="images/com_sci.jpg"
+                                class="card-img-top"
+                                alt="Students studying computer science"
+                            >
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h3 class="card-title">
+                                    Computer Science
+                                </h3>
+
+                                <p class="card-text">
+                                    Study algorithms, operating systems
+                                    and intelligent systems through
+                                    hands-on projects.
+                                </p>
+
+                                <a
+                                    href="#program-list"
+                                    class="btn btn-primary mt-auto"
+                                >
+                                    Learn More
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Card 3 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="card h-100 shadow-sm">
+
+                            <img
+                                src="images/dig_media.jpg"
+                                class="card-img-top"
+                                alt="Students working on digital design"
+                            >
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h3 class="card-title">
+                                    Digital Media &amp; Design
+                                </h3>
+
+                                <p class="card-text">
+                                    Combine creativity and technology
+                                    to design useful digital products
+                                    and experiences.
+                                </p>
+
+                                <a
+                                    href="#program-list"
+                                    class="btn btn-primary mt-auto"
+                                >
+                                    Learn More
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             Bootstrap Program Grid
+             ======================================== -->
+
+        <section
+            class="container py-5"
+            id="program-list"
+        >
+
+            <div class="mb-4">
+
+                <p class="eyebrow mb-2">
                     BACHELOR'S DEGREES
                 </p>
 
-                <h2>
+                <h2 class="mb-2">
                     Our Programs
                 </h2>
 
                 <p>
-                    Students combine academic knowledge with practical projects,
-                    teamwork and modern digital tools.
+                    Students combine academic knowledge with
+                    practical projects, teamwork and modern
+                    digital tools.
                 </p>
 
             </div>
 
 
-            <div class="program-grid">
+            <div class="row g-4">
 
-                <article class="program-card">
+                <!-- Software Engineering -->
+                <div class="col-12 col-md-6 col-lg-4">
 
-                    <h3>
-                        Software Engineering
-                    </h3>
+                    <article class="card h-100">
 
-                    <p>
-                        Learn to design, develop and maintain
-                        modern software systems.
-                    </p>
+                        <div class="card-body d-flex flex-column">
 
-                    <ul>
-                        <li>Web Development</li>
-                        <li>Databases</li>
-                        <li>Algorithms &amp; Data Structures</li>
-                    </ul>
+                            <h3 class="card-title">
+                                Software Engineering
+                            </h3>
 
-                    <p class="program-meta">
-                        4 years · English
-                    </p>
+                            <p class="card-text">
+                                Learn to design, develop and maintain
+                                modern software systems.
+                            </p>
 
-                </article>
+                            <ul>
+                                <li>Web Development</li>
+                                <li>Databases</li>
+                                <li>Algorithms &amp; Data Structures</li>
+                            </ul>
 
+                            <p class="fw-bold text-primary mt-auto mb-0">
+                                4 years · English
+                            </p>
 
-                <article class="program-card">
+                        </div>
 
-                    <h3>
-                        Computer Science
-                    </h3>
-
-                    <p>
-                        Build a strong foundation in computing,
-                        algorithms and intelligent systems.
-                    </p>
-
-                    <ul>
-                        <li>Programming Fundamentals</li>
-                        <li>Operating Systems</li>
-                        <li>Artificial Intelligence</li>
-                    </ul>
-
-                    <p class="program-meta">
-                        4 years · English
-                    </p>
-
-                </article>
-
-
-                <article class="program-card">
-
-                    <h3>
-                        Cybersecurity
-                    </h3>
-
-                    <p>
-                        Learn how to protect networks,
-                        applications and digital information.
-                    </p>
-
-                    <ul>
-                        <li>Network Security</li>
-                        <li>Cryptography</li>
-                        <li>Digital Forensics</li>
-                    </ul>
-
-                    <p class="program-meta">
-                        4 years · English
-                    </p>
-
-                </article>
-
-
-                <article class="program-card">
-
-                    <h3>
-                        Data Science
-                    </h3>
-
-                    <p>
-                        Turn data into useful insights with statistics,
-                        programming and machine learning.
-                    </p>
-
-                    <ul>
-                        <li>Python Programming</li>
-                        <li>Machine Learning</li>
-                        <li>Data Visualization</li>
-                    </ul>
-
-                    <p class="program-meta">
-                        4 years · English
-                    </p>
-
-                </article>
-
-
-                <article class="program-card">
-
-                    <h3>
-                        Business Analytics
-                    </h3>
-
-                    <p>
-                        Combine business knowledge with
-                        data analysis and digital strategy.
-                    </p>
-
-                    <ul>
-                        <li>Business Intelligence</li>
-                        <li>Data Analytics</li>
-                        <li>Project Management</li>
-                    </ul>
-
-                    <p class="program-meta">
-                        4 years · English
-                    </p>
-
-                </article>
-
-
-                <article class="program-card">
-
-                    <h3>
-                        Digital Media &amp; Design
-                    </h3>
-
-                    <p>
-                        Develop creative and technical skills
-                        for modern digital products.
-                    </p>
-
-                    <ul>
-                        <li>UI/UX Design</li>
-                        <li>Web Design</li>
-                        <li>Digital Media</li>
-                    </ul>
-
-                    <p class="program-meta">
-                        4 years · English
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- Assignment 2 - Grid Areas -->
-        <section class="section">
-
-            <div class="campus-layout">
-
-                <div class="grid-header">
-
-                    <p class="eyebrow">
-                        PROGRAM GUIDE
-                    </p>
-
-                    <h2>
-                        Choose the Right Direction
-                    </h2>
+                    </article>
 
                 </div>
 
 
-                <aside class="grid-sidebar">
+                <!-- Computer Science -->
+                <div class="col-12 col-md-6 col-lg-4">
 
-                    <h3>
-                        Study Areas
-                    </h3>
+                    <article class="card h-100">
 
-                    <ul>
-                        <li>Software Development</li>
-                        <li>Computer Science</li>
-                        <li>Cybersecurity</li>
-                        <li>Data &amp; Analytics</li>
-                        <li>Digital Design</li>
-                    </ul>
+                        <div class="card-body d-flex flex-column">
 
-                </aside>
+                            <h3 class="card-title">
+                                Computer Science
+                            </h3>
 
+                            <p class="card-text">
+                                Build a strong foundation in computing,
+                                algorithms and intelligent systems.
+                            </p>
 
-                <div class="grid-main">
+                            <ul>
+                                <li>Programming Fundamentals</li>
+                                <li>Operating Systems</li>
+                                <li>Artificial Intelligence</li>
+                            </ul>
 
-                    <h3>
-                        Build Skills for Your Future
-                    </h3>
+                            <p class="fw-bold text-primary mt-auto mb-0">
+                                4 years · English
+                            </p>
 
-                    <p>
-                        Compare the programs, explore the subjects you will study
-                        and choose a direction that matches your interests
-                        and career goals.
-                    </p>
+                        </div>
 
-                    <a class="button" href="admissions.html">
-                        Admission Details
-                    </a>
+                    </article>
 
                 </div>
 
 
-                <div class="grid-footer">
+                <!-- Cybersecurity -->
+                <div class="col-12 col-md-6 col-lg-4">
 
-                    <p>
-                        All bachelor's programs are designed around
-                        practical learning and modern digital skills.
-                    </p>
+                    <article class="card h-100">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title">
+                                Cybersecurity
+                            </h3>
+
+                            <p class="card-text">
+                                Learn how to protect networks,
+                                applications and digital information.
+                            </p>
+
+                            <ul>
+                                <li>Network Security</li>
+                                <li>Cryptography</li>
+                                <li>Digital Forensics</li>
+                            </ul>
+
+                            <p class="fw-bold text-primary mt-auto mb-0">
+                                4 years · English
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Data Science -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title">
+                                Data Science
+                            </h3>
+
+                            <p class="card-text">
+                                Turn data into useful insights
+                                with statistics, programming
+                                and machine learning.
+                            </p>
+
+                            <ul>
+                                <li>Python Programming</li>
+                                <li>Machine Learning</li>
+                                <li>Data Visualization</li>
+                            </ul>
+
+                            <p class="fw-bold text-primary mt-auto mb-0">
+                                4 years · English
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Business Analytics -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title">
+                                Business Analytics
+                            </h3>
+
+                            <p class="card-text">
+                                Combine business knowledge with
+                                data analysis and digital strategy.
+                            </p>
+
+                            <ul>
+                                <li>Business Intelligence</li>
+                                <li>Data Analytics</li>
+                                <li>Project Management</li>
+                            </ul>
+
+                            <p class="fw-bold text-primary mt-auto mb-0">
+                                4 years · English
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Digital Media -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title">
+                                Digital Media &amp; Design
+                            </h3>
+
+                            <p class="card-text">
+                                Develop creative and technical skills
+                                for modern digital products.
+                            </p>
+
+                            <ul>
+                                <li>UI/UX Design</li>
+                                <li>Web Design</li>
+                                <li>Digital Media</li>
+                            </ul>
+
+                            <p class="fw-bold text-primary mt-auto mb-0">
+                                4 years · English
+                            </p>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -415,12 +554,123 @@
         </section>
 
 
-        <!-- Assignment 2 - Grid Image Gallery -->
-        <section class="section soft-section" id="program-gallery">
+        <!-- ========================================
+             Assignment 3 - Task 3
+             Bootstrap Two Column Grid
+             col-lg-6
+             ======================================== -->
 
-            <div class="section-heading">
+        <section class="kdk-soft-bg py-5">
 
-                <p class="eyebrow">
+            <div class="container">
+
+                <div class="row g-4 align-items-stretch">
+
+                    <div class="col-12 col-lg-6">
+
+                        <div class="p-4 bg-white border rounded-3 h-100">
+
+                            <p class="eyebrow mb-2">
+                                PROGRAM GUIDE
+                            </p>
+
+                            <h2>
+                                Study Areas
+                            </h2>
+
+                            <ul class="list-group list-group-flush">
+
+                                <li class="list-group-item">
+                                    Software Development
+                                </li>
+
+                                <li class="list-group-item">
+                                    Computer Science
+                                </li>
+
+                                <li class="list-group-item">
+                                    Cybersecurity
+                                </li>
+
+                                <li class="list-group-item">
+                                    Data &amp; Analytics
+                                </li>
+
+                                <li class="list-group-item">
+                                    Digital Design
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 col-lg-6">
+
+                        <div class="p-4 bg-white border rounded-3 h-100">
+
+                            <p class="eyebrow mb-2">
+                                YOUR FUTURE
+                            </p>
+
+                            <h2>
+                                Choose the Right Direction
+                            </h2>
+
+                            <p>
+                                Compare the programs, explore the
+                                subjects you will study and choose
+                                a direction that matches your
+                                interests and career goals.
+                            </p>
+
+
+                            <!-- Assignment 3 - Button Group -->
+                            <div
+                                class="btn-group mt-3"
+                                role="group"
+                                aria-label="Program actions"
+                            >
+
+                                <a
+                                    href="admissions.html"
+                                    class="btn btn-primary"
+                                >
+                                    Admissions
+                                </a>
+
+                                <a
+                                    href="contact.html"
+                                    class="btn btn-outline-primary"
+                                >
+                                    Contact
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             Assignment 3 - Task 7
+             Bootstrap Carousel - 9 Images
+             ======================================== -->
+
+        <section class="container py-5">
+
+            <div class="mb-4">
+
+                <p class="eyebrow mb-2">
                     LEARNING AT KDK
                 </p>
 
@@ -436,115 +686,211 @@
             </div>
 
 
-            <div class="campus-gallery">
+            <div
+                id="programsCarousel"
+                class="carousel slide assignment3-carousel"
+                role="region"
+                aria-label="KDK University program gallery"
+            >
 
-                <div class="gallery-item">
-                    <img
-                        src="images/images1.jpg"
-                        alt="KDK University campus experience"
-                    >
-                    <div class="gallery-caption">
-                        Campus Learning
-                    </div>
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 4"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="4"
+                        aria-label="Slide 5"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="5"
+                        aria-label="Slide 6"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="6"
+                        aria-label="Slide 7"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="7"
+                        aria-label="Slide 8"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#programsCarousel"
+                        data-bs-slide-to="8"
+                        aria-label="Slide 9"
+                    ></button>
+
                 </div>
 
 
-                <div class="gallery-item">
-                    <img
-                        src="images/team_study.jpg"
-                        alt="Students studying together"
-                    >
-                    <div class="gallery-caption">
-                        Team Study
+                <!-- Slides -->
+                <div class="carousel-inner rounded-4">
+
+                    <div class="carousel-item active">
+                        <img
+                            src="images/gallery1.jpg"
+                            class="d-block w-100"
+                            alt="KDK University campus"
+                        >
                     </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/team_study.jpg"
+                            class="d-block w-100"
+                            alt="Students studying together"
+                        >
+                    </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/library.jpg"
+                            class="d-block w-100"
+                            alt="University library"
+                        >
+                    </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/gallery4.jpg"
+                            class="d-block w-100"
+                            alt="University workshop"
+                        >
+                    </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/gallery5.jpg"
+                            class="d-block w-100"
+                            alt="Student project activity"
+                        >
+                    </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/gallery6.jpg"
+                            class="d-block w-100"
+                            alt="Students collaborating"
+                        >
+                    </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/basketball.jpg"
+                            class="d-block w-100"
+                            alt="Students taking part in sports"
+                        >
+                    </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/gallery8.jpg"
+                            class="d-block w-100"
+                            alt="Modern university space"
+                        >
+                    </div>
+
+                    <div class="carousel-item">
+                        <img
+                            src="images/gym.jpg"
+                            class="d-block w-100"
+                            alt="University gym"
+                        >
+                    </div>
+
                 </div>
 
 
-                <div class="gallery-item">
-                    <img
-                        src="images/library.jpg"
-                        alt="University learning space"
-                    >
-                    <div class="gallery-caption">
-                        Research &amp; Reading
-                    </div>
-                </div>
+                <!-- Previous -->
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#programsCarousel"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span class="visually-hidden">
+                        Previous
+                    </span>
+                </button>
 
 
-                <div class="gallery-item">
-                    <img
-                        src="images/gallery4.jpg"
-                        alt="Students at a university event"
-                    >
-                    <div class="gallery-caption">
-                        Workshops
-                    </div>
-                </div>
+                <!-- Next -->
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#programsCarousel"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
 
-
-                <div class="gallery-item">
-                    <img
-                        src="images/gallery5.jpg"
-                        alt="KDK University student activity"
-                    >
-                    <div class="gallery-caption">
-                        Student Projects
-                    </div>
-                </div>
-
-
-                <div class="gallery-item">
-                    <img
-                        src="images/gallery6.jpg"
-                        alt="Students collaborating"
-                    >
-                    <div class="gallery-caption">
-                        Collaboration
-                    </div>
-                </div>
-
-
-                <div class="gallery-item">
-                    <img
-                        src="images/basketball.jpg"
-                        alt="University student experience"
-                    >
-                    <div class="gallery-caption">
-                        Active Campus
-                    </div>
-                </div>
-
-
-                <div class="gallery-item">
-                    <img
-                        src="images/gallery8.jpg"
-                        alt="KDK University campus space"
-                    >
-                    <div class="gallery-caption">
-                        Modern Spaces
-                    </div>
-                </div>
-
-
-                <div class="gallery-item">
-                    <img
-                        src="images/gym.jpg"
-                        alt="KDK University community"
-                    >
-                    <div class="gallery-caption">
-                        KDK Community
-                    </div>
-                </div>
+                    <span class="visually-hidden">
+                        Next
+                    </span>
+                </button>
 
             </div>
 
         </section>
 
 
-        <!-- Why KDK -->
-        <section class="section soft-section">
+        <!-- ========================================
+             Assignment 3 - Task 2
+             CSS Media Queries ONLY
+             NO Bootstrap in this card group
+             ======================================== -->
 
-            <div class="section-heading">
+        <section class="mq-section">
+
+            <div class="mq-section-heading">
 
                 <p class="eyebrow">
                     WHY KDK?
@@ -554,12 +900,17 @@
                     Learn by Doing
                 </h2>
 
+                <p>
+                    These cards use CSS Media Queries instead of
+                    the Bootstrap grid.
+                </p>
+
             </div>
 
 
-            <div class="feature-grid">
+            <div class="mq-card-group">
 
-                <article class="feature-card">
+                <article class="mq-card">
 
                     <h3>
                         Practical Learning
@@ -573,21 +924,21 @@
                 </article>
 
 
-                <article class="feature-card">
+                <article class="mq-card">
 
                     <h3>
                         Modern Campus
                     </h3>
 
                     <p>
-                        Technology-equipped classrooms and collaborative
-                        spaces support everyday learning.
+                        Technology-equipped classrooms and
+                        collaborative spaces support everyday learning.
                     </p>
 
                 </article>
 
 
-                <article class="feature-card">
+                <article class="mq-card">
 
                     <h3>
                         Career Opportunities
@@ -605,26 +956,39 @@
         </section>
 
 
-        <!-- CTA -->
-        <section class="cta">
+        <!-- ========================================
+             CTA
+             ======================================== -->
 
-            <h2>
-                Ready to start your journey?
-            </h2>
+        <section class="container mb-5">
 
-            <p>
-                Explore admission requirements and become
-                part of KDK University.
-            </p>
+            <div class="kdk-cta text-center p-5 rounded-4">
 
-            <a class="button" href="admissions.html">
-                View Admissions
-            </a>
+                <h2 class="text-white">
+                    Ready to start your journey?
+                </h2>
+
+                <p class="text-white-50">
+                    Explore admission requirements and become
+                    part of KDK University.
+                </p>
+
+                <a
+                    class="btn btn-light btn-lg"
+                    href="admissions.html"
+                >
+                    View Admissions
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
+
+    <!-- Keep the same team names that are already
+         in your current repository footer. -->
 
     <footer>
 
@@ -633,7 +997,7 @@
         </p>
 
         <p>
-            Team members: Allazhar · Akylzhan · Yerkhan
+            Team members: [keep your current team names here]
         </p>
 
         <p>
@@ -641,6 +1005,14 @@
         </p>
 
     </footer>
+
+
+    <!-- Bootstrap JavaScript is required for
+         navbar collapse and carousel controls -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
 </body>
 
