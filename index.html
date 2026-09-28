@@ -1,244 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>KDK University | Home</title>
 
-    <!-- Created by: Allazhar | KDK University Project -->
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Project styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/allazhar.css">
 </head>
 
 <body>
 
-    <!-- Task 1: Flexbox Navigation -->
-    <header class="site-header">
-
-        <div class="navbar">
-
-            <a class="brand" href="index.html">
-
-                <img
-                    class="brand-logo"
-                    src="images/kdk-logo.svg"
-                    alt="KDK University logo">
-
+    <!-- Assignment 3 - Task 5: Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom assignment3-navbar" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+                <img class="brand-logo" src="images/kdk-logo.svg" alt="KDK University logo">
                 <span>KDK University</span>
-
             </a>
 
-            <nav>
-                <a class="active" href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="campus-life.html">Campus Life</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#homeNavbar"
+                    aria-controls="homeNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="homeNavbar">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link" href="programs.html">Programs</a>
+                    <a class="nav-link" href="admissions.html">Admissions</a>
+                    <a class="nav-link" href="campus-life.html">Campus Life</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </div>
+            </div>
         </div>
-
-    </header>
-
+    </nav>
 
     <main>
 
-        <!-- Hero Section -->
+        <!-- Assignment 3 - Task 1: Responsive Typography -->
         <section id="home-hero" class="home-hero">
-
             <div class="home-hero-image">
-
-                <img
-                    src="images/kdk-campus-wide.png"
-                    alt="KDK University campus">
-
+                <img src="images/kdk-campus-wide.png" alt="KDK University campus">
             </div>
 
-
             <div class="home-hero-content">
+                <p class="eyebrow">WELCOME TO KDK UNIVERSITY</p>
 
-                <p class="eyebrow">
-                    WELCOME TO KDK UNIVERSITY
-                </p>
+                <h1 class="assignment3-title">Build Your Future With Us</h1>
 
-                <h1>
-                    Build Your Future With Us
-                </h1>
-
-                <p class="home-description">
+                <p class="home-description assignment3-lead">
                     KDK University is a modern university where students
                     learn new skills, gain practical experience and prepare
                     for their future careers.
                 </p>
 
                 <div>
-                    <a class="button" href="programs.html">
+                    <a class="btn btn-primary btn-lg" href="programs.html">
                         Explore Programs
                     </a>
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- Introduction -->
         <section class="section home-intro">
-
-            <p class="eyebrow">
-                WHY KDK?
-            </p>
-
-            <h2>
-                A Place to Learn and Grow
-            </h2>
-
+            <p class="eyebrow">WHY KDK?</p>
+            <h2>A Place to Learn and Grow</h2>
             <p class="home-description">
                 We provide students with modern education,
                 practical knowledge and opportunities for personal
                 and professional development.
             </p>
-
         </section>
 
-
-        <!-- Task 2: Flexbox Card Row -->
+        <!-- Assignment 3 - Task 2: CSS-only responsive card group -->
         <section class="section">
-
             <div class="section-heading">
-
-                <p class="eyebrow">
-                    EXPLORE KDK
-                </p>
-
-                <h2>
-                    University Opportunities
-                </h2>
-
+                <p class="eyebrow">RESPONSIVE CARD GROUP</p>
+                <h2>University Opportunities</h2>
                 <p>
-                    Explore the main opportunities available
-                    for students at KDK University.
+                    The layout changes with CSS media queries:
+                    three cards on desktop, two on tablet and one on mobile.
                 </p>
-
             </div>
 
-
-            <div class="flex-cards">
-
-                <!-- Card 1 -->
+            <div class="flex-cards assignment3-card-group">
                 <article class="flex-card">
-
-                    <img
-                        src="images/LibraryAll.jpg"
-                        alt="KDK University library">
-
-                    <h3>
-                        Academic Programs
-                    </h3>
-
+                    <img src="images/LibraryAll.jpg" alt="KDK University library">
+                    <h3>Academic Programs</h3>
                     <p>
                         Explore our academic programs and choose
                         the right direction for your future career.
                     </p>
-
-                    <a class="button" href="programs.html">
+                    <a class="btn btn-outline-primary btn-sm" href="programs.html">
                         View Programs
                     </a>
-
                 </article>
 
-
-                <!-- Card 2 -->
                 <article class="flex-card">
-
-                    <img
-                        src="images/GymCelebAll.jpg"
-                        alt="KDK University sports complex">
-
-                    <h3>
-                        Campus Life
-                    </h3>
-
+                    <img src="images/GymCelebAll.jpg" alt="KDK University sports complex">
+                    <h3>Campus Life</h3>
                     <p>
                         Discover student clubs, sports,
                         activities and university community.
                     </p>
-
-                    <a class="button" href="campus-life.html">
+                    <a class="btn btn-outline-primary btn-sm" href="campus-life.html">
                         Campus Life
                     </a>
-
                 </article>
 
-
-                <!-- Card 3 -->
                 <article class="flex-card">
-
-                    <img
-                        src="images/Campus2All.jpg"
-                        alt="KDK University campus">
-
-                    <h3>
-                        Admissions
-                    </h3>
-
+                    <img src="images/Campus2All.jpg" alt="KDK University campus">
+                    <h3>Admissions</h3>
                     <p>
                         Learn about admission requirements
                         and the university application process.
                     </p>
-
-                    <a class="button" href="admissions.html">
+                    <a class="btn btn-outline-primary btn-sm" href="admissions.html">
                         Admissions
                     </a>
-
                 </article>
-
             </div>
-
         </section>
 
-
-        <!-- Call to Action -->
+        <!-- Assignment 3 - Task 6: Bootstrap Buttons + Button Group -->
         <section class="cta">
+            <h2>Start Your Journey at KDK</h2>
+            <p>Discover our academic programs and admission opportunities.</p>
 
-            <h2>
-                Start Your Journey at KDK
-            </h2>
-
-            <p>
-                Discover our academic programs and admission opportunities.
-            </p>
-
-            <a class="button" href="admissions.html">
-                Apply to KDK
-            </a>
-
+            <div class="btn-group" role="group" aria-label="University actions">
+                <a class="btn btn-light" href="programs.html">Programs</a>
+                <a class="btn btn-outline-light" href="admissions.html">Admissions</a>
+            </div>
         </section>
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
-
-        <p>
-            <strong>KDK University</strong>
-        </p>
-
-        <p>
-            Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan
-        </p>
-
-        <p>
-            &copy; 2026 KDK University Student project.
-        </p>
-
+        <p><strong>KDK University</strong></p>
+        <p>Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan</p>
+        <p>&copy; 2026 KDK University Student project.</p>
     </footer>
 
+    <!-- Bootstrap JavaScript is required for the navbar toggler -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
