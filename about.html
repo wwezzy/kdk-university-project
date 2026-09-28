@@ -1,496 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>KDK University | About Us</title>
 
-    <!-- Created by: Allazhar | KDK University Project -->
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Project styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/allazhar.css">
 </head>
 
 <body>
 
-    <!-- Task 1: Flexbox Navigation -->
-    <header class="site-header">
-
-        <div class="navbar">
-
-            <a class="brand" href="index.html">
-
-                <img
-                    class="brand-logo"
-                    src="images/kdk-logo.svg"
-                    alt="KDK University logo">
-
+    <!-- Assignment 3 - Task 5: Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom assignment3-navbar" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+                <img class="brand-logo" src="images/kdk-logo.svg" alt="KDK University logo">
                 <span>KDK University</span>
-
             </a>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a class="active" href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="campus-life.html">Campus Life</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#aboutNavbar"
+                    aria-controls="aboutNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="aboutNavbar">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+                    <a class="nav-link" href="programs.html">Programs</a>
+                    <a class="nav-link" href="admissions.html">Admissions</a>
+                    <a class="nav-link" href="campus-life.html">Campus Life</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </div>
+            </div>
         </div>
-
-    </header>
-
+    </nav>
 
     <main>
 
-        <!-- About Banner -->
         <section id="about-hero" class="page-banner">
-
-            <img
-                class="banner-image"
-                src="images/kdk-campus-wide.png"
-                alt="KDK University campus">
-
+            <img class="banner-image" src="images/kdk-campus-wide.png" alt="KDK University campus">
             <div class="banner-shade"></div>
-
             <div class="banner-title">
-
-                <p>
-                    ABOUT KDK
-                </p>
-
-                <h1>
-                    About Our University
-                </h1>
-
+                <p>ABOUT KDK</p>
+                <h1>About Our University</h1>
             </div>
-
         </section>
 
+        <!-- Assignment 3 - Task 3: Bootstrap Grid, two columns -->
+        <!-- Task 4 spacing utilities: py-5, px-sm-2, px-md-4, mt-lg-4, g-4 -->
+        <section class="container py-5 px-sm-2 px-md-4">
+            <div class="row align-items-center g-4 mt-lg-4">
+                <div class="col-12 col-lg-6">
+                    <p class="eyebrow">WHO WE ARE</p>
+                    <h2>KDK University</h2>
 
-        <!-- About University -->
-        <section class="section about-main">
-
-            <div class="about-main-text">
-
-                <p class="eyebrow">
-                    WHO WE ARE
-                </p>
-
-                <h2>
-                    KDK University
-                </h2>
-
-                <p class="about-description">
-                    KDK University is a modern educational institution
-                    focused on quality education, practical skills
-                    and student development.
-                </p>
-
-                <p class="about-description">
-                    Our goal is to create an environment where students
-                    can learn, communicate, develop new ideas and prepare
-                    for their future careers.
-                </p>
-
-            </div>
-
-
-            <img
-                class="about-image"
-                src="images/kdk-campus.png"
-                alt="View of KDK University campus">
-
-        </section>
-
-
-        <!-- Mission, Vision and Values -->
-        <section class="section">
-
-            <div class="feature-grid">
-
-                <article class="feature-card no-hover">
-
-                    <h3>
-                        Our Mission
-                    </h3>
-
-                    <p>
-                        To provide students with useful knowledge,
-                        practical experience and opportunities
-                        for personal development.
+                    <p class="about-description">
+                        KDK University is a modern educational institution
+                        focused on quality education, practical skills
+                        and student development.
                     </p>
 
-                </article>
-
-
-                <article class="feature-card no-hover">
-
-                    <h3>
-                        Our Vision
-                    </h3>
-
-                    <p>
-                        To create a modern university community
-                        that prepares students for the future.
+                    <p class="about-description mb-0">
+                        Our goal is to create an environment where students
+                        can learn, communicate, develop new ideas and prepare
+                        for their future careers.
                     </p>
-
-                </article>
-
-
-                <article class="feature-card no-hover">
-
-                    <h3>
-                        Our Values
-                    </h3>
-
-                    <ul>
-                        <li>Education</li>
-                        <li>Innovation</li>
-                        <li>Teamwork</li>
-                        <li>Responsibility</li>
-                    </ul>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- Task 3: Grid Areas -->
-        <section class="section">
-
-            <div class="section-heading">
-
-                <p class="eyebrow">
-                    STUDENT EXPERIENCE
-                </p>
-
-                <h2>
-                    Life at KDK
-                </h2>
-
-                <p>
-                    This section presents the main parts
-                    of the KDK student experience.
-                </p>
-
-            </div>
-
-
-            <div class="grid-layout">
-
-                <div class="grid-header">
-
-                    <h3>
-                        KDK Student Experience
-                    </h3>
-
                 </div>
 
+                <div class="col-12 col-lg-6">
+                    <img class="about-image"
+                         src="images/kdk-campus.png"
+                         alt="View of KDK University campus">
+                </div>
+            </div>
+        </section>
+
+        <!-- Assignment 3 - Task 3 + Task 8: Bootstrap 3-column Grid and Cards -->
+        <section class="container py-5">
+            <div class="mb-4">
+                <p class="eyebrow">BOOTSTRAP CARDS</p>
+                <h2>University Highlights</h2>
+                <p class="mb-0">
+                    This section uses Bootstrap cards inside a responsive 12-column grid.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 shadow-sm">
+                        <img src="images/LibraryAll.jpg"
+                             class="card-img-top assignment3-card-image"
+                             alt="KDK University library">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title">Academic Life</h3>
+                            <p class="card-text">
+                                Modern learning spaces support individual study,
+                                teamwork and academic development.
+                            </p>
+                            <a class="btn btn-primary mt-auto" href="programs.html">
+                                Explore Programs
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 shadow-sm">
+                        <img src="images/GymCelebAll.jpg"
+                             class="card-img-top assignment3-card-image"
+                             alt="KDK University sports complex">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title">Student Life</h3>
+                            <p class="card-text">
+                                Students can join activities, sports
+                                and become part of the university community.
+                            </p>
+                            <a class="btn btn-secondary mt-auto" href="campus-life.html">
+                                Campus Life
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 shadow-sm">
+                        <img src="images/Campus2All.jpg"
+                             class="card-img-top assignment3-card-image"
+                             alt="KDK University campus">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title">Future Students</h3>
+                            <p class="card-text">
+                                Learn about application requirements,
+                                university opportunities and admissions.
+                            </p>
+                            <a class="btn btn-outline-primary mt-auto" href="admissions.html">
+                                Admissions
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assignment 2 Grid Areas kept for continuity -->
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">STUDENT EXPERIENCE</p>
+                <h2>Life at KDK</h2>
+                <p>This section presents the main parts of the KDK student experience.</p>
+            </div>
+
+            <div class="grid-layout">
+                <div class="grid-header">
+                    <h3>KDK Student Experience</h3>
+                </div>
 
                 <aside class="grid-sidebar">
-
-                    <h3>
-                        Student Life
-                    </h3>
-
+                    <h3>Student Life</h3>
                     <ul>
                         <li>Education</li>
                         <li>Sports</li>
                         <li>Research</li>
                         <li>Activities</li>
                     </ul>
-
                 </aside>
 
-
                 <div class="grid-main">
-
-                    <h3>
-                        Study and Community
-                    </h3>
-
+                    <h3>Study and Community</h3>
                     <p>
                         Students at KDK University can study,
                         participate in projects, communicate
                         with other students and develop new skills.
                     </p>
-
                     <p>
                         The university provides modern facilities,
-                        academic opportunities and an active
-                        student community.
+                        academic opportunities and an active student community.
                     </p>
-
                 </div>
-
 
                 <div class="grid-footer">
+                    <strong>Learn · Connect · Grow</strong>
+                </div>
+            </div>
+        </section>
 
-                    <strong>
-                        Learn · Connect · Grow
-                    </strong>
+        <!-- Assignment 3 - Task 7: Bootstrap Carousel with 9 images -->
+        <section class="container py-5">
+            <div class="mb-4">
+                <p class="eyebrow">BOOTSTRAP CAROUSEL</p>
+                <h2>KDK University Carousel</h2>
+                <p class="mb-0">
+                    Nine campus images with indicators and previous/next controls.
+                </p>
+            </div>
 
+            <div id="aboutCarousel"
+                 class="carousel slide assignment3-carousel"
+                 role="region"
+                 aria-label="KDK University image carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="6"
+                            aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="7"
+                            aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="8"
+                            aria-label="Slide 9"></button>
                 </div>
 
-            </div>
+                <div class="carousel-inner rounded-3 overflow-hidden">
+                    <div class="carousel-item active">
+                        <img src="images/research-lab.jpg" class="d-block w-100" alt="KDK research laboratory">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/GymCelebAll.jpg" class="d-block w-100" alt="KDK sports complex">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/MusclesCampusAll.jpg" class="d-block w-100" alt="KDK athletics campus">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/LibraryAll.jpg" class="d-block w-100" alt="KDK university library">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/SportfieldAll.jpg" class="d-block w-100" alt="KDK sports field">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Camp4All.jpg" class="d-block w-100" alt="KDK research building">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Campus2All.jpg" class="d-block w-100" alt="KDK main campus">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Campus3All.jpg" class="d-block w-100" alt="Students at KDK campus">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Colazh1All.jpg" class="d-block w-100" alt="KDK campus life">
+                    </div>
+                </div>
 
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#aboutCarousel"
+                        data-bs-slide="prev"
+                        aria-label="Previous slide">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#aboutCarousel"
+                        data-bs-slide="next"
+                        aria-label="Next slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
 
-
-        <!-- Task 4: Grid Image Gallery -->
+        <!-- Assignment 2 gallery kept -->
         <section class="section">
-
             <div class="section-heading">
-
-                <p class="eyebrow">
-                    CAMPUS GALLERY
-                </p>
-
-                <h2>
-                    KDK University Gallery
-                </h2>
-
-                <p>
-                    Explore our campus, research facilities,
-                    sports areas and student life.
-                </p>
-
+                <p class="eyebrow">CAMPUS GALLERY</p>
+                <h2>KDK University Gallery</h2>
+                <p>Explore our campus, research facilities, sports areas and student life.</p>
             </div>
-
 
             <div class="gallery">
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/research-lab.jpg"
-                        alt="KDK University research laboratory">
-
-                    <figcaption>
-                        Research Laboratory
-                    </figcaption>
-
+                    <img src="images/research-lab.jpg" alt="KDK University research laboratory">
+                    <figcaption>Research Laboratory</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/GymCelebAll.jpg"
-                        alt="KDK University sports complex">
-
-                    <figcaption>
-                        Sports Complex
-                    </figcaption>
-
+                    <img src="images/GymCelebAll.jpg" alt="KDK University sports complex">
+                    <figcaption>Sports Complex</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/MusclesCampusAll.jpg"
-                        alt="KDK University athletics campus">
-
-                    <figcaption>
-                        Athletics Campus
-                    </figcaption>
-
+                    <img src="images/MusclesCampusAll.jpg" alt="KDK University athletics campus">
+                    <figcaption>Athletics Campus</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/LibraryAll.jpg"
-                        alt="KDK University library">
-
-                    <figcaption>
-                        University Library
-                    </figcaption>
-
+                    <img src="images/LibraryAll.jpg" alt="KDK University library">
+                    <figcaption>University Library</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/SportfieldAll.jpg"
-                        alt="KDK University sports field">
-
-                    <figcaption>
-                        Sports Field
-                    </figcaption>
-
+                    <img src="images/SportfieldAll.jpg" alt="KDK University sports field">
+                    <figcaption>Sports Field</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/Camp4All.jpg"
-                        alt="KDK University research building">
-
-                    <figcaption>
-                        Research Building
-                    </figcaption>
-
+                    <img src="images/Camp4All.jpg" alt="KDK University research building">
+                    <figcaption>Research Building</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/Campus2All.jpg"
-                        alt="KDK University main campus">
-
-                    <figcaption>
-                        Main Campus
-                    </figcaption>
-
+                    <img src="images/Campus2All.jpg" alt="KDK University main campus">
+                    <figcaption>Main Campus</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/Campus3All.jpg"
-                        alt="Students at KDK University campus">
-
-                    <figcaption>
-                        Student Campus
-                    </figcaption>
-
+                    <img src="images/Campus3All.jpg" alt="Students at KDK University campus">
+                    <figcaption>Student Campus</figcaption>
                 </figure>
-
-
                 <figure class="gallery-item">
-
-                    <img
-                        src="images/Colazh1All.jpg"
-                        alt="Different activities at KDK University">
-
-                    <figcaption>
-                        Campus Life
-                    </figcaption>
-
+                    <img src="images/Colazh1All.jpg" alt="Different activities at KDK University">
+                    <figcaption>Campus Life</figcaption>
                 </figure>
-
             </div>
-
         </section>
 
-
-        <!-- Team Members - Flexbox -->
         <section class="section">
-
             <div class="section-heading">
-
-                <p class="eyebrow">
-                    OUR TEAM
-                </p>
-
-                <h2>
-                    About the Team Members
-                </h2>
-
-                <p>
-                    This website was created as a team project
-                    for the Web Technologies course.
-                </p>
-
+                <p class="eyebrow">OUR TEAM</p>
+                <h2>About the Team Members</h2>
+                <p>This website was created as a team project for the Web Technologies course.</p>
             </div>
-
 
             <div class="team-flex">
-
                 <article class="feature-card no-hover team-flex-card">
-
-                    <h3>
-                        Khafiz Akylzhan
-                    </h3>
-
-                    <p>
-                        KDK University project team member.
-                    </p>
-
+                    <h3>Khafiz Akylzhan</h3>
+                    <p>KDK University project team member.</p>
                 </article>
 
-
                 <article class="feature-card no-hover team-flex-card">
-
-                    <h3>
-                        Kuat Allazhar
-                    </h3>
-
-                    <p>
-                       KDK University project team member.
-                    </p>
-
+                    <h3>Kuat Allazhar</h3>
+                    <p>KDK University project team member.</p>
                 </article>
 
-
                 <article class="feature-card no-hover team-flex-card">
-
-                    <h3>
-                        Dautbekov Yerkhan
-                    </h3>
-
-                    <p>
-                        KDK University project team member.
-                    </p>
-
+                    <h3>Dautbekov Yerkhan</h3>
+                    <p>KDK University project team member.</p>
                 </article>
-
             </div>
-
         </section>
 
-
-        <!-- Call to Action -->
         <section class="cta">
-
-            <h2>
-                Learn More About KDK
-            </h2>
-
-            <p>
-                Explore our programs and find the right direction for you.
-            </p>
-
-            <a class="button" href="programs.html">
-                View Programs
-            </a>
-
+            <h2>Learn More About KDK</h2>
+            <p>Explore our programs and find the right direction for you.</p>
+            <div class="btn-group" role="group" aria-label="About page actions">
+                <a class="btn btn-light" href="programs.html">Programs</a>
+                <a class="btn btn-outline-light" href="admissions.html">Admissions</a>
+            </div>
         </section>
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
-
-        <p>
-            <strong>KDK University</strong>
-        </p>
-
-        <p>
-            Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan
-        </p>
-
-        <p>
-            &copy; 2026 KDK University Student project.
-        </p>
-
+        <p><strong>KDK University</strong></p>
+        <p>Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan</p>
+        <p>&copy; 2026 KDK University Student project.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
