@@ -3,16 +3,11 @@
    Shared stylesheet
    ========================= */
 
-* {
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
     color: #16324f;
@@ -22,13 +17,12 @@ body {
 h1,
 h2,
 h3 {
-    margin-top: 0;
     color: #12345b;
 }
 
-p {
-    margin-top: 0;
-}
+/* box-sizing: border-box, body margin и margin-top у заголовков
+   и абзацев уже заданы Bootstrap 5 reboot (подключён на всех
+   страницах проекта), поэтому здесь не дублируются. */
 
 a {
     text-decoration: none;
@@ -289,17 +283,6 @@ a {
     background-color: #0d7fca;
 }
 
-.button-light {
-    background-color: #ffffff;
-    color: #1378bd;
-}
-
-.button-light:hover {
-    background-color: #dff3ff;
-    color: #0d6da9;
-}
-
-
 /* Main sections */
 
 .section {
@@ -452,13 +435,6 @@ a {
 
 
 /* Table */
-
-.table-wrapper {
-    overflow-x: auto;
-
-    border: 1px solid #d9ebf7;
-    border-radius: 16px;
-}
 
 table {
     width: 100%;
@@ -679,15 +655,6 @@ footer p {
     outline: none;
     border-color: #1597e5;
 }
-
-#contact-form .button {
-    align-self: flex-start;
-
-    border: none;
-
-    cursor: pointer;
-}
-
 
 /* Visit Campus */
 
@@ -1041,32 +1008,17 @@ footer p {
     }
 }
 
-/* Assignment 3 - Task 1: Responsive Typography */
-
-/* Mobile */
-@media (max-width: 576px) {
-    .campus-hero h1 {
-        font-size: 32px;
-    }
-
-    .campus-hero p {
-        font-size: 16px;
-    }
-}
-
-/* Tablet */
-@media (min-width: 577px) and (max-width: 991px) {
-    .campus-hero h1 {
-        font-size: 42px;
-    }
-
-    .campus-hero p {
-        font-size: 18px;
-    }
-}
+/* =========================================================
+   Assignment 3 - Task 1: Responsive Typography
+   Assignment 3 - Task 2: Responsive Card Group
+   Правила сгруппированы по брейкпоинтам (Desktop здесь,
+   Tablet и Mobile — ниже), чтобы не дублировать @media.
+   ========================================================= */
 
 /* Desktop */
 @media (min-width: 992px) {
+
+    /* Task 1: Responsive Typography */
     .campus-hero h1 {
         font-size: 52px;
     }
@@ -1074,12 +1026,8 @@ footer p {
     .campus-hero p {
         font-size: 20px;
     }
-}
 
-/* Assignment 3 - Task 2: Responsive Card Group */
-
-/* Desktop */
-@media (min-width: 992px) {
+    /* Task 2: Responsive Card Group */
     .flex-cards {
         display: flex;
         flex-direction: row;
@@ -1088,31 +1036,6 @@ footer p {
 
     .flex-cards .feature-card {
         flex: 1;
-    }
-}
-
-/* Tablet */
-@media (min-width: 577px) and (max-width: 991px) {
-    .flex-cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .flex-cards .feature-card {
-        flex: 0 0 calc(50% - 14px);
-    }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-    .flex-cards {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .flex-cards .feature-card {
-        width: 100%;
     }
 }
 
@@ -1129,12 +1052,6 @@ footer p {
     object-fit: cover;
 }
 
-@media (max-width: 576px) {
-    #campusCarousel .carousel-item img {
-        height: 280px;
-    }
-}
-
 /* Assignment 3 - Bootstrap Cards */
 .card .card-img-top {
     width: 100%;
@@ -1146,23 +1063,69 @@ footer p {
     align-self: stretch;
 }
 
-/* Assignment 3 - Task 2: Responsive Card Group */
+/* =========================================================
+   Assignment 3 - Task 2: Responsive Card Group (facilities)
+   Базовый layout берётся из .feature-grid, ниже — только
+   брейкпоинты. Медиазапросы сгруппированы по брейкпоинтам.
+   ========================================================= */
 
-.responsive-facilities {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-/* Tablet - 2 cards per row */
+/* Tablet */
 @media (min-width: 577px) and (max-width: 991px) {
+
+    /* Task 1: Responsive Typography */
+    .campus-hero h1 {
+        font-size: 42px;
+    }
+
+    .campus-hero p {
+        font-size: 18px;
+    }
+
+    /* Task 2: Responsive Card Group */
+    .flex-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-cards .feature-card {
+        flex: 0 0 calc(50% - 14px);
+    }
+
+    /* Facilities: 2 cards per row */
     .responsive-facilities {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile - 1 card per row */
+/* Mobile */
 @media (max-width: 576px) {
+
+    /* Task 1: Responsive Typography */
+    .campus-hero h1 {
+        font-size: 32px;
+    }
+
+    .campus-hero p {
+        font-size: 16px;
+    }
+
+    /* Task 2: Responsive Card Group */
+    .flex-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-cards .feature-card {
+        width: 100%;
+    }
+
+    /* Bootstrap carousel */
+    #campusCarousel .carousel-item img {
+        height: 280px;
+    }
+
+    /* Facilities: 1 card per row */
     .responsive-facilities {
         grid-template-columns: 1fr;
     }
