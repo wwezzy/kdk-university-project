@@ -419,3 +419,81 @@
         flex-direction: column;
     }
 }
+
+/* Assignment 4 — Task 4: Smooth background change */
+body {
+  transition: background-color 0.3s ease;
+}
+
+/* Assignment 4 — Task 2: FAQ answers */
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+/* Assignment 4 - Task 3: Popup subscription form */
+.subscription-popup {
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.subscription-popup-panel {
+    box-sizing: border-box;
+    position: relative;
+    width: min(100%, 420px);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+.subscription-popup-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: 0;
+    background-color: transparent;
+    color: #16324f;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Assignment 4 - Task 1: Form layout and clear validation feedback */
+.registration-card {
+    max-width: 720px;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #d9ebf7;
+    border-radius: 16px;
+}
+
+.validation-error {
+    margin: 4px 0 0;
+    color: #a61c2b;
+    font-size: 0.9rem;
+}
+
+.form-message {
+    margin-top: 16px;
+    color: #a61c2b;
+}
+
+.form-message.is-success {
+    color: #176238;
+}
+
+#registrationForm .is-invalid,
+#subscriptionForm .is-invalid {
+    border-color: #a61c2b;
+}
