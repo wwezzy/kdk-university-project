@@ -1,1088 +1,499 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>KDK University | Admissions</title>
-
-    <!-- Assignment 3 - Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-    <!-- Shared project stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>KDK University | Admissions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="a4-admissions">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg bg-white assignment3-navbar" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+          <img src="images/kdk-logo.svg" alt="KDK University logo" class="brand-logo">
+          KDK University
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#admissionsNavbar" aria-controls="admissionsNavbar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="admissionsNavbar">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="programs.html">Programs</a>
+            <a class="nav-link active" aria-current="page" href="admissions.html">Admissions</a>
+            <a class="nav-link" href="campus-life.html">Campus Life</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<body>
+  <main>
+    <section id="admissions-hero" class="page-banner admissions-banner">
+      <img class="banner-image" src="images/kdk-campus-wide.png" alt="KDK University campus">
+      <div class="banner-shade admissions-shade"></div>
+      <div class="admissions-hero-content">
+        <p class="hero-eyebrow">ADMISSIONS 2026–2027</p>
+        <h1>Your Future Starts Here</h1>
+        <p>
+          Take the first step toward studying at KDK University.
+          Applications for the 2026–2027 academic year are open.
+        </p>
+        <a class="btn btn-light btn-lg mt-3" href="#requirements">See Requirements</a>
+      </div>
+    </section>
 
-    <!-- ========================================
-         Assignment 3 - Bootstrap Navbar
-         ======================================== -->
+    <section class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center">
+          <p class="eyebrow mb-2">ADMISSION ESSENTIALS</p>
+          <h2 class="assignment3-heading mb-3">Plan Your Application</h2>
+          <p class="assignment3-copy mb-0">
+            Review the requirements, tuition and scholarship opportunities
+            before submitting your application.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <header class="site-header">
+    <section class="kdk-soft-bg py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm">
+              <img src="images/admission.jpg" class="card-img-top" alt="KDK University admissions">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Admission Requirements</h3>
+                <p class="card-text">
+                  Check the documents, education requirements and
+                  examination results you may need.
+                </p>
+                <a href="#requirements" class="btn btn-primary mt-auto">View Requirements</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm">
+              <img src="images/gallery2.jpg" class="card-img-top" alt="Students studying at KDK University">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Tuition Information</h3>
+                <p class="card-text">
+                  Compare estimated annual tuition for bachelor's programs
+                  offered by KDK University.
+                </p>
+                <a href="#tuition" class="btn btn-primary mt-auto">View Tuition</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm">
+              <img src="images/scholarship.jpg" class="card-img-top" alt="KDK University scholarship opportunities">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Scholarships</h3>
+                <p class="card-text">
+                  Explore academic, talent and social support opportunities
+                  available to eligible students.
+                </p>
+                <a href="#scholarships" class="btn btn-primary mt-auto">View Scholarships</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <nav
-            class="navbar navbar-expand-lg bg-white assignment3-navbar"
-            aria-label="Main navigation"
-        >
+    <section class="container py-5">
+      <div class="mb-4">
+        <p class="eyebrow mb-2">HOW TO APPLY</p>
+        <h2>Admission Process</h2>
+      </div>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start py-3">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Choose Your Program</div>
+            Select the degree that matches your interests and career goals.
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start py-3">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Prepare Your Documents</div>
+            Collect your school certificate, transcript and identification documents.
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start py-3">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Submit Your Application</div>
+            Complete the application and provide the required information.
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start py-3">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Complete Admission Requirements</div>
+            Provide examination results or English proficiency where required.
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start py-3">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Receive Your Decision</div>
+            Successful applicants receive an admission offer and enrollment instructions.
+          </div>
+        </li>
+      </ol>
+    </section>
 
-            <div class="container">
+    <section id="requirements" class="kdk-soft-bg py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6">
+            <p class="eyebrow mb-2">REQUIREMENTS</p>
+            <h2>What You Need</h2>
+            <p>General requirements for bachelor's degree applicants:</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-transparent">Completed secondary education</li>
+              <li class="list-group-item bg-transparent">Valid identification document</li>
+              <li class="list-group-item bg-transparent">High school certificate or diploma</li>
+              <li class="list-group-item bg-transparent">Academic transcript</li>
+              <li class="list-group-item bg-transparent">Passport-size photograph</li>
+              <li class="list-group-item bg-transparent">Entrance examination results where required</li>
+              <li class="list-group-item bg-transparent">English proficiency for English-taught programs</li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="images/admission.jpg" class="img-fluid rounded-4 shadow-sm"
+              alt="Student preparing university admission documents">
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <a
-                    class="navbar-brand d-flex align-items-center gap-2 fw-bold"
-                    href="index.html"
-                >
-                    <img
-                        src="images/kdk-logo.svg"
-                        alt="KDK University logo"
-                        class="brand-logo"
-                    >
+    <section class="container py-5">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="border rounded-3 p-4 h-100">
+            <p class="eyebrow mb-2">APPLICATION GUIDE</p>
+            <h2>Quick Checklist</h2>
+            <ul class="mb-0">
+              <li>Choose a program</li>
+              <li>Prepare documents</li>
+              <li>Check requirements</li>
+              <li>Review tuition</li>
+              <li>Submit application</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="border rounded-3 p-4 h-100">
+            <p class="eyebrow mb-2">BEFORE APPLYING</p>
+            <h2>Prepare Carefully</h2>
+            <p>
+              Review the admission requirements, confirm your selected program
+              and prepare all documents before submitting your application.
+            </p>
+            <div class="btn-group mt-3" role="group" aria-label="Admission links">
+              <a href="programs.html" class="btn btn-primary">Programs</a>
+              <a href="contact.html" class="btn btn-outline-primary">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    KDK University
-                </a>
+    <section class="kdk-soft-bg py-5" id="tuition">
+      <div class="container">
+        <div class="mb-4">
+          <p class="eyebrow mb-2">TUITION</p>
+          <h2>Program Information</h2>
+          <p>Estimated tuition for the 2026–2027 academic year.</p>
+        </div>
+        <div class="table-responsive bg-white border rounded-3">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <thead class="table-primary">
+              <tr>
+                <th scope="col">Program</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Language</th>
+                <th scope="col">Tuition / Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Software Engineering</td>
+                <td>4 years</td>
+                <td>English</td>
+                <td>2,600,000 ₸</td>
+              </tr>
+              <tr>
+                <td>Computer Science</td>
+                <td>4 years</td>
+                <td>English</td>
+                <td>2,500,000 ₸</td>
+              </tr>
+              <tr>
+                <td>Cybersecurity</td>
+                <td>4 years</td>
+                <td>English</td>
+                <td>2,700,000 ₸</td>
+              </tr>
+              <tr>
+                <td>Data Science</td>
+                <td>4 years</td>
+                <td>English</td>
+                <td>2,700,000 ₸</td>
+              </tr>
+              <tr>
+                <td>Business Analytics</td>
+                <td>4 years</td>
+                <td>English</td>
+                <td>2,400,000 ₸</td>
+              </tr>
+              <tr>
+                <td>Digital Media &amp; Design</td>
+                <td>4 years</td>
+                <td>English</td>
+                <td>2,300,000 ₸</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
+    <section class="container py-5" id="scholarships">
+      <div class="mb-4">
+        <p class="eyebrow mb-2">FINANCIAL SUPPORT</p>
+        <h2>Scholarships</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Academic Excellence</h3>
+              <p class="card-text">
+                Up to 50% tuition reduction for applicants with outstanding academic results.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">KDK Talent Scholarship</h3>
+              <p class="card-text">
+                Up to 30% tuition reduction for achievements in science,
+                technology, sports or creativity.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Social Support Grant</h3>
+              <p class="card-text">
+                Financial support may be available for eligible students
+                based on individual circumstances.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#admissionsNavbar"
-                    aria-controls="admissionsNavbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
+    <!-- Assignment 4: Task 2 - FAQ Accordion -->
+    <section class="container py-5" id="admissions-faq">
+      <p class="eyebrow mb-2">FREQUENTLY ASKED QUESTIONS</p>
+      <h2>Admissions FAQ</h2>
+      <p>Click a question to show or hide its answer.</p>
+
+      <div class="a4-faq-item">
+        <h3 class="m-0">
+          <button id="faq-q1" class="a4-faq-button" type="button"
+            aria-expanded="false" aria-controls="faq-a1">
+            What documents do I need to apply?
+          </button>
+        </h3>
+        <div id="faq-a1" class="a4-faq-answer" role="region" aria-labelledby="faq-q1">
+          <div class="a4-faq-answer-inner">
+            You generally need identification, proof of secondary education,
+            an academic transcript and a photograph. Examination or English-language
+            results may also be required.
+          </div>
+        </div>
+      </div>
+
+      <div class="a4-faq-item">
+        <h3 class="m-0">
+          <button id="faq-q2" class="a4-faq-button" type="button"
+            aria-expanded="false" aria-controls="faq-a2">
+            How long are bachelor's programs?
+          </button>
+        </h3>
+        <div id="faq-a2" class="a4-faq-answer" role="region" aria-labelledby="faq-q2">
+          <div class="a4-faq-answer-inner">
+            All six listed bachelor's programs last four years and are taught in English.
+          </div>
+        </div>
+      </div>
+
+      <div class="a4-faq-item">
+        <h3 class="m-0">
+          <button id="faq-q3" class="a4-faq-button" type="button"
+            aria-expanded="false" aria-controls="faq-a3">
+            Are scholarships available?
+          </button>
+        </h3>
+        <div id="faq-a3" class="a4-faq-answer" role="region" aria-labelledby="faq-q3">
+          <div class="a4-faq-answer-inner">
+            The website lists Academic Excellence, KDK Talent Scholarship
+            and Social Support Grant opportunities. Eligibility varies.
+          </div>
+        </div>
+      </div>
+
+      <div class="a4-faq-item">
+        <h3 class="m-0">
+          <button id="faq-q4" class="a4-faq-button" type="button"
+            aria-expanded="false" aria-controls="faq-a4">
+            Where can I find tuition information?
+          </button>
+        </h3>
+        <div id="faq-a4" class="a4-faq-answer" role="region" aria-labelledby="faq-q4">
+          <div class="a4-faq-answer-inner">
+            See the tuition table above for the estimated 2026–2027
+            annual costs for each program.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assignment 4: Task 1 - Form Validation -->
+    <section class="kdk-soft-bg py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="admissions-form-card p-4 p-md-5">
+              <p class="eyebrow mb-2">REQUEST INFORMATION</p>
+              <h2 class="mb-3">Interested in KDK University?</h2>
+              <p class="mb-4">
+                Complete the form and tell us which program interests you.
+                This is a demonstration form; it does not send or save your data.
+              </p>
+
+              <form id="admissions-form" novalidate>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="applicantName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="applicantName"
+                      name="applicantName" placeholder="Enter your name"
+                      autocomplete="name" aria-describedby="applicantNameError" required>
+                    <div id="applicantNameError" class="invalid-feedback"></div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="applicantEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="applicantEmail"
+                      name="applicantEmail" placeholder="name@example.com"
+                      autocomplete="email" aria-describedby="applicantEmailError" required>
+                    <div id="applicantEmailError" class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <label for="selectedProgram" class="form-label">Program</label>
+                  <select class="form-select" id="selectedProgram"
+                    name="selectedProgram" aria-describedby="selectedProgramError" required>
+                    <option value="" selected disabled>Choose a program</option>
+                    <option value="software-engineering">Software Engineering</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="business-analytics">Business Analytics</option>
+                    <option value="digital-media">Digital Media &amp; Design</option>
+                  </select>
+                  <div id="selectedProgramError" class="invalid-feedback"></div>
+                </div>
+
+                <div class="row g-3 mt-1">
+                  <div class="col-12 col-md-6">
+                    <label for="applicantPassword" class="form-label">Demo account password</label>
+                    <input type="password" class="form-control" id="applicantPassword"
+                      name="applicantPassword" minlength="8" autocomplete="new-password"
+                      aria-describedby="applicantPasswordError" required>
+                    <div id="applicantPasswordError" class="invalid-feedback"></div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="confirmPassword" class="form-label">Confirm password</label>
+                    <input type="password" class="form-control" id="confirmPassword"
+                      name="confirmPassword" autocomplete="new-password"
+                      aria-describedby="confirmPasswordError" required>
+                    <div id="confirmPasswordError" class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <fieldset class="mt-3">
+                  <legend class="fs-6 fw-bold">Preferred study format</legend>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="studyFormat"
+                      id="onCampus" value="campus" checked>
+                    <label class="form-check-label" for="onCampus">On campus</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="studyFormat"
+                      id="online" value="online">
+                    <label class="form-check-label" for="online">Online</label>
+                  </div>
+                </fieldset>
+
+                <div class="form-check mt-3">
+                  <input class="form-check-input" type="checkbox"
+                    id="admissionUpdates" name="admissionUpdates">
+                  <label class="form-check-label" for="admissionUpdates">
+                    Send me admission updates
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg mt-4">
+                  Request Information
                 </button>
-
-
-                <div
-                    class="collapse navbar-collapse"
-                    id="admissionsNavbar"
-                >
-
-                    <div class="navbar-nav ms-auto">
-
-                        <a class="nav-link" href="index.html">
-                            Home
-                        </a>
-
-                        <a class="nav-link" href="about.html">
-                            About Us
-                        </a>
-
-                        <a class="nav-link" href="programs.html">
-                            Programs
-                        </a>
-
-                        <a
-                            class="nav-link active"
-                            aria-current="page"
-                            href="admissions.html"
-                        >
-                            Admissions
-                        </a>
-
-                        <a class="nav-link" href="campus-life.html">
-                            Campus Life
-                        </a>
-
-                        <a class="nav-link" href="contact.html">
-                            Contact
-                        </a>
-
-                    </div>
-
-                </div>
-
+                <div id="admissions-form-status" class="a4-validation-status"
+                  role="status" aria-live="polite"></div>
+              </form>
             </div>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <!-- ========================================
-             Admissions Hero
-             ======================================== -->
-
-        <section
-            id="admissions-hero"
-            class="page-banner admissions-banner"
-        >
-
-            <img
-                class="banner-image"
-                src="images/kdk-campus-wide.png"
-                alt="KDK University campus"
-            >
-
-            <div class="banner-shade admissions-shade"></div>
-
-
-            <div class="admissions-hero-content">
-
-                <p class="hero-eyebrow">
-                    ADMISSIONS 2026–2027
-                </p>
-
-                <h1>
-                    Your Future Starts Here
-                </h1>
-
-                <p>
-                    Take the first step toward studying at
-                    KDK University. Applications for the
-                    2026–2027 academic year are open.
-                </p>
-
-                <a
-                    class="btn btn-light btn-lg mt-3"
-                    href="#requirements"
-                >
-                    See Requirements
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             Assignment 3 - Task 1
-             Responsive Typography
-             ======================================== -->
-
-        <section class="container py-5">
-
-            <div class="row justify-content-center">
-
-                <div class="col-12 col-lg-8 text-center">
-
-                    <p class="eyebrow mb-2">
-                        ADMISSION ESSENTIALS
-                    </p>
-
-                    <h2 class="assignment3-heading mb-3">
-                        Plan Your Application
-                    </h2>
-
-                    <p class="assignment3-copy mb-0">
-                        Review the requirements, tuition and
-                        scholarship opportunities before
-                        submitting your application.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             Assignment 3 - Bootstrap Cards
-             ======================================== -->
-
-        <section class="kdk-soft-bg py-5">
-
-            <div class="container">
-
-                <div class="row g-4">
-
-                    <!-- Requirements -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <article class="card h-100 shadow-sm">
-
-                            <img
-                                src="images/admission.jpg"
-                                class="card-img-top"
-                                alt="KDK University admissions"
-                            >
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">
-                                    Admission Requirements
-                                </h3>
-
-                                <p class="card-text">
-                                    Check the documents, education
-                                    requirements and examination results
-                                    you may need.
-                                </p>
-
-                                <a
-                                    href="#requirements"
-                                    class="btn btn-primary mt-auto"
-                                >
-                                    View Requirements
-                                </a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-
-                    <!-- Tuition -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <article class="card h-100 shadow-sm">
-
-                            <img
-                                src="images/gallery2.jpg"
-                                class="card-img-top"
-                                alt="Students studying at KDK University"
-                            >
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">
-                                    Tuition Information
-                                </h3>
-
-                                <p class="card-text">
-                                    Compare estimated annual tuition
-                                    for bachelor's programs offered
-                                    by KDK University.
-                                </p>
-
-                                <a
-                                    href="#tuition"
-                                    class="btn btn-primary mt-auto"
-                                >
-                                    View Tuition
-                                </a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-
-                    <!-- Scholarships -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <article class="card h-100 shadow-sm">
-
-                            <img
-                                src="images/scholarship.jpg"
-                                class="card-img-top"
-                                alt="KDK University scholarship opportunities"
-                            >
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h3 class="card-title">
-                                    Scholarships
-                                </h3>
-
-                                <p class="card-text">
-                                    Explore academic, talent and
-                                    social support opportunities
-                                    available to eligible students.
-                                </p>
-
-                                <a
-                                    href="#scholarships"
-                                    class="btn btn-primary mt-auto"
-                                >
-                                    View Scholarships
-                                </a>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             Admission Process
-             Bootstrap List Group
-             ======================================== -->
-
-        <section class="container py-5">
-
-            <div class="mb-4">
-
-                <p class="eyebrow mb-2">
-                    HOW TO APPLY
-                </p>
-
-                <h2>
-                    Admission Process
-                </h2>
-
-            </div>
-
-
-            <ol class="list-group list-group-numbered">
-
-                <li
-                    class="list-group-item
-                           d-flex justify-content-between
-                           align-items-start py-3"
-                >
-
-                    <div class="ms-2 me-auto">
-
-                        <div class="fw-bold">
-                            Choose Your Program
-                        </div>
-
-                        Select the degree that matches
-                        your interests and career goals.
-
-                    </div>
-
-                </li>
-
-
-                <li
-                    class="list-group-item
-                           d-flex justify-content-between
-                           align-items-start py-3"
-                >
-
-                    <div class="ms-2 me-auto">
-
-                        <div class="fw-bold">
-                            Prepare Your Documents
-                        </div>
-
-                        Collect your school certificate,
-                        transcript and identification documents.
-
-                    </div>
-
-                </li>
-
-
-                <li
-                    class="list-group-item
-                           d-flex justify-content-between
-                           align-items-start py-3"
-                >
-
-                    <div class="ms-2 me-auto">
-
-                        <div class="fw-bold">
-                            Submit Your Application
-                        </div>
-
-                        Complete the application and provide
-                        the required information.
-
-                    </div>
-
-                </li>
-
-
-                <li
-                    class="list-group-item
-                           d-flex justify-content-between
-                           align-items-start py-3"
-                >
-
-                    <div class="ms-2 me-auto">
-
-                        <div class="fw-bold">
-                            Complete Admission Requirements
-                        </div>
-
-                        Provide examination results or English
-                        proficiency where required.
-
-                    </div>
-
-                </li>
-
-
-                <li
-                    class="list-group-item
-                           d-flex justify-content-between
-                           align-items-start py-3"
-                >
-
-                    <div class="ms-2 me-auto">
-
-                        <div class="fw-bold">
-                            Receive Your Decision
-                        </div>
-
-                        Successful applicants receive an
-                        admission offer and enrollment instructions.
-
-                    </div>
-
-                </li>
-
-            </ol>
-
-        </section>
-
-
-        <!-- ========================================
-             Assignment 3 - Task 3
-             Bootstrap Two Column Grid
-             ======================================== -->
-
-        <section
-            id="requirements"
-            class="kdk-soft-bg py-5"
-        >
-
-            <div class="container">
-
-                <div class="row g-4 align-items-center">
-
-                    <!-- Column 1 -->
-                    <div class="col-12 col-lg-6">
-
-                        <p class="eyebrow mb-2">
-                            REQUIREMENTS
-                        </p>
-
-                        <h2>
-                            What You Need
-                        </h2>
-
-                        <p>
-                            General requirements for bachelor's
-                            degree applicants:
-                        </p>
-
-
-                        <ul class="list-group list-group-flush">
-
-                            <li class="list-group-item bg-transparent">
-                                Completed secondary education
-                            </li>
-
-                            <li class="list-group-item bg-transparent">
-                                Valid identification document
-                            </li>
-
-                            <li class="list-group-item bg-transparent">
-                                High school certificate or diploma
-                            </li>
-
-                            <li class="list-group-item bg-transparent">
-                                Academic transcript
-                            </li>
-
-                            <li class="list-group-item bg-transparent">
-                                Passport-size photograph
-                            </li>
-
-                            <li class="list-group-item bg-transparent">
-                                Entrance examination results where required
-                            </li>
-
-                            <li class="list-group-item bg-transparent">
-                                English proficiency for
-                                English-taught programs
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <!-- Column 2 -->
-                    <div class="col-12 col-lg-6">
-
-                        <img
-                            src="images/admission.jpg"
-                            class="img-fluid rounded-4 shadow-sm"
-                            alt="Student preparing university admission documents"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             Bootstrap Grid + Button Group
-             ======================================== -->
-
-        <section class="container py-5">
-
-            <div class="row g-4">
-
-                <div class="col-12 col-lg-6">
-
-                    <div class="border rounded-3 p-4 h-100">
-
-                        <p class="eyebrow mb-2">
-                            APPLICATION GUIDE
-                        </p>
-
-                        <h2>
-                            Quick Checklist
-                        </h2>
-
-                        <ul class="mb-0">
-                            <li>Choose a program</li>
-                            <li>Prepare documents</li>
-                            <li>Check requirements</li>
-                            <li>Review tuition</li>
-                            <li>Submit application</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-12 col-lg-6">
-
-                    <div class="border rounded-3 p-4 h-100">
-
-                        <p class="eyebrow mb-2">
-                            BEFORE APPLYING
-                        </p>
-
-                        <h2>
-                            Prepare Carefully
-                        </h2>
-
-                        <p>
-                            Review the admission requirements,
-                            confirm your selected program and prepare
-                            all documents before submitting your
-                            application.
-                        </p>
-
-
-                        <div
-                            class="btn-group mt-3"
-                            role="group"
-                            aria-label="Admission links"
-                        >
-
-                            <a
-                                href="programs.html"
-                                class="btn btn-primary"
-                            >
-                                Programs
-                            </a>
-
-                            <a
-                                href="contact.html"
-                                class="btn btn-outline-primary"
-                            >
-                                Contact
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             Tuition Table
-             Bootstrap Responsive Table
-             ======================================== -->
-
-        <section
-            class="kdk-soft-bg py-5"
-            id="tuition"
-        >
-
-            <div class="container">
-
-                <div class="mb-4">
-
-                    <p class="eyebrow mb-2">
-                        TUITION
-                    </p>
-
-                    <h2>
-                        Program Information
-                    </h2>
-
-                    <p>
-                        Estimated tuition for the
-                        2026–2027 academic year.
-                    </p>
-
-                </div>
-
-
-                <div
-                    class="table-responsive
-                           bg-white border rounded-3"
-                >
-
-                    <table
-                        class="table table-striped
-                               table-hover align-middle mb-0"
-                    >
-
-                        <thead class="table-primary">
-
-                            <tr>
-                                <th scope="col">Program</th>
-                                <th scope="col">Duration</th>
-                                <th scope="col">Language</th>
-                                <th scope="col">Tuition / Year</th>
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-                            <tr>
-                                <td>Software Engineering</td>
-                                <td>4 years</td>
-                                <td>English</td>
-                                <td>2,600,000 ₸</td>
-                            </tr>
-
-                            <tr>
-                                <td>Computer Science</td>
-                                <td>4 years</td>
-                                <td>English</td>
-                                <td>2,500,000 ₸</td>
-                            </tr>
-
-                            <tr>
-                                <td>Cybersecurity</td>
-                                <td>4 years</td>
-                                <td>English</td>
-                                <td>2,700,000 ₸</td>
-                            </tr>
-
-                            <tr>
-                                <td>Data Science</td>
-                                <td>4 years</td>
-                                <td>English</td>
-                                <td>2,700,000 ₸</td>
-                            </tr>
-
-                            <tr>
-                                <td>Business Analytics</td>
-                                <td>4 years</td>
-                                <td>English</td>
-                                <td>2,400,000 ₸</td>
-                            </tr>
-
-                            <tr>
-                                <td>Digital Media &amp; Design</td>
-                                <td>4 years</td>
-                                <td>English</td>
-                                <td>2,300,000 ₸</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             Assignment 3 - Bootstrap Cards
-             Scholarships
-             ======================================== -->
-
-        <section
-            class="container py-5"
-            id="scholarships"
-        >
-
-            <div class="mb-4">
-
-                <p class="eyebrow mb-2">
-                    FINANCIAL SUPPORT
-                </p>
-
-                <h2>
-                    Scholarships
-                </h2>
-
-            </div>
-
-
-            <div class="row g-4">
-
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <article class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="card-title">
-                                Academic Excellence
-                            </h3>
-
-                            <p class="card-text">
-                                Up to 50% tuition reduction
-                                for applicants with outstanding
-                                academic results.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <article class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="card-title">
-                                KDK Talent Scholarship
-                            </h3>
-
-                            <p class="card-text">
-                                Up to 30% tuition reduction for
-                                achievements in science, technology,
-                                sports or creativity.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <article class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="card-title">
-                                Social Support Grant
-                            </h3>
-
-                            <p class="card-text">
-                                Financial support may be available
-                                for eligible students based on
-                                individual circumstances.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             Assignment 3 - Task 9
-             Responsive Bootstrap Form
-             ======================================== -->
-
-        <section class="kdk-soft-bg py-5">
-
-            <div class="container">
-
-                <div class="row justify-content-center">
-
-                    <div class="col-12 col-lg-8">
-
-                        <div class="admissions-form-card p-4 p-md-5">
-
-                            <p class="eyebrow mb-2">
-                                REQUEST INFORMATION
-                            </p>
-
-                            <h2 class="mb-3">
-                                Interested in KDK University?
-                            </h2>
-
-                            <p class="mb-4">
-                                Complete the form and tell us
-                                which program interests you.
-                            </p>
-
-
-                            <form id="admissions-form">
-
-                                <!-- Name + Email -->
-                                <div class="row g-3">
-
-                                    <div class="col-12 col-md-6">
-
-                                        <label
-                                            for="applicantName"
-                                            class="form-label"
-                                        >
-                                            Name
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="applicantName"
-                                            name="applicantName"
-                                            placeholder="Enter your name"
-                                            required
-                                        >
-
-                                    </div>
-
-
-                                    <div class="col-12 col-md-6">
-
-                                        <label
-                                            for="applicantEmail"
-                                            class="form-label"
-                                        >
-                                            Email
-                                        </label>
-
-                                        <input
-                                            type="email"
-                                            class="form-control"
-                                            id="applicantEmail"
-                                            name="applicantEmail"
-                                            placeholder="name@example.com"
-                                            required
-                                        >
-
-                                    </div>
-
-                                </div>
-
-
-                                <!-- Program -->
-                                <div class="mt-3">
-
-                                    <label
-                                        for="selectedProgram"
-                                        class="form-label"
-                                    >
-                                        Program
-                                    </label>
-
-                                    <select
-                                        class="form-select"
-                                        id="selectedProgram"
-                                        name="selectedProgram"
-                                        required
-                                    >
-
-                                        <option value="" selected disabled>
-                                            Choose a program
-                                        </option>
-
-                                        <option value="software-engineering">
-                                            Software Engineering
-                                        </option>
-
-                                        <option value="computer-science">
-                                            Computer Science
-                                        </option>
-
-                                        <option value="cybersecurity">
-                                            Cybersecurity
-                                        </option>
-
-                                        <option value="data-science">
-                                            Data Science
-                                        </option>
-
-                                        <option value="business-analytics">
-                                            Business Analytics
-                                        </option>
-
-                                        <option value="digital-media">
-                                            Digital Media &amp; Design
-                                        </option>
-
-                                    </select>
-
-                                </div>
-
-
-                                <!-- Study format -->
-                                <fieldset class="mt-3">
-
-                                    <legend class="fs-6 fw-bold">
-                                        Preferred study format
-                                    </legend>
-
-
-                                    <div class="form-check">
-
-                                        <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="studyFormat"
-                                            id="onCampus"
-                                            value="campus"
-                                            checked
-                                        >
-
-                                        <label
-                                            class="form-check-label"
-                                            for="onCampus"
-                                        >
-                                            On campus
-                                        </label>
-
-                                    </div>
-
-
-                                    <div class="form-check">
-
-                                        <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="studyFormat"
-                                            id="online"
-                                            value="online"
-                                        >
-
-                                        <label
-                                            class="form-check-label"
-                                            for="online"
-                                        >
-                                            Online
-                                        </label>
-
-                                    </div>
-
-                                </fieldset>
-
-
-                                <!-- Checkbox -->
-                                <div class="form-check mt-3">
-
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        id="admissionUpdates"
-                                    >
-
-                                    <label
-                                        class="form-check-label"
-                                        for="admissionUpdates"
-                                    >
-                                        Send me admission updates
-                                    </label>
-
-                                </div>
-
-
-                                <button
-                                    type="submit"
-                                    class="btn btn-primary btn-lg mt-4"
-                                >
-                                    Request Information
-                                </button>
-
-                            </form>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             CTA
-             ======================================== -->
-
-        <section class="container py-5">
-
-            <div class="kdk-cta text-center p-5 rounded-4">
-
-                <h2 class="text-white">
-                    Have questions about admission?
-                </h2>
-
-                <p class="text-white-50">
-                    Contact our university team for
-                    more information.
-                </p>
-
-                <a
-                    href="contact.html"
-                    class="btn btn-light btn-lg"
-                >
-                    Contact Us
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Keep your current team names here. -->
-
-    <footer>
-
-        <p>
-            <strong>KDK University</strong>
-        </p>
-
-        <p>Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan</p>
-
-        <p>
-            &copy; 2026 KDK University. Student project.
-        </p>
-
-    </footer>
-
-
-    <!-- Bootstrap JavaScript -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    ></script>
-
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assignment 4: Task 5 - Date and Time -->
+    <section class="container py-4">
+      <p class="mb-0">
+        Current local date and time:
+        <time class="a4-clock" data-current-datetime>Loading...</time>
+      </p>
+    </section>
+
+    <section class="container py-5">
+      <div class="kdk-cta text-center p-5 rounded-4">
+        <h2 class="text-white">Have questions about admission?</h2>
+        <p class="text-white-50">Contact our university team for more information.</p>
+        <a href="contact.html" class="btn btn-light btn-lg">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>KDK University</strong></p>
+    <p>Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan</p>
+    <p>&copy; 2026 KDK University. Student project.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/yerkhan.js" defer></script>
 </body>
-
 </html>

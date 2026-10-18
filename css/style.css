@@ -1,1390 +1,951 @@
-/* =========================
-   KDK University
-   Shared stylesheet
-   ========================= */
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #16324f;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #16324f;
+  line-height: 1.6;
 }
-
-h1,
-h2,
-h3 {
-    color: #12345b;
+h1, h2, h3 {
+  color: #12345b;
 }
-
-/* box-sizing: border-box, body margin и margin-top у заголовков
-   и абзацев уже заданы Bootstrap 5 reboot (подключён на всех
-   страницах проекта), поэтому здесь не дублируются. */
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
-
-/* Navigation */
-
 .site-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dcecf8;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcecf8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-
 .navbar {
-    width: min(1120px, 92%);
-    margin: 0 auto;
-    min-height: 72px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
-
 .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #1378bd;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1378bd;
 }
-
 .brand-logo {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
 }
-
 .navbar nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
 }
-
 .navbar a {
-    color: #35536d;
-    font-weight: 600;
+  color: #35536d;
+  font-weight: 600;
 }
-
-.navbar nav a:hover,
-.navbar nav a.active {
-    color: #1597e5;
+.navbar nav a:hover, .navbar nav a.active {
+  color: #1597e5;
 }
-
-
-/* Page banners */
-
 .page-banner {
-    position: relative;
-    width: 100%;
-    height: 390px;
-    overflow: hidden;
-    background-color: #dceef9;
+  position: relative;
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  background-color: #dceef9;
 }
-
 .banner-image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
-
 .programs-banner .banner-image {
-    object-position: center 52%;
+  object-position: center 52%;
 }
-
 .admissions-banner {
-    height: 480px;
+  height: 480px;
 }
-
 .admissions-banner .banner-image {
-    object-position: center 52%;
+  object-position: center 52%;
 }
-
-
-/* ID selectors */
-
 #programs-hero {
-    border-bottom: 4px solid #dff3ff;
+  border-bottom: 4px solid #dff3ff;
 }
-
 #admissions-hero {
-    border-bottom: 4px solid #bfe8ff;
+  border-bottom: 4px solid #bfe8ff;
 }
-
-
-/* Banner Overlay */
-
 .banner-shade {
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(8, 35, 60, 0.06),
-        rgba(8, 35, 60, 0.20) 58%,
-        rgba(8, 35, 60, 0.58)
-    );
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,35,60,.06), rgba(8,35,60,.20) 58%, rgba(8,35,60,.58));
 }
-
 .banner-title {
-    position: absolute;
-    left: 50%;
-    bottom: 34px;
-
-    transform: translateX(-50%);
-
-    width: min(900px, 90%);
-    text-align: center;
-    color: #ffffff;
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  transform: translateX(-50%);
+  width: min(900px, 90%);
+  text-align: center;
+  color: #ffffff;
 }
-
 .banner-title p {
-    margin-bottom: 7px;
-
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+  margin-bottom: 7px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
 }
-
 .banner-title h1 {
-    margin-bottom: 0;
-
-    color: #ffffff;
-
-    font-size: clamp(2.4rem, 5vw, 4.2rem);
-    line-height: 1;
-
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
+  margin-bottom: 0;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1;
+  text-shadow: 0 2px 12px rgba(0,0,0,.22);
 }
-
-
-/* Programs opening text */
-
 .programs-intro {
-    width: min(850px, 88%);
-    margin: 0 auto;
-    padding: 78px 0 58px;
-
-    text-align: center;
+  width: min(850px, 88%);
+  margin: 0 auto;
+  padding: 78px 0 58px;
+  text-align: center;
 }
-
 .programs-intro h2 {
-    margin-bottom: 16px;
-
-    font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
-
 .programs-intro > p:not(.eyebrow) {
-    max-width: 760px;
-
-    margin: 0 auto;
-
-    color: #58758b;
-    font-size: 1.05rem;
+  max-width: 760px;
+  margin: 0 auto;
+  color: #58758b;
+  font-size: 1.05rem;
 }
-
-
-/* Admissions opening */
-
 .admissions-shade {
-    background: linear-gradient(
-        90deg,
-        rgba(8, 35, 60, 0.82) 0%,
-        rgba(8, 35, 60, 0.58) 38%,
-        rgba(8, 35, 60, 0.15) 72%,
-        rgba(8, 35, 60, 0.05) 100%
-    );
+  background: linear-gradient(90deg, rgba(8,35,60,.82) 0%, rgba(8,35,60,.58) 38%, rgba(8,35,60,.15) 72%, rgba(8,35,60,.05) 100%);
 }
-
 .admissions-hero-content {
-    position: absolute;
-
-    left: max(4%, calc((100% - 1120px) / 2));
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: min(560px, 86%);
-    color: #ffffff;
+  position: absolute;
+  left: max(4%, calc((100% - 1120px) / 2));
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(560px, 86%);
+  color: #ffffff;
 }
-
 .admissions-hero-content h1 {
-    margin-bottom: 18px;
-
-    color: #ffffff;
-
-    font-size: clamp(2.7rem, 6vw, 4.8rem);
-    line-height: 1.02;
-
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: clamp(2.7rem, 6vw, 4.8rem);
+  line-height: 1.02;
+  text-shadow: 0 2px 14px rgba(0,0,0,.18);
 }
-
 .admissions-hero-content > p:not(.hero-eyebrow) {
-    max-width: 540px;
-
-    color: #f2f8fc;
-    font-size: 1.08rem;
+  max-width: 540px;
+  color: #f2f8fc;
+  font-size: 1.08rem;
 }
-
 .hero-eyebrow {
-    margin-bottom: 10px;
-
-    color: #d8f1ff;
-
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
+  margin-bottom: 10px;
+  color: #d8f1ff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
 }
-
-
-/* Eyebrow */
-
 .eyebrow {
-    margin-bottom: 10px;
-
-    color: #1597e5;
-
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  color: #1597e5;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
-
-
-/* Buttons */
-
 .button {
-    display: inline-block;
-
-    margin-top: 12px;
-    padding: 12px 22px;
-
-    border-radius: 10px;
-
-    background-color: #1597e5;
-    color: #ffffff;
-
-    font-weight: 700;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background-color: #1597e5;
+  color: #ffffff;
+  font-weight: 700;
 }
-
 .button:hover {
-    background-color: #0d7fca;
+  background-color: #0d7fca;
 }
-
-/* Main sections */
-
 .section {
-    width: min(1120px, 92%);
-    margin: 0 auto;
-    padding: 85px 0;
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  padding: 85px 0;
 }
-
 .soft-section {
-    width: 100%;
-    max-width: none;
-
-    padding-left: max(4%, calc((100% - 1120px) / 2));
-    padding-right: max(4%, calc((100% - 1120px) / 2));
-
-    background-color: #f4fbff;
+  width: 100%;
+  max-width: none;
+  padding-left: max(4%, calc((100% - 1120px) / 2));
+  padding-right: max(4%, calc((100% - 1120px) / 2));
+  background-color: #f4fbff;
 }
-
 .section-heading {
-    max-width: 700px;
-    margin-bottom: 35px;
+  max-width: 700px;
+  margin-bottom: 35px;
 }
-
 .section-heading h2 {
-    margin-bottom: 10px;
-
-    font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
 }
-
-
-/* Program Cards */
-
 .program-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
-
-.program-card,
-.feature-card,
-.info-box,
-.team-card {
-    padding: 26px;
-
-    border: 1px solid #d9ebf7;
-    border-radius: 4px;
-
-    background-color: #ffffff;
+.program-card, .feature-card, .info-box, .team-card {
+  padding: 26px;
+  border: 1px solid #d9ebf7;
+  border-radius: 4px;
+  background-color: #ffffff;
 }
-
-.program-card:hover,
-.feature-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 12px 30px rgba(33, 120, 168, 0.10);
+.program-card:hover, .feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(33,120,168,.10);
 }
-
 .program-card {
-    transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-
 .program-card h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 .program-card ul {
-    padding-left: 20px;
-
-    color: #49677e;
+  padding-left: 20px;
+  color: #49677e;
 }
-
 .program-number {
-    display: inline-block;
-
-    margin-bottom: 18px;
-
-    color: #1597e5;
-
-    font-weight: 800;
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #1597e5;
+  font-weight: 800;
 }
-
 .program-meta {
-    margin-top: 20px;
-    margin-bottom: 0;
-
-    font-weight: 700;
-    color: #1378bd;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #1378bd;
 }
-
-
-/* Feature cards */
-
 .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
-
 .feature-card {
-    transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-
 .feature-card.no-hover:hover {
-    transform: none;
-    box-shadow: none;
+  transform: none;
+  box-shadow: none;
 }
-
-
-/* Admissions */
-
 .steps {
-    margin: 0;
-    padding-left: 28px;
+  margin: 0;
+  padding-left: 28px;
 }
-
 .steps li {
-    margin-bottom: 24px;
-    padding-left: 8px;
+  margin-bottom: 24px;
+  padding-left: 8px;
 }
-
-.steps strong,
+.steps strong, .steps span {
+  display: block;
+}
 .steps span {
-    display: block;
+  color: #58758b;
 }
-
-.steps span {
-    color: #58758b;
-}
-
 .two-column {
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr;
-
-    gap: 40px;
-
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 40px;
+  align-items: start;
 }
-
 .check-list {
-    padding-left: 20px;
+  padding-left: 20px;
 }
-
 .check-list li {
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 }
-
 .info-box {
-    border-top: 5px solid #1597e5;
+  border-top: 5px solid #1597e5;
 }
-
-
-/* Table */
-
 table {
-    width: 100%;
-
-    border-collapse: collapse;
-
-    background-color: #ffffff;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
 }
-
-table th,
-table td {
-    padding: 16px;
-
-    text-align: left;
-
-    border-bottom: 1px solid #e3eff7;
+table th, table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e3eff7;
 }
-
 table th {
-    background-color: #eaf7ff;
-    color: #12345b;
+  background-color: #eaf7ff;
+  color: #12345b;
 }
-
 table tr:last-child td {
-    border-bottom: none;
+  border-bottom: none;
 }
-
-
-/* Team block */
-
 .team-card {
-    display: flex;
-    align-items: center;
-
-    gap: 24px;
-
-    max-width: 720px;
-    margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 720px;
+  margin-bottom: 24px;
 }
-
 .profile-image {
-    width: 115px;
-    height: 115px;
-
-    object-fit: cover;
-
-    border: 5px solid #dff3ff;
-    border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  border: 5px solid #dff3ff;
+  border-radius: 50%;
 }
-
-
-/* CTA */
-
 .cta {
-    width: min(1120px, 92%);
-
-    margin: 0 auto 80px;
-    padding: 55px 30px;
-
-    text-align: center;
-
-    border-radius: 24px;
-
-    background-color: #12345b;
-    color: #ffffff;
+  width: min(1120px, 92%);
+  margin: 0 auto 80px;
+  padding: 55px 30px;
+  text-align: center;
+  border-radius: 24px;
+  background-color: #12345b;
+  color: #ffffff;
 }
-
 .cta h2 {
-    color: #ffffff;
+  color: #ffffff;
 }
-
 .cta p {
-    color: #dcecf8;
+  color: #dcecf8;
 }
-
-
-/* Footer */
-
 footer {
-    padding: 35px 4%;
-
-    text-align: center;
-
-    background-color: #0d2944;
-    color: #dcecf8;
+  padding: 35px 4%;
+  text-align: center;
+  background-color: #0d2944;
+  color: #dcecf8;
 }
-
 footer p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
-
-
-/* Campus Life Hero */
-
 .campus-hero {
-    width: min(1120px, 92%);
-
-    margin: 40px auto 0;
-    padding: 55px 50px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 55px;
-
-    align-items: center;
-
-    background-color: #eaf7ff;
-
-    border-radius: 24px;
+  width: min(1120px, 92%);
+  margin: 40px auto 0;
+  padding: 55px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+  background-color: #eaf7ff;
+  border-radius: 24px;
 }
-
 .campus-hero-text h1 {
-    margin-bottom: 20px;
-
-    font-size: clamp(2.7rem, 5vw, 4.2rem);
-    line-height: 1.05;
+  margin-bottom: 20px;
+  font-size: clamp(2.7rem, 5vw, 4.2rem);
+  line-height: 1.05;
 }
-
 .campus-hero-text > p:not(.eyebrow) {
-    color: #58758b;
-    font-size: 1.05rem;
+  color: #58758b;
+  font-size: 1.05rem;
 }
-
 .campus-hero-image img {
-    width: 100%;
-    height: 300px;
-
-    display: block;
-
-    object-fit: cover;
-
-    border-radius: 18px;
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
 }
-
-
-/* =========================
-   Contact Page
-   ========================= */
-
 .contact-grid {
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 45px;
-
-    align-items: start;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 45px;
+  align-items: start;
 }
-
 .contact-info .info-box {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
-
 .contact-info .info-box h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 .contact-info .info-box p {
-    margin-bottom: 6px;
-
-    color: #58758b;
+  margin-bottom: 6px;
+  color: #58758b;
 }
-
-
-/* Contact Form */
-
 .contact-form-box {
-    padding: 32px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #d9ebf7;
-    border-radius: 16px;
+  padding: 32px;
+  background-color: #ffffff;
+  border: 1px solid #d9ebf7;
+  border-radius: 16px;
 }
-
 .contact-form-box h2 {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
-
 #contact-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
 #contact-form label {
-    margin-bottom: 7px;
-
-    font-weight: 700;
-    color: #12345b;
+  margin-bottom: 7px;
+  font-weight: 700;
+  color: #12345b;
 }
-
-#contact-form input,
-#contact-form select,
+#contact-form input, #contact-form select, #contact-form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 13px 14px;
+  border: 1px solid #c9deec;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #16324f;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
 #contact-form textarea {
-    width: 100%;
-
-    margin-bottom: 20px;
-    padding: 13px 14px;
-
-    border: 1px solid #c9deec;
-    border-radius: 8px;
-
-    background-color: #ffffff;
-    color: #16324f;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+  resize: vertical;
 }
-
-#contact-form textarea {
-    resize: vertical;
+#contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus {
+  outline: none;
+  border-color: #1597e5;
 }
-
-#contact-form input:focus,
-#contact-form select:focus,
-#contact-form textarea:focus {
-    outline: none;
-    border-color: #1597e5;
-}
-
-/* Visit Campus */
-
 .visit-campus {
-    display: grid;
-
-    grid-template-columns: 0.8fr 1.2fr;
-
-    gap: 40px;
-
-    align-items: center;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: center;
 }
-
 .visit-campus-image {
-    width: 100%;
-    height: 280px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
 }
-
-
-/* =========================
-   Assignment 2
-   Flexbox Cards
-   ========================= */
-
 .flex-cards {
-    display: flex;
-
-    gap: 28px;
-
-    align-items: stretch;
-
-    max-width: 1050px;
-
-    margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.flex-cards .feature-card {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.flex-cards .feature-card img {
+  width: 100%;
+  height: 145px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.flex-cards .feature-card p {
+  flex-grow: 1;
+  margin-bottom: 12px;
+}
+.flex-cards .feature-card .button {
+  align-self: flex-start;
+  margin-top: 5px;
+  padding: 9px 16px;
+}
+.flex-cards .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(33,120,168,.16);
+}
+.flex-cards .button {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.flex-cards .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(21,151,229,.25);
+}
+.campus-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+  gap: 24px;
+}
+.grid-header {
+  grid-area: header;
+  padding: 25px;
+  background-color: #eaf7ff;
+  border-radius: 14px;
+}
+.grid-sidebar {
+  grid-area: sidebar;
+  padding: 25px;
+  background-color: #f4fbff;
+  border: 1px solid #d9ebf7;
+  border-radius: 14px;
+}
+.grid-main {
+  grid-area: main;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #d9ebf7;
+  border-radius: 14px;
+}
+.grid-footer {
+  grid-area: footer;
+  padding: 18px 25px;
+  text-align: center;
+  background-color: #12345b;
+  color: #ffffff;
+  border-radius: 14px;
+}
+.grid-footer p {
+  margin: 0;
+}
+.campus-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.gallery-item {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px;
+  background: rgba(10,42,70,.78);
+  color: #ffffff;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.3s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+#campus-moments {
+  scroll-margin-top: 100px;
 }
 
-.flex-cards .feature-card {
+/* Responsive layouts */
+@media (max-width: 850px) {
+  .navbar {
+    padding: 14px 0;
+    flex-direction: column;
+  }
+  .navbar nav {
+    justify-content: center;
+    gap: 12px;
+  }
+  .program-grid, .feature-grid, .two-column {
+    grid-template-columns: 1fr;
+  }
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .page-banner {
+    height: 310px;
+  }
+  .admissions-banner {
+    height: 430px;
+  }
+  .banner-title {
+    bottom: 26px;
+  }
+  .programs-intro {
+    padding: 58px 0 38px;
+  }
+  .admissions-shade {
+    background: linear-gradient(to right, rgba(8,35,60,.78), rgba(8,35,60,.42));
+  }
+  .admissions-hero-content {
+    left: 7%;
+    width: 86%;
+  }
+  .campus-hero {
+    grid-template-columns: 1fr;
+    padding: 35px 25px;
+  }
+  .campus-hero-image img {
+    height: 240px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-box {
+    padding: 24px;
+  }
+  .visit-campus {
+    grid-template-columns: 1fr;
+  }
+  .flex-cards {
+    flex-direction: column;
+  }
+  .campus-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "sidebar" "main" "footer";
+  }
+  .campus-gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery-item {
+    height: 240px;
+  }
+}
+@media (min-width: 992px) {
+  .campus-hero h1 {
+    font-size: 52px;
+  }
+  .campus-hero p {
+    font-size: 20px;
+  }
+  .flex-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .flex-cards .feature-card {
     flex: 1;
-
-    padding: 20px;
-
+  }
+}
+#campusCarousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+}
+#campusCarousel .carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+.card .card-img-top {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+.card .btn {
+  align-self: stretch;
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  .campus-hero h1 {
+    font-size: 42px;
+  }
+  .campus-hero p {
+    font-size: 18px;
+  }
+  .flex-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .flex-cards .feature-card {
+    flex: 0 0 calc(50% - 14px);
+  }
+  .responsive-facilities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .campus-hero h1 {
+    font-size: 32px;
+  }
+  .campus-hero p {
+    font-size: 16px;
+  }
+  .flex-cards {
     display: flex;
     flex-direction: column;
-
-    border-radius: 14px;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.flex-cards .feature-card img {
+  }
+  .flex-cards .feature-card {
     width: 100%;
-    height: 145px;
-
-    margin-bottom: 15px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
+  }
+  #campusCarousel .carousel-item img {
+    height: 280px;
+  }
+  .responsive-facilities {
+    grid-template-columns: 1fr;
+  }
 }
-
-.flex-cards .feature-card p {
-    flex-grow: 1;
-
-    margin-bottom: 12px;
-}
-
-.flex-cards .feature-card .button {
-    align-self: flex-start;
-
-    margin-top: 5px;
-
-    padding: 9px 16px;
-}
-
-.flex-cards .feature-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 12px 28px rgba(33, 120, 168, 0.16);
-}
-
-.flex-cards .button {
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.flex-cards .button:hover {
-    transform: translateY(-2px);
-
-    box-shadow: 0 6px 14px rgba(21, 151, 229, 0.25);
-}
-
-
-/* =========================
-   Assignment 2
-   Grid Areas
-   ========================= */
-
-.campus-layout {
-    display: grid;
-
-    grid-template-columns: 240px 1fr;
-
-    grid-template-areas:
-        "header header"
-        "sidebar main"
-        "footer footer";
-
-    gap: 24px;
-}
-
-.grid-header {
-    grid-area: header;
-
-    padding: 25px;
-
-    background-color: #eaf7ff;
-
-    border-radius: 14px;
-}
-
-.grid-sidebar {
-    grid-area: sidebar;
-
-    padding: 25px;
-
-    background-color: #f4fbff;
-
-    border: 1px solid #d9ebf7;
-    border-radius: 14px;
-}
-
-.grid-main {
-    grid-area: main;
-
-    padding: 30px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #d9ebf7;
-    border-radius: 14px;
-}
-
-.grid-footer {
-    grid-area: footer;
-
-    padding: 18px 25px;
-
-    text-align: center;
-
-    background-color: #12345b;
-    color: #ffffff;
-
-    border-radius: 14px;
-}
-
-.grid-footer p {
-    margin: 0;
-}
-
-
-/* =========================
-   Assignment 2
-   Grid Image Gallery
-   ========================= */
-
-.campus-gallery {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.gallery-item {
-    position: relative;
-
-    height: 220px;
-
-    overflow: hidden;
-
-    border-radius: 14px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition: transform 0.3s ease;
-}
-
-.gallery-caption {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 18px;
-
-    background: rgba(10, 42, 70, 0.78);
-
-    color: #ffffff;
-
-    font-weight: 700;
-
-    opacity: 0;
-
-    transform: translateY(100%);
-
-    transition: 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-item:hover .gallery-caption {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-#campus-moments {
-    scroll-margin-top: 100px;
-}
-
-
-/* =========================
-   Responsive
-   ========================= */
-
-@media (max-width: 850px) {
-
-    .navbar {
-        padding: 14px 0;
-
-        flex-direction: column;
-    }
-
-    .navbar nav {
-        justify-content: center;
-
-        gap: 12px;
-    }
-
-    .program-grid,
-    .feature-grid,
-    .two-column {
-        grid-template-columns: 1fr;
-    }
-
-    .team-card {
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-    .page-banner {
-        height: 310px;
-    }
-
-    .admissions-banner {
-        height: 430px;
-    }
-
-    .banner-title {
-        bottom: 26px;
-    }
-
-    .programs-intro {
-        padding: 58px 0 38px;
-    }
-
-    .admissions-shade {
-        background: linear-gradient(
-            to right,
-            rgba(8, 35, 60, 0.78),
-            rgba(8, 35, 60, 0.42)
-        );
-    }
-
-    .admissions-hero-content {
-        left: 7%;
-
-        width: 86%;
-    }
-
-    .campus-hero {
-        grid-template-columns: 1fr;
-
-        padding: 35px 25px;
-    }
-
-    .campus-hero-image img {
-        height: 240px;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form-box {
-        padding: 24px;
-    }
-
-    .visit-campus {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* Assignment 2 Flexbox */
-
-    .flex-cards {
-        flex-direction: column;
-    }
-
-
-    /* Assignment 2 Grid Areas */
-
-    .campus-layout {
-        grid-template-columns: 1fr;
-
-        grid-template-areas:
-            "header"
-            "sidebar"
-            "main"
-            "footer";
-    }
-
-
-    /* Assignment 2 Gallery */
-
-    .campus-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-item {
-        height: 240px;
-    }
-}
-
-/* =========================================================
-   Assignment 3 - Task 1: Responsive Typography
-   Assignment 3 - Task 2: Responsive Card Group
-   Правила сгруппированы по брейкпоинтам (Desktop здесь,
-   Tablet и Mobile — ниже), чтобы не дублировать @media.
-   ========================================================= */
-
-/* Desktop */
-@media (min-width: 992px) {
-
-    /* Task 1: Responsive Typography */
-    .campus-hero h1 {
-        font-size: 52px;
-    }
-
-    .campus-hero p {
-        font-size: 20px;
-    }
-
-    /* Task 2: Responsive Card Group */
-    .flex-cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .flex-cards .feature-card {
-        flex: 1;
-    }
-}
-
-/* Assignment 3 - Bootstrap Carousel */
-#campusCarousel {
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 14px;
-    overflow: hidden;
-}
-
-#campusCarousel .carousel-item img {
-    height: 500px;
-    object-fit: cover;
-}
-
-/* Assignment 3 - Bootstrap Cards */
-.card .card-img-top {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
-
-.card .btn {
-    align-self: stretch;
-}
-
-/* =========================================================
-   Assignment 3 - Task 2: Responsive Card Group (facilities)
-   Базовый layout берётся из .feature-grid, ниже — только
-   брейкпоинты. Медиазапросы сгруппированы по брейкпоинтам.
-   ========================================================= */
-
-/* Tablet */
-@media (min-width: 577px) and (max-width: 991px) {
-
-    /* Task 1: Responsive Typography */
-    .campus-hero h1 {
-        font-size: 42px;
-    }
-
-    .campus-hero p {
-        font-size: 18px;
-    }
-
-    /* Task 2: Responsive Card Group */
-    .flex-cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .flex-cards .feature-card {
-        flex: 0 0 calc(50% - 14px);
-    }
-
-    /* Facilities: 2 cards per row */
-    .responsive-facilities {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-
-    /* Task 1: Responsive Typography */
-    .campus-hero h1 {
-        font-size: 32px;
-    }
-
-    .campus-hero p {
-        font-size: 16px;
-    }
-
-    /* Task 2: Responsive Card Group */
-    .flex-cards {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .flex-cards .feature-card {
-        width: 100%;
-    }
-
-    /* Bootstrap carousel */
-    #campusCarousel .carousel-item img {
-        height: 280px;
-    }
-
-    /* Facilities: 1 card per row */
-    .responsive-facilities {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Assignment 3 - Fix Bootstrap Checkbox */
-
 #contact-form .form-check {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
 #contact-form input.form-check-input {
-    appearance: auto;
-    -webkit-appearance: checkbox;
-    width: 16px;
-    height: 16px;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
-    border-radius: 3px;
-    cursor: pointer;
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  width: 16px;
+  height: 16px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 3px;
+  cursor: pointer;
 }
-
 #contact-form .form-check-label {
-    margin: 0;
-    cursor: pointer;
+  margin: 0;
+  cursor: pointer;
 }
 
-/* =========================================================
-   ASSIGNMENT 3
-   PROGRAMS + ADMISSIONS
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   Bootstrap Navbar Fix
-
-   The project already had a custom .navbar class before
-   Bootstrap was introduced. These rules prevent the old
-   navbar styles from breaking the Bootstrap navbar.
-   --------------------------------------------------------- */
-
+/* Existing Bootstrap styles */
 .assignment3-navbar {
-    width: 100%;
-    margin: 0;
-    min-height: 72px;
-    gap: 0;
+  width: 100%;
+  margin: 0;
+  min-height: 72px;
+  gap: 0;
 }
-
 .assignment3-navbar .navbar-brand {
-    color: #1378bd;
+  color: #1378bd;
 }
-
 .assignment3-navbar .nav-link {
-    color: #35536d;
-    font-weight: 600;
+  color: #35536d;
+  font-weight: 600;
 }
-
-.assignment3-navbar .nav-link:hover,
-.assignment3-navbar .nav-link.active {
-    color: #1597e5;
+.assignment3-navbar .nav-link:hover, .assignment3-navbar .nav-link.active {
+  color: #1597e5;
 }
-
-
-/* ---------------------------------------------------------
-   Assignment 3 - Task 1
-   Responsive Typography
-   --------------------------------------------------------- */
-
-/* Mobile */
-
 .assignment3-heading {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
-
 .assignment3-copy {
-    font-size: 0.95rem;
+  font-size: 0.95rem;
 }
-
-
-/* Tablet */
-
 @media (min-width: 577px) and (max-width: 991px) {
-
-    .assignment3-heading {
-        font-size: 2.2rem;
-    }
-
-    .assignment3-copy {
-        font-size: 1.05rem;
-    }
+  .assignment3-heading {
+    font-size: 2.2rem;
+  }
+  .assignment3-copy {
+    font-size: 1.05rem;
+  }
 }
-
-
-/* Desktop */
-
 @media (min-width: 992px) {
-
-    .assignment3-heading {
-        font-size: 2.6rem;
-    }
-
-    .assignment3-copy {
-        font-size: 1.15rem;
-    }
+  .assignment3-heading {
+    font-size: 2.6rem;
+  }
+  .assignment3-copy {
+    font-size: 1.15rem;
+  }
 }
-
-
-/* ---------------------------------------------------------
-   Assignment 3 - Task 2
-   Responsive Card Group
-
-   IMPORTANT:
-   This layout intentionally uses normal CSS Media Queries
-   instead of Bootstrap because Task 2 requires CSS only.
-   --------------------------------------------------------- */
-
 .mq-section {
-    width: min(1120px, 92%);
-    margin: 0 auto;
-    padding: 70px 0;
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  padding: 70px 0;
 }
-
 .mq-section-heading {
-    max-width: 700px;
-    margin-bottom: 32px;
+  max-width: 700px;
+  margin-bottom: 32px;
 }
-
 .mq-card-group {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
-
 .mq-card {
-    padding: 26px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #d9ebf7;
-    border-radius: 14px;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #d9ebf7;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .mq-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(33, 120, 168, 0.10);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(33,120,168,.10);
 }
-
 .mq-card h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 .mq-card p {
-    margin-bottom: 0;
-    color: #58758b;
+  margin-bottom: 0;
+  color: #58758b;
 }
-
-
-/* Tablet: 2 cards per row */
-
 @media (min-width: 577px) and (max-width: 991px) {
-
-    .mq-card-group {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .mq-card-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-
-/* Mobile: cards stacked vertically */
-
 @media (max-width: 576px) {
-
-    .mq-section {
-        padding: 50px 0;
-    }
-
-    .mq-card-group {
-        grid-template-columns: 1fr;
-    }
+  .mq-section {
+    padding: 50px 0;
+  }
+  .mq-card-group {
+    grid-template-columns: 1fr;
+  }
 }
-
-
-/* ---------------------------------------------------------
-   Light Background Section
-   Spacing is handled with Bootstrap utilities such as py-5.
-   --------------------------------------------------------- */
-
 .kdk-soft-bg {
-    background-color: #f4fbff;
+  background-color: #f4fbff;
 }
-
-
-/* ---------------------------------------------------------
-   Assignment 3 - Bootstrap Carousel
-   --------------------------------------------------------- */
-
 .assignment3-carousel {
-    max-width: 1000px;
-    margin: 0 auto;
-
-    overflow: hidden;
-
-    border-radius: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
 }
-
 .assignment3-carousel .carousel-item img {
-    height: 500px;
-    object-fit: cover;
+  height: 500px;
+  object-fit: cover;
 }
-
-
-/* Mobile carousel */
-
 @media (max-width: 576px) {
-
-    .assignment3-carousel .carousel-item img {
-        height: 280px;
-    }
+  .assignment3-carousel .carousel-item img {
+    height: 280px;
+  }
 }
-
-
-/* ---------------------------------------------------------
-   Admissions Bootstrap Form
-   --------------------------------------------------------- */
-
 .admissions-form-card {
-    background-color: #ffffff;
-
-    border: 1px solid #d9ebf7;
-    border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d9ebf7;
+  border-radius: 16px;
 }
-
-
-/* Better visible focus for accessibility */
-
-#admissions-form .form-control:focus,
-#admissions-form .form-select:focus,
-#admissions-form .form-check-input:focus {
-    border-color: #1597e5;
-
-    box-shadow:
-        0 0 0 0.25rem
-        rgba(21, 151, 229, 0.15);
+#admissions-form .form-control:focus, #admissions-form .form-select:focus, #admissions-form .form-check-input:focus {
+  border-color: #1597e5;
+  box-shadow: 0 0 0 0.25rem rgba(21,151,229,.15);
 }
-
-
-/* ---------------------------------------------------------
-   Assignment 3 CTA
-   --------------------------------------------------------- */
-
 .kdk-cta {
-    background-color: #12345b;
+  background-color: #12345b;
+}
+
+/* Assignment 4: Programs and Admissions */
+body.a4-programs {
+  transition: background-color 0.35s ease;
+}
+.a4-programs .a4-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.a4-programs .a4-clock, .a4-admissions .a4-clock {
+  display: inline-block;
+  color: #285474;
+  font-weight: 600;
+}
+
+/* Task 2: FAQ Accordion */
+.a4-admissions .a4-faq-item {
+  margin-bottom: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #d9ebf7;
+  border-radius: 12px;
+}
+.a4-admissions .a4-faq-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  padding: 18px 20px;
+  border: 0;
+  background-color: #ffffff;
+  color: #12345b;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.a4-admissions .a4-faq-button::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.a4-admissions .a4-faq-item.is-open .a4-faq-button::after {
+  transform: rotate(45deg);
+}
+.a4-admissions .a4-faq-button:hover {
+  background-color: #f4fbff;
+}
+.a4-admissions .a4-faq-button:focus-visible {
+  outline: 3px solid #1597e5;
+  outline-offset: -3px;
+}
+.a4-admissions .a4-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.a4-admissions .a4-faq-answer-inner {
+  padding: 0 20px 18px;
+  color: #35536d;
+}
+
+/* Task 3: Popup Contact Form */
+.a4-programs .a4-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgba(8,35,60,.68);
+}
+.a4-programs .a4-modal[hidden] {
+  display: none;
+}
+.a4-programs .a4-modal-dialog {
+  position: relative;
+  width: min(100%, 530px);
+  max-height: calc(100vh - 40px);
+  padding: 28px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.28);
+}
+.a4-programs .a4-modal-dialog h2 {
+  padding-right: 25px;
+}
+.a4-programs .a4-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  color: #12345b;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.a4-programs .a4-close:focus-visible {
+  outline: 3px solid #1597e5;
+  outline-offset: 2px;
+}
+body.a4-programs.a4-modal-open {
+  overflow: hidden;
+}
+.a4-programs .a4-popup-status:empty,
+.a4-admissions .a4-validation-status:empty {
+  display: none;
+}
+@media (max-width: 576px) {
+  .a4-programs .a4-modal-dialog {
+    padding: 22px 18px;
+  }
+  .a4-programs .a4-tools {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.a4-programs,
+  .a4-admissions .a4-faq-answer,
+  .a4-admissions .a4-faq-button::after {
+    transition: none;
+  }
 }
