@@ -502,6 +502,16 @@
 
         </section>
 
+<!-- Assignment 4 - Task 4: Background Color -->
+<section class="container text-center my-5">
+    <h2>Customize Your Campus Experience</h2>
+    <p>Click the button to change the background color.</p>
+
+    <button type="button" id="change-bg" class="btn btn-primary">
+        Change Background Color
+    </button>
+</section>
+
         <!-- Contact CTA -->
         <section class="cta">
 
@@ -512,11 +522,53 @@
                 campus activities and student opportunities.
             </p>
 
-            <a href="contact.html" class="button">Contact Us</a>
+            <button type="button" class="button" id="open-popup"> Contact Us </button>
 
         </section>
 
     </main>
+
+<!-- Assignment 4 - Task 3: Popup Form -->
+<div class="popup-overlay" id="contact-popup">
+
+    <div class="popup-content" role="dialog"
+         aria-modal="true" aria-labelledby="popup-title">
+
+        <button type="button" class="popup-close"
+                id="close-popup" aria-label="Close popup">
+            &times;
+        </button>
+
+        <h2 id="popup-title">Contact KDK University</h2>
+        <p>Have a question about campus life? Send us a message!</p>
+
+        <form id="popup-form">
+            <label for="popup-name">Your Name</label>
+            <input type="text" id="popup-name"
+                   placeholder="Enter your name" required>
+
+            <label for="popup-email">Email Address</label>
+            <input type="email" id="popup-email"
+                   placeholder="Enter your email" required>
+
+            <label for="popup-message">Your Message</label>
+            <textarea id="popup-message"
+                      placeholder="Write your message" required></textarea>
+
+            <button type="submit" class="btn btn-primary">
+                Send Message
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Assignment 4 - Task 5: Current Date and Time -->
+<section class="container text-center my-4">
+    <h3>Current Date & Time</h3>
+    <p id="current-datetime" aria-live="off"></p>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -535,5 +587,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/akylzhan.js"></script>
 </body>
 </html>

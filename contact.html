@@ -94,7 +94,7 @@
                     <h2>Contact Form</h2>
 
                     <!-- Assignment 3 - Task 9: Bootstrap Form -->
-                    <form id="contact-form">
+                    <form id="contact-form" novalidate>
 
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
@@ -137,6 +137,31 @@
         </select>
     </div>
 
+    <!-- Assignment 4: Password Validation -->
+<div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="At least 8 characters"
+        required
+    >
+</div>
+
+<div class="mb-3">
+    <label for="confirm-password" class="form-label">
+        Confirm Password
+    </label>
+    <input
+        type="password"
+        class="form-control"
+        id="confirm-password"
+        placeholder="Repeat your password"
+        required
+    >
+</div>
+
     <div class="mb-3">
         <label for="message" class="form-label">Message</label>
         <textarea
@@ -160,6 +185,8 @@
             Send me university updates
         </label>
     </div>
+
+<p id="form-message" aria-live="polite"></p>
 
     <button type="submit" class="btn btn-primary">
         Send Message
@@ -199,6 +226,43 @@
 
 </section>
 
+<section class="section">
+    <div class="section-heading">
+        <p class="eyebrow mb-2">FREQUENTLY ASKED QUESTIONS</p>
+        <h2>Contact FAQ</h2>
+    </div>
+
+    <div class="faq">
+
+    <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+            How can I apply to KDK University?
+        </button>
+        <div class="faq-answer">
+            <p>Visit our Admissions page for application details.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+            Where is KDK University located?
+        </button>
+        <div class="faq-answer">
+            <p>Our campus is located in Astana, Kazakhstan.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+            How can I contact the admissions office?
+        </button>
+        <div class="faq-answer">
+            <p>You can use our contact form or email the admissions office.</p>
+        </div>
+    </div>
+</div>
+</section>
+
     </main>
 
 
@@ -217,6 +281,7 @@
 
     </footer>
 
+<script src="js/akylzhan.js"></script>
 </body>
 
 </html>
