@@ -1106,3 +1106,22 @@ body.a4-programs.a4-modal-open {
     min-height: 100px;
     resize: vertical;
 }
+
+.campus-page .soft-section,
+.campus-page .section {
+    background-color: transparent;
+}
+
+.campus-page {
+    transition: background-color 0.5s;
+}
+
+.campus-page .navbar {
+    border-radius: 15px;
+    box-shadow: none;
+    border: none;
+}
+
+.navbar .nav-link.active {
+    color: #009dff;
+}
