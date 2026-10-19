@@ -428,8 +428,27 @@ body {
 /* Assignment 4 — Task 2: FAQ answers */
 .faq-answer {
   height: 0;
+  /* This accordion animates height, not the shared FAQ's max-height/opacity. */
+  max-height: none;
+  opacity: 1;
+  padding: 0 24px;
+  border: 0;
   overflow: hidden;
   transition: height 0.3s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 12px;
+}
+
+.faq-item .faq-question:hover,
+.faq-item .faq-question:focus-visible,
+.faq-item .faq-question:active {
+  color: #123b64;
+}
+
+.faq-item.is-open .faq-question::after {
+  content: "\2212";
 }
 
 /* Assignment 4 - Task 3: Popup subscription form */
