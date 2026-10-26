@@ -48,6 +48,8 @@
     </div>
 </nav>
 
+
+
     <main>
 
   <!-- Campus Life Hero -->
@@ -255,6 +257,18 @@
                     </p>
                 </div>
 
+            </div>
+
+            <div class="text-center mt-4">
+                <button id="read-more-btn" class="btn btn-primary" type="button">
+                    Read More
+                </button>
+
+                <p id="extra-campus-info" hidden class="mt-3">
+                    KDK University also offers student workshops,
+                    collaborative learning areas, and community events
+                    to help students develop their skills.
+                </p>
             </div>
 
         </section>
@@ -526,6 +540,103 @@
 
         </section>
 
+
+        <section class="section campus-rating">
+            <h2>Rate Your Campus Experience</h2>
+            <p>How would you rate student life at KDK University?</p>
+
+            <div id="rating-stars">
+                <button class="rating-star" data-rating="1">★</button>
+                <button class="rating-star" data-rating="2">★</button>
+                <button class="rating-star" data-rating="3">★</button>
+                <button class="rating-star" data-rating="4">★</button>
+                <button class="rating-star" data-rating="5">★</button>
+            </div>
+
+            <p id="rating-result">Click a star to rate!</p>
+        </section>
+
+
+        <section class="section theme-section">
+            <h2>Choose Your Theme</h2>
+            <p>Switch between light and dark mode.</p>
+
+            <button id="theme-toggle" type="button">
+                Switch to Dark Mode
+            </button>
+        </section>
+
+<!-- Assignment 5 - Task 6: Callback Functions -->
+<section class="section text-center">
+    <h2>Register for a Campus Event</h2>
+    <p>Choose an event and enter your name.</p>
+
+    <div class="mx-auto" style="max-width: 400px;">
+        <input
+            type="text"
+            id="event-name"
+            class="form-control mb-3"
+            placeholder="Your name"
+        >
+
+        <select id="event-choice" class="form-select mb-3">
+            <option value="">Select an event</option>
+            <option value="Sports Day">Sports Day</option>
+            <option value="Tech Workshop">Tech Workshop</option>
+            <option value="Student Festival">Student Festival</option>
+        </select>
+
+        <button id="event-register" class="btn btn-primary" type="button">
+            Register
+        </button>
+
+        <p id="event-result" class="mt-3" aria-live="polite"></p>
+    </div>
+</section>
+
+<section class="section text-center">
+    <h2>Welcome to KDK University</h2>
+    <p id="time-greeting"></p>
+</section>
+
+<!-- Assignment 5 - Task 8: JavaScript Objects -->
+<section class="section text-center">
+    <h2>Campus Information</h2>
+    <p>Learn more about our university campus.</p>
+
+    <button id="campus-info-btn" class="btn btn-primary" type="button">
+        Show Campus Information
+    </button>
+
+    <div id="campus-info-result" class="mt-3"></div>
+</section>
+
+<!-- Assignment 5 - Task 9: Arrays and Loops -->
+<section class="section text-center">
+    <h2>Campus Activities</h2>
+    <p>Explore student activities at KDK University.</p>
+
+    <button id="activities-btn" class="btn btn-primary" type="button">
+        Show Activities
+    </button>
+
+    <div id="activities-list" class="mt-4"></div>
+</section>
+
+<!-- Assignment 5 - Task 10: Sounds and Animations -->
+<section class="section text-center">
+    <h2>Celebrate Campus Life 🎉</h2>
+    <p>Click the button for a surprise!</p>
+
+    <button id="celebrate-btn" class="btn btn-primary" type="button">
+        Celebrate!
+    </button>
+
+    <p id="celebrate-message" aria-live="polite">
+        Welcome to KDK University!
+    </p>
+</section>
+
     </main>
 
 <!-- Assignment 4 - Task 3: Popup Form -->
@@ -568,6 +679,11 @@
 <section class="container text-center my-4">
     <h3>Current Date & Time</h3>
     <p id="current-datetime" aria-live="off"></p>
+    <button id="show-time-btn" class="btn btn-primary" type="button">
+        Show Current Time
+    </button>
+
+    <p id="clicked-time" class="mt-3"></p>
 </section>
 
     <!-- Footer -->
