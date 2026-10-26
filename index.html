@@ -11,6 +11,7 @@
     <!-- Project styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/allazhar.css">
+    <link rel="stylesheet" href="css/allazhar-assignment5.css">
 </head>
 
 <body>
@@ -47,6 +48,8 @@
     </nav>
 
     <section class="container py-4">
+
+        <p><a href="#visitKdk">Explore KDK and plan a visit</a></p>
 
         <!-- Assignment 4 - Task 4: Change background -->
         <button type="button" class="btn btn-primary" id="changeBackground">
@@ -144,6 +147,64 @@
     </section>
 
     <main>
+
+        <!-- Assignment 5 - Kuat Allazhar: DOM, events, data, sound and animation -->
+        <section id="visitKdk" class="a5-experience" aria-labelledby="a5Title">
+            <h2 id="a5Title">Explore KDK. Plan your visit.</h2>
+            <p class="a5-intro">Take a look around campus, then build your own visit plan in three simple steps.</p>
+            <div class="a5-layout">
+                <div class="a5-gallery">
+                    <figure>
+                        <img id="a5MainImage" class="a5-main-image" src="images/Campus2All.jpg" alt="KDK University campus buildings">
+                        <figcaption id="a5PhotoCaption" aria-live="polite">1 / 3 - Explore our campus</figcaption>
+                    </figure>
+                    <div id="a5Thumbnails" class="a5-thumbnails" role="group" aria-label="Choose a campus photo"></div>
+                    <p class="a5-note">Choose a thumbnail to see a different part of university life.</p>
+                </div>
+                <div class="a5-planner">
+                    <form id="a5VisitForm" novalidate>
+                        <p id="a5Progress" class="a5-progress" aria-live="polite">Step 1 of 3</p>
+                        <div class="a5-step">
+                            <h3>Your details</h3>
+                            <label for="a5VisitorName">Name</label>
+                            <input id="a5VisitorName" name="visitorName" type="text" autocomplete="name" maxlength="80" required>
+                            <label for="a5VisitorEmail">Email</label>
+                            <input id="a5VisitorEmail" name="visitorEmail" type="email" autocomplete="email" maxlength="160" required>
+                        </div>
+                        <div class="a5-step" hidden>
+                            <h3>What would you like to explore?</h3>
+                            <label for="a5VisitInterest">Your interest</label>
+                            <select id="a5VisitInterest" name="visitInterest">
+                                <option>Campus tour</option>
+                                <option>Library and study spaces</option>
+                                <option>Sports and student life</option>
+                            </select>
+                            <p class="a5-note">You can go back at any time. Your entries stay in the form.</p>
+                        </div>
+                        <div class="a5-step" hidden>
+                            <h3 tabindex="-1">Review your plan</h3>
+                            <p id="a5Review"></p>
+                            <p class="a5-note">Check your details, then select Create plan.</p>
+                        </div>
+                        <p id="a5Error" class="a5-error" role="alert"></p>
+                        <div class="a5-actions">
+                            <button id="a5Back" class="a5-button a5-button-secondary" type="button" hidden>Back</button>
+                            <button id="a5Next" class="a5-button" type="button">Next</button>
+                            <button id="a5Finish" class="a5-button" type="submit" hidden>Create plan</button>
+                            <button id="a5Reset" class="a5-button a5-button-secondary" type="button">Reset</button>
+                        </div>
+                        <div class="a5-sound-controls">
+                            <label><input id="a5SoundEnabled" type="checkbox" checked> Sound on completion</label>
+                            <button id="a5PlaySound" class="a5-button a5-button-secondary" type="button">Play sound</button>
+                        </div>
+                        <p id="a5SoundMessage" class="a5-note" role="status"></p>
+                        <p id="a5Result" class="a5-success" tabindex="-1" role="status" hidden></p>
+                        <p class="a5-note">Preview only. Your details stay on this page; this form does not send a booking.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Assignment 3 - Task 1: Responsive Typography -->
         <section id="home-hero" class="home-hero">
@@ -285,5 +346,6 @@
     <!-- Bootstrap JavaScript is required for the navbar toggler -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/allazhar.js"></script>
+    <script src="js/allazhar-assignment5.js"></script>
 </body>
 </html>

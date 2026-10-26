@@ -1,0 +1,103 @@
+/* Assignment 5 - styles for Allazhar's Home and About components only. */
+.a5-experience {
+  max-width: 1120px;
+  margin: 32px auto;
+  padding: 28px;
+  background: #f4fbff;
+  border: 1px solid #d9ebf7;
+  border-radius: 16px;
+}
+.a5-experience [hidden] { display: none !important; }
+.a5-experience h2 { margin: 0 0 8px; }
+.a5-intro { margin-bottom: 24px; color: #35536d; }
+.a5-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.a5-gallery, .a5-planner { min-width: 0; }
+.a5-gallery figure { margin: 0; }
+.a5-main-image {
+  width: 100%;
+  height: 275px;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.a5-gallery figcaption { min-height: 32px; padding-top: 8px; font-weight: 600; }
+.a5-thumbnails { display: flex; gap: 10px; margin-top: 10px; }
+.a5-thumbnail {
+  flex: 1;
+  min-width: 0;
+  padding: 3px;
+  background: white;
+  border: 3px solid #d9ebf7;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.a5-thumbnail img { width: 100%; height: 76px; object-fit: cover; border-radius: 5px; }
+.a5-experience button:focus-visible,
+.a5-experience input:focus-visible,
+.a5-experience select:focus-visible,
+.assignment3-navbar .nav-link:focus-visible {
+  outline: 3px solid #1378bd;
+  outline-offset: 3px;
+}
+.a5-planner { padding: 20px; background: white; border: 1px solid #d9ebf7; border-radius: 12px; }
+.a5-progress { color: #35536d; font-weight: 700; margin: 0 0 12px; }
+.a5-step { min-height: 195px; animation: a5StepEnter 0.25s ease; }
+.a5-step h3 { font-size: 1.25rem; margin: 0 0 12px; }
+.a5-step label { display: block; font-weight: 600; margin-top: 8px; }
+.a5-step input, .a5-step select {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #8da8bc;
+  border-radius: 7px;
+  background: white;
+  color: #16324f;
+  font: inherit;
+}
+.a5-error { min-height: 24px; color: #a61c2b; margin: 8px 0; }
+.a5-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.a5-button {
+  padding: 8px 16px;
+  border: 1px solid #1378bd;
+  border-radius: 7px;
+  background: #1378bd;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.a5-button:hover { background: #0d5b91; transform: translateY(-2px); }
+.a5-button-secondary { background: white; color: #0d5b91; }
+.a5-button-secondary:hover { background: #eaf7ff; }
+.a5-sound-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.a5-sound-controls label { display: flex; align-items: center; gap: 6px; font-size: 0.9rem; }
+.a5-note { color: #496579; font-size: 0.9rem; margin: 12px 0 0; }
+.a5-success {
+  margin: 16px 0 0;
+  padding: 14px;
+  color: #176238;
+  background: #edf9f0;
+  border: 1px solid #a6cfb2;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+  animation: a5StepEnter 0.35s ease;
+}
+@keyframes a5StepEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 767px) {
+  .a5-experience { margin: 24px 12px; padding: 18px; }
+  .a5-layout { grid-template-columns: 1fr; gap: 22px; }
+  .a5-main-image { height: 230px; }
+  .a5-planner { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .a5-experience *, .a5-experience *::before, .a5-experience *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

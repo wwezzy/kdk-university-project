@@ -1,0 +1,57 @@
+KDK University - Assignment 5
+Advanced JavaScript and DOM Manipulation
+
+Team: theboys
+Group: SE-2515
+Submitted by: Kuat Allazhar
+Team members: Kuat Allazhar, Dautbekov Yerkhan, Khafiz Akylzhan
+
+Allazhar's pages: index.html (Home) and about.html (About Us).
+Both pages contain the same Assignment 5 gallery and visit planner.
+Other team members' source files have been preserved.
+
+RUN
+Open this folder in VS Code. Right-click index.html and select
+Open with Live Server. Open about.html to check the second page.
+The website is static and has no installation or build step.
+
+DEPLOYED WEBSITE
+https://wwezzy.github.io/kdk-university-project/
+https://wwezzy.github.io/kdk-university-project/about.html
+Repository: https://github.com/wwezzy/kdk-university-project
+
+NEW SOURCE FILES
+js/allazhar-assignment5.js - gallery, keyboard navigation, visit planner, sound.
+css/allazhar-assignment5.css - scoped responsive styles and animations.
+sounds/kdk-notification.wav - original local two-note notification.
+
+REQUIREMENT MAP
+1. DOM: getElementById, querySelectorAll, textContent, src/alt/aria attributes.
+   A for loop creates three thumbnail buttons from an array of photo objects.
+   showCampusPhoto updates the image, caption and selected button styles.
+   Chosen attribute option: thumbnail image gallery.
+   Chosen styling option: direct style changes, not an additional theme toggle.
+2. Events: click listeners on thumbnails, Next, Back, Reset and Play sound.
+   Arrow keys, Home and End move focus between the main navigation links.
+   switch(event.key) handles keyboard input. Tab and Enter keep normal behavior.
+   Chosen callback option: three-step form that preserves inputs on Back/Next.
+3. Data/functions: visitPlan object with name/email/interest and getSummary method;
+   campusPhotos array, for loop, and forEach higher-order functions with callbacks.
+   One reusable Audio object restarts the sound instead of overlapping copies.
+   Selected thumbnails use CSS transitions; steps and success use CSS animation.
+4. Structure: external HTML/CSS/JS, named helper functions and readable variables.
+5. UX: university gallery and visit plan, responsive layout, visible keyboard focus,
+   sound preference, validation messages and reduced-motion support.
+
+VISIT PLANNER
+Step 1: enter a name and valid email.
+Step 2: choose a campus tour, study spaces, or sports/student life.
+Step 3: review, go Back to edit, or create the local plan preview.
+Reset clears the form and returns to step 1.
+The form does not send data, email or a real booking. Refreshing loses the plan.
+The multi-step option is used instead of a POST request or server/API integration.
+No jQuery dependency is needed for the selected assignment requirements.
+
+PREVIOUS ASSIGNMENT
+js/allazhar.js and css/allazhar.css retain the existing registration validation,
+FAQ accordion, subscription popup, background colors and live date/time.
