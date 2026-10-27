@@ -1,0 +1,172 @@
+/* Assignment 5 — scoped CSS: does not modify teammates' page styles. */
+.a5-widget {
+  --a5-surface: #f0f7ff;
+  --a5-card: #ffffff;
+  --a5-text: #16324f;
+  --a5-muted: #526b83;
+  --a5-border: #d2e4f5;
+  color: var(--a5-text);
+  background: var(--a5-surface);
+  border: 1px solid var(--a5-border);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.a5-widget.a5-night {
+  --a5-surface: #0e203a;
+  --a5-card: #1a3354;
+  --a5-text: #eef6ff;
+  --a5-muted: #c0d2e6;
+  --a5-border: #456387;
+}
+.a5-widget h2,
+.a5-widget h3,
+.a5-widget .eyebrow { color: var(--a5-text); }
+.a5-widget .a5-muted { color: var(--a5-muted); }
+.a5-widget .a5-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+.a5-widget .a5-heading p { margin-bottom: 0; }
+.a5-widget .a5-panel {
+  background: var(--a5-card);
+  color: var(--a5-text);
+  border: 1px solid var(--a5-border);
+  padding: clamp(16px, 3vw, 26px);
+  border-radius: 18px;
+}
+.a5-widget .a5-control-row {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(200px, 2fr);
+  gap: 16px;
+  margin: 16px 0;
+}
+.a5-widget .a5-program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.a5-widget .a5-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--a5-border);
+  background: var(--a5-card);
+  border-radius: 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+  animation: a5-enter .35s ease both;
+}
+.a5-widget .a5-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(13, 45, 80, .12);
+}
+.a5-widget .a5-card h3 { font-size: 1.12rem; }
+.a5-widget .a5-card p { font-size: .95rem; }
+.a5-widget .a5-card-details {
+  display: none;
+  margin: 12px 0 0;
+  color: var(--a5-muted);
+}
+.a5-widget .a5-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 18px;
+}
+.a5-widget .a5-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.a5-widget .a5-step-label {
+  font-weight: 700;
+  color: #1674b7;
+}
+.a5-widget.a5-night .a5-step-label { color: #8bd1ff; }
+.a5-widget .a5-error {
+  color: #be2f35;
+  font-weight: 600;
+  min-height: 1.5em;
+  margin: 12px 0;
+}
+.a5-widget.a5-night .a5-error { color: #ffb0b5; }
+.a5-widget .a5-result {
+  background: #e3f5e9;
+  border-left: 4px solid #229451;
+  color: #155e34;
+  border-radius: 7px;
+  padding: 12px 15px;
+  margin: 16px 0 0;
+  animation: a5-enter .35s ease both;
+}
+.a5-widget.a5-night .a5-result {
+  background: #173f31;
+  color: #d3ffe0;
+}
+.a5-widget .a5-time {
+  display: block;
+  margin: 12px 0;
+  font-weight: 700;
+}
+.a5-widget .a5-small-heading { font-size: 1.1rem; }
+.a5-widget .a5-stars { display: flex; gap: 6px; }
+.a5-widget .a5-stars button {
+  background: transparent;
+  border: 0;
+  color: #94a4b4;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 3px 5px;
+  cursor: pointer;
+  transition: transform .18s ease, color .18s ease;
+}
+.a5-widget .a5-stars button:hover,
+.a5-widget .a5-stars button:focus-visible { transform: scale(1.18); }
+.a5-widget .a5-stars button:focus-visible {
+  outline: 2px solid #1674b7;
+  outline-offset: 2px;
+}
+.a5-widget .a5-check-list { display: grid; gap: 12px; }
+.a5-widget .a5-check-list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+.a5-widget .a5-check-list input { accent-color: #1872b4; margin-top: 6px; }
+.a5-widget .a5-progress-track {
+  height: 16px;
+  overflow: hidden;
+  background: #d5e6f3;
+  border-radius: 99px;
+}
+.a5-widget .a5-progress-fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #2287d1, #22a96c);
+  border-radius: 99px;
+  transition: width .35s ease;
+}
+.a5-widget .a5-extra-guidance {
+  display: none;
+  margin-top: 18px;
+  padding: 15px;
+  border-left: 4px solid #2c86cd;
+  background: var(--a5-surface);
+  color: var(--a5-text);
+}
+.a5-widget [hidden] { display: none !important; }
+.a5-widget .a5-empty { grid-column: 1 / -1; }
+@keyframes a5-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 767px) {
+  .a5-widget .a5-control-row,
+  .a5-widget .a5-bottom-grid { grid-template-columns: 1fr; }
+  .a5-widget .a5-theme-button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .a5-widget, .a5-widget * { animation: none !important; transition: none !important; }
+}
