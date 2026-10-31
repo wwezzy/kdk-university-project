@@ -10,6 +10,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 </head>
 
 <body class="campus-page">
@@ -566,6 +567,83 @@
             </button>
         </section>
 
+
+<!-- Assignment 6: jQuery Features -->
+
+<div id="a6-scroll-progress"></div>
+
+<section class="section text-center" id="a6-search-section">
+    <h2>Find Campus Activities</h2>
+    <p>Search student clubs and activities.</p>
+
+    <div class="a6-search-container">
+        <input type="text" id="a6-search"
+               class="form-control"
+               placeholder="Search activities..."
+               autocomplete="off">
+
+        <div id="a6-suggestions"></div>
+
+        <p id="a6-search-status" class="mt-3"></p>
+
+        <div id="a6-activity-list">
+            <div class="a6-activity">Football Club</div>
+            <div class="a6-activity">Basketball Club</div>
+            <div class="a6-activity">Programming Workshop</div>
+            <div class="a6-activity">Music Club</div>
+            <div class="a6-activity">Art Club</div>
+            <div class="a6-activity">Tech Workshop</div>
+        </div>
+    </div>
+</section>
+
+<section class="section text-center">
+    <h2>Campus Statistics</h2>
+    <p>Discover our student community.</p>
+
+    <div class="a6-stats">
+        <div class="a6-stat">
+            <h3 class="a6-counter" data-target="1200">0</h3>
+            <p>Students</p>
+        </div>
+
+        <div class="a6-stat">
+            <h3 class="a6-counter" data-target="25">0</h3>
+            <p>Student Clubs</p>
+        </div>
+
+        <div class="a6-stat">
+            <h3 class="a6-counter" data-target="50">0</h3>
+            <p>Campus Events</p>
+        </div>
+    </div>
+    <p class="a6-demo-note">Demo statistics for this student project.</p>
+</section>
+
+<section class="section text-center">
+    <h2>Share Our University</h2>
+    <p>Copy the KDK University website address.</p>
+
+    <div class="a6-copy-box">
+        <input id="a6-copy-text"
+               class="form-control"
+               type="text"
+               value="https://wwezzy.github.io/kdk-university-project/"
+               readonly>
+
+        <button id="a6-copy-btn"
+                type="button"
+                class="btn btn-primary">
+            Copy
+        </button>
+    </div>
+
+    <p id="a6-copy-status" role="status"></p>
+</section>
+
+<div id="a6-toast" role="status" aria-live="polite"></div>
+
+        
 <!-- Assignment 5 - Task 6: Callback Functions -->
 <section class="section text-center">
     <h2>Register for a Campus Event</h2>
@@ -587,7 +665,10 @@
         </select>
 
         <button id="event-register" class="btn btn-primary" type="button">
-            Register
+            <span id="a6-register-text">Register</span>
+            <span id="a6-register-spinner"
+                class="spinner-border spinner-border-sm d-none"
+                aria-hidden="true"></span>
         </button>
 
         <p id="event-result" class="mt-3" aria-live="polite"></p>
@@ -701,7 +782,7 @@
 
     </footer>
 
-
+    <script src="js/akylzhan-assignment6.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/akylzhan.js"></script>
 </body>

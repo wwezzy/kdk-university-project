@@ -1343,3 +1343,139 @@ body.dark-mode .activity-card {
 .event-form-container {
     max-width: 400px;
 }
+
+
+/* Assignment 6 - jQuery */
+
+#a6-scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 0;
+    background: linear-gradient(90deg, #008cff, #7b2cff, #ff4b91);
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
+
+.a6-search-container {
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#a6-suggestions {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+}
+
+.a6-suggestion {
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    color: #16324f;
+}
+
+.a6-suggestion:hover,
+.a6-suggestion:focus {
+    background: #eaf4ff;
+}
+
+.a6-activity {
+    background: #eaf4ff;
+    color: #16324f;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.a6-activity mark {
+    background: #ffdd57;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.a6-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.a6-stat {
+    min-width: 180px;
+    padding: 30px;
+    background: #eaf4ff;
+    border-radius: 15px;
+    color: #16324f;
+}
+
+.a6-stat h3 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #1378bd;
+}
+
+.a6-demo-note {
+    margin-top: 16px;
+    font-size: 13px;
+    opacity: .7;
+}
+
+.a6-copy-box {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+#a6-copy-status {
+    margin-top: 12px;
+}
+
+#a6-toast {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #1378bd;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    z-index: 9999;
+}
+
+.a6-lazy {
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.a6-lazy.a6-loaded {
+    opacity: 1;
+}
+
+body.dark-mode .a6-stat,
+body.dark-mode .a6-activity {
+    background: #263448;
+    color: white;
+}
+
+@media (max-width: 576px) {
+    .a6-copy-box {
+        flex-direction: column;
+    }
+
+    .a6-stat {
+        width: 100%;
+    }
+}
