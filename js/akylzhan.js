@@ -346,7 +346,7 @@ if (campusInfoBtn && campusInfoResult) {
         campusInfoResult.innerHTML = `
             <h3>${campus.name}</h3>
             <p>City: ${campus.city}</p>
-            <p>Facilities: ${campus.facilities}</p>} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            <p>Facilities: ${campus.facilities}</p>
             <p>Library Available: ${campus.hasLibrary ? "Yes" : "No"}</p>
             <p>${campus.getDescription()}</p>
         `;
