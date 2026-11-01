@@ -1,0 +1,59 @@
+/* Assignment 6 - Allazhar's Home and About components. */
+.a6-allazhar-tools {
+  max-width: 1120px;
+  margin: 32px auto;
+  padding: 24px;
+  background: #f4fbff;
+  border: 1px solid #d9ebf7;
+  border-radius: 16px;
+}
+
+.a6-allazhar-toast {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1100;
+  max-width: min(360px, calc(100vw - 40px));
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #123b64;
+  color: #ffffff;
+  box-shadow: 0 6px 24px rgb(18 59 100 / 20%);
+}
+
+.a6-allazhar-copy-label {
+  display: block;
+  margin: 20px 0 8px;
+  font-weight: 600;
+}
+
+.a6-allazhar-copy-row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.a6-allazhar-copy-row input {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.a6-allazhar-copy-action {
+  position: relative;
+}
+
+.a6-allazhar-copy-tooltip {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 1;
+  width: max-content;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #123b64;
+  color: #ffffff;
+  font-size: 14px;
+}

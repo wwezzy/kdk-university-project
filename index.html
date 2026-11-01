@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/allazhar.css">
     <link rel="stylesheet" href="css/allazhar-assignment5.css">
+    <link rel="stylesheet" href="css/allazhar-assignment6.css">
+
+    <!-- Assignment 6 - Task 0: load jQuery before our external script. -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/allazhar-assignment6.js"></script>
 </head>
 
 <body>
@@ -148,6 +153,24 @@
 
     <main>
 
+        <!-- Assignment 6 - Allazhar: notification and sharing tools. -->
+        <section id="a6Tools" class="a6-allazhar-tools" aria-labelledby="a6ToolsTitle">
+            <h2 id="a6ToolsTitle">KDK visitor tools</h2>
+            <p>Get a quick tip for planning your visit.</p>
+            <button id="a6ShowTip" class="btn btn-primary" type="button">Show visit tip</button>
+            <label for="a6ShareUrl" class="a6-allazhar-copy-label">Share the KDK website</label>
+            <div class="a6-allazhar-copy-row">
+                <input id="a6ShareUrl" class="form-control" type="text" value="https://wwezzy.github.io/kdk-university-project/" readonly>
+                <div class="a6-allazhar-copy-action">
+                    <button id="a6CopyLink" class="btn btn-outline-primary" type="button" aria-describedby="a6CopyTooltip">
+                        <span id="a6CopyIcon" aria-hidden="true">&#128203;</span> Copy link
+                    </button>
+                    <span id="a6CopyTooltip" class="a6-allazhar-copy-tooltip" role="tooltip">Copied to clipboard!</span>
+                </div>
+            </div>
+        </section>
+        <div id="a6Toast" class="a6-allazhar-toast" role="status" aria-live="polite"></div>
+
         <!-- Assignment 5 - Kuat Allazhar: DOM, events, data, sound and animation -->
         <section id="visitKdk" class="a5-experience" aria-labelledby="a5Title">
             <h2 id="a5Title">Explore KDK. Plan your visit.</h2>
@@ -254,7 +277,7 @@
 
             <div class="flex-cards assignment3-card-group">
                 <article class="flex-card">
-                    <img src="images/LibraryAll.jpg" alt="KDK University library">
+                    <img id="a6LibraryPhoto" class="a6-allazhar-lazy" src="images/a6-lazy-placeholder.svg" data-src="images/LibraryAll.jpg" alt="KDK University library">
                     <h3>Academic Programs</h3>
                     <p>
                         Explore our academic programs and choose
@@ -266,7 +289,7 @@
                 </article>
 
                 <article class="flex-card">
-                    <img src="images/GymCelebAll.jpg" alt="KDK University sports complex">
+                    <img class="a6-allazhar-lazy" src="images/a6-lazy-placeholder.svg" data-src="images/GymCelebAll.jpg" alt="KDK University sports complex">
                     <h3>Campus Life</h3>
                     <p>
                         Discover student clubs, sports,
@@ -278,7 +301,7 @@
                 </article>
 
                 <article class="flex-card">
-                    <img src="images/Campus2All.jpg" alt="KDK University campus">
+                    <img class="a6-allazhar-lazy" src="images/a6-lazy-placeholder.svg" data-src="images/Campus2All.jpg" alt="KDK University campus">
                     <h3>Admissions</h3>
                     <p>
                         Learn about admission requirements

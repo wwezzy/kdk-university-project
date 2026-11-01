@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/allazhar.css">
     <link rel="stylesheet" href="css/allazhar-assignment5.css">
+    <link rel="stylesheet" href="css/allazhar-assignment6.css">
+
+    <!-- Assignment 6 - Task 0: load jQuery before our external script. -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/allazhar-assignment6.js"></script>
 </head>
 
 <body>
@@ -148,6 +153,24 @@
 
     <main>
 
+        <!-- Assignment 6 - Allazhar: notification and sharing tools. -->
+        <section id="a6Tools" class="a6-allazhar-tools" aria-labelledby="a6ToolsTitle">
+            <h2 id="a6ToolsTitle">KDK visitor tools</h2>
+            <p>Get a quick tip for planning your visit.</p>
+            <button id="a6ShowTip" class="btn btn-primary" type="button">Show visit tip</button>
+            <label for="a6ShareUrl" class="a6-allazhar-copy-label">Share the KDK website</label>
+            <div class="a6-allazhar-copy-row">
+                <input id="a6ShareUrl" class="form-control" type="text" value="https://wwezzy.github.io/kdk-university-project/" readonly>
+                <div class="a6-allazhar-copy-action">
+                    <button id="a6CopyLink" class="btn btn-outline-primary" type="button" aria-describedby="a6CopyTooltip">
+                        <span id="a6CopyIcon" aria-hidden="true">&#128203;</span> Copy link
+                    </button>
+                    <span id="a6CopyTooltip" class="a6-allazhar-copy-tooltip" role="tooltip">Copied to clipboard!</span>
+                </div>
+            </div>
+        </section>
+        <div id="a6Toast" class="a6-allazhar-toast" role="status" aria-live="polite"></div>
+
         <!-- Assignment 5 - Kuat Allazhar: DOM, events, data, sound and animation -->
         <section id="visitKdk" class="a5-experience" aria-labelledby="a5Title">
             <h2 id="a5Title">Explore KDK. Plan your visit.</h2>
@@ -237,8 +260,9 @@
                 </div>
 
                 <div class="col-12 col-lg-6">
-                    <img class="about-image"
-                         src="images/kdk-campus.png"
+                    <img class="about-image a6-allazhar-lazy"
+                         src="images/a6-lazy-placeholder.svg"
+                         data-src="images/kdk-campus.png"
                          alt="View of KDK University campus">
                 </div>
             </div>
@@ -257,8 +281,9 @@
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4">
                     <article class="card h-100 shadow-sm">
-                        <img src="images/LibraryAll.jpg"
-                             class="card-img-top assignment3-card-image"
+                        <img id="a6LibraryPhoto" src="images/a6-lazy-placeholder.svg"
+                             data-src="images/LibraryAll.jpg"
+                             class="card-img-top assignment3-card-image a6-allazhar-lazy"
                              alt="KDK University library">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title">Academic Life</h3>
@@ -275,8 +300,9 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
                     <article class="card h-100 shadow-sm">
-                        <img src="images/GymCelebAll.jpg"
-                             class="card-img-top assignment3-card-image"
+                        <img src="images/a6-lazy-placeholder.svg"
+                             data-src="images/GymCelebAll.jpg"
+                             class="card-img-top assignment3-card-image a6-allazhar-lazy"
                              alt="KDK University sports complex">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title">Student Life</h3>
@@ -293,8 +319,9 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
                     <article class="card h-100 shadow-sm">
-                        <img src="images/Campus2All.jpg"
-                             class="card-img-top assignment3-card-image"
+                        <img src="images/a6-lazy-placeholder.svg"
+                             data-src="images/Campus2All.jpg"
+                             class="card-img-top assignment3-card-image a6-allazhar-lazy"
                              alt="KDK University campus">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title">Future Students</h3>

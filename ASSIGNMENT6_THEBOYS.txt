@@ -1,0 +1,36 @@
+KDK University - Assignment 6: jQuery
+Team: theboys | Group: SE-2515
+Submitted by: Kuat Allazhar
+Team members: Kuat Allazhar, Dautbekov Yerkhan, Khafiz Akylzhan
+
+TASK MAP
+0: jQuery 4.0.0 CDN, document ready and console confirmation.
+1-3: Khafiz Akylzhan - campus-life.html, js/akylzhan-assignment6.js.
+     Live activity filter, autocomplete suggestions and search highlighting.
+4-6: Dautbekov Yerkhan - programs.html, js/assignment6-yerkhan.js,
+     css/assignment6-yerkhan.css. Scroll progress, counters and submit spinner.
+7-9: Kuat Allazhar - index.html and about.html,
+     js/allazhar-assignment6.js, css/allazhar-assignment6.css.
+     Temporary notifications, clipboard copy with checkmark and tooltip,
+     viewport-based lazy loading for three Home and four About images.
+Akylzhan's page also contains additional implementations beyond Tasks 1-3.
+
+RUN
+Open the project folder in VS Code and use Open with Live Server.
+Use localhost or the deployed HTTPS website for clipboard functionality.
+No installation, build step or backend is required.
+The forms are demonstrations and do not send real messages or bookings.
+
+WEBSITE
+https://wwezzy.github.io/kdk-university-project/
+https://wwezzy.github.io/kdk-university-project/campus-life.html
+https://wwezzy.github.io/kdk-university-project/programs.html
+https://wwezzy.github.io/kdk-university-project/about.html
+Repository: https://github.com/wwezzy/kdk-university-project
+
+CHECK
+Search Club or Work on Campus Life; select a suggestion or clear the query.
+Scroll Programs; open Contact an Academic Advisor and submit valid demo input.
+On Home/About, show a visit tip, copy the link and scroll to the image cards.
+The lazy loader retains placeholders until an image enters the viewport.
+Use browser zoom 100 percent to observe images arriving during scrolling.
