@@ -1,0 +1,111 @@
+
+/* Dautbekov Yerkhan — Assignment 6, Tasks 4, 5 and 6 */
+
+.yerkhan-a6-scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1900;
+  width: 100%;
+  height: 6px;
+  background: rgba(20, 61, 103, 0.16);
+  pointer-events: none;
+}
+
+.yerkhan-a6-scroll-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    #1976d2 0%,
+    #1dc6b5 50%,
+    #ad52db 100%
+  );
+  box-shadow: 0 0 14px rgba(39, 162, 234, 0.55);
+  transition: width 0.09s linear;
+}
+
+.yerkhan-a6-stat-section {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.yerkhan-a6-stat-section h2 {
+  margin-bottom: 1.2rem;
+  color: #143c60;
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+  font-weight: 750;
+}
+
+.yerkhan-a6-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.yerkhan-a6-stat-card {
+  min-width: 0;
+  padding: 1.5rem 1rem;
+  border-radius: 18px;
+  border: 1px solid #cce2f5;
+  background: linear-gradient(
+    140deg,
+    #f4faff 0%,
+    #eaf4ff 100%
+  );
+  box-shadow: 0 10px 25px rgba(16, 67, 117, 0.08);
+  text-align: center;
+}
+
+.yerkhan-a6-stat-number {
+  display: block;
+  color: #1165ad;
+  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  line-height: 1.15;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
+.yerkhan-a6-stat-label {
+  display: block;
+  margin-top: 0.35rem;
+  color: #476a89;
+  font-weight: 650;
+}
+
+.yerkhan-a6-spinner {
+  display: inline-block;
+  width: 1.05em;
+  height: 1.05em;
+  margin-right: 0.55em;
+  border: 0.15em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: yerkhan-a6-spin 0.75s linear infinite;
+  vertical-align: -0.1em;
+}
+
+@keyframes yerkhan-a6-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .yerkhan-a6-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yerkhan-a6-stat-card {
+    padding: 1rem 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yerkhan-a6-scroll-fill {
+    transition: none;
+  }
+
+  .yerkhan-a6-spinner {
+    animation-duration: 1.5s;
+  }
+}

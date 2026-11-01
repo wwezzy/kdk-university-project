@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/assignment5-yerkhan.css">
+
+  <!--  | Assignment 6 | Tasks 4, 5, 6 | HEAD -->
+  <link rel="stylesheet" href="css/assignment6-yerkhan.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 </head>
 
 <body class="a4-programs">
@@ -347,7 +352,6 @@
       </div>
     </section>
 
-    <!-- Assignment 5: interactive Program Explorer (insert before Assignment 4 tools) -->
     <section id="a5-program-explorer" class="a5-widget container my-5 p-4 p-lg-5 rounded-4"
       aria-labelledby="a5-explorer-title">
       <div class="a5-heading">
@@ -440,7 +444,6 @@
       </div>
     </section>
 
-    <!-- Assignment 4: Tasks 3, 4 and 5 -->
     <section class="container py-5" aria-labelledby="programToolsHeading">
       <p class="eyebrow mb-2">INTERACTIVE FEATURES</p>
       <h2 id="programToolsHeading">Explore KDK Online</h2>
@@ -464,9 +467,27 @@
         <a class="btn btn-light btn-lg" href="admissions.html">View Admissions</a>
       </div>
     </section>
+
+    <!--  | Assignment 6 | Tasks 4, 5, 6 | STATISTICS -->
+    <section class="container yerkhan-a6-stat-section" aria-labelledby="yerkhan-a6-stats-heading">
+      <h2 id="yerkhan-a6-stats-heading">KDK Programs in Numbers</h2>
+      <div class="yerkhan-a6-stat-grid">
+        <div class="yerkhan-a6-stat-card">
+          <span class="yerkhan-a6-stat-number" data-yerkhan-a6-count="6">0</span>
+          <span class="yerkhan-a6-stat-label">Bachelor's programs</span>
+        </div>
+        <div class="yerkhan-a6-stat-card">
+          <span class="yerkhan-a6-stat-number" data-yerkhan-a6-count="4">0</span>
+          <span class="yerkhan-a6-stat-label">Years per degree</span>
+        </div>
+        <div class="yerkhan-a6-stat-card">
+          <span class="yerkhan-a6-stat-number" data-yerkhan-a6-count="3">0</span>
+          <span class="yerkhan-a6-stat-label">Fields of study</span>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Assignment 4: Popup Contact Form -->
   <div id="a4-popup" class="a4-modal" role="dialog" aria-modal="true" aria-labelledby="a4-popup-title" hidden>
     <div class="a4-modal-dialog">
       <button type="button" class="a4-close" data-close-popup aria-label="Close popup">&times;</button>
@@ -502,6 +523,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/yerkhan.js" defer></script>
   <script src="js/assignment5-yerkhan.js" defer></script>
+
+  <!-- | Assignment 6 | Tasks 4, 5, 6 | BODY -->
+  <div id="yerkhan-a6-scroll-progress" class="yerkhan-a6-scroll-progress"
+    role="progressbar" aria-label="Page scroll progress"
+    aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="yerkhan-a6-scroll-fill"></div>
+  </div>
+  <script src="js/assignment6-yerkhan.js"></script>
 </body>
 
 </html>
