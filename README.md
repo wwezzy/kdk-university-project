@@ -1,145 +1,61 @@
-# KDK University Website
+# KDK University · Final project
 
-A responsive multi-page university website developed as a team project.
+A responsive, seven-page fictional university website for Web Technologies, SE-2515.
 
-The project started with basic HTML and CSS and was gradually improved with Flexbox, CSS Grid, Media Queries and Bootstrap.
+## Run locally
 
-## Live Demo
+No build step or backend is required. In this directory run:
 
-https://wwezzy.github.io/kdk-university-project/
-
-## About the Project
-
-KDK University is a fictional university website created to practice frontend development.
-
-The website contains six pages:
-
-- Home
-- About Us
-- Programs
-- Admissions
-- Campus Life
-- Contact
-
-The project was developed by a team of three students. Each team member was responsible for different pages.
-
-## My Contribution
-
-My main responsibility was the **Campus Life** and **Contact** pages.
-
-I worked on:
-
-- Campus Life page structure and content
-- Contact page and contact form
-- Responsive layouts for desktop, tablet and mobile
-- Flexbox layouts
-- CSS Grid layouts
-- Responsive image gallery
-- CSS Media Queries
-- Bootstrap Grid
-- Responsive Bootstrap Navbar
-- Bootstrap Cards
-- Bootstrap Carousel
-- Bootstrap Buttons
-- Bootstrap Form
-- Basic accessibility with semantic HTML, labels, alt text and ARIA attributes
-- Git and GitHub workflow
-- Testing and deployment with GitHub Pages
-
-## Technologies
-
-- HTML5
-- CSS3
-- Flexbox
-- CSS Grid
-- Media Queries
-- Bootstrap 5
-- Git
-- GitHub
-- GitHub Pages
-
-## Responsive Design
-
-The website supports different screen sizes.
-
-Custom CSS Media Queries are used for some sections, while Bootstrap responsive classes are used for others.
-
-For example, the Campus Life page changes its layout depending on the screen size:
-
-- Desktop: multi-column layouts
-- Tablet: reduced number of columns
-- Mobile: stacked content and hamburger navigation
-
-## Bootstrap
-
-Bootstrap was used to improve the responsive version of the project.
-
-Components and utilities used in my pages include:
-
-- Grid system
-- Navbar
-- Cards
-- Carousel
-- Buttons and button groups
-- Forms
-- Spacing utilities
-
-## My Pages
-
-### Campus Life
-
-The Campus Life page includes:
-
-- Responsive hero section
-- Student life cards
-- Campus facilities
-- Bootstrap grid sections
-- Responsive navigation
-- Image carousel
-- Image gallery
-- Mobile, tablet and desktop layouts
-
-### Contact
-
-The Contact page includes:
-
-- Contact information
-- Responsive contact form
-- Text and email inputs
-- Select field
-- Textarea
-- Checkbox
-- Bootstrap form styling
-
-## Team
-
-| Team Member | Main Pages |
-| --- | --- |
-| Kuat Allazhar | Home, About Us |
-| Dautbekov Yerkhan | Programs, Admissions |
-| **Khafiz Akylzhan** | **Campus Life, Contact** |
-
-## Run Locally
-
-Clone the repository:
-
-```bash
-git clone https://github.com/wwezzy/kdk-university-project.git
+```sh
+python -m http.server 8000
 ```
 
-Open the project:
+Open http://localhost:8000. Use localhost or HTTPS, not a double-clicked file URL, for browser cryptography and consistent storage behaviour.
 
-```bash
-cd kdk-university-project
-code .
+## Pages
+
+- `index.html`: introduction, campus photos, public Open Library API reading suggestions, FAQ.
+- `about.html`: mission, values, study spaces, honest project/team description.
+- `programs.html`: dynamic search, category filter, shortlist, details dialog and subject match.
+- `admissions.html`: application steps, persistent checklist, fees, scholarships, validated information request.
+- `campus-life.html`: clubs, activities, facilities and useful FAQ.
+- `contact.html`: validated contact form and relevant navigation.
+- `profile.html`: stored demo user details and matching saved information requests.
+
+Sign up and log in are modal dialogs on every page. `login.html` and `signup.html` are small compatibility redirects, not extra content pages.
+
+## Code map
+
+- `css/yerkhan.css`: shared theme/layout plus original Programs/Admissions components.
+- `css/final.css`: final integration, readable dialog and responsive refinements.
+- `js/yerkhan.js`: shared theme, navigation, program data/filter, book API, JS validation, demo authentication and profile. Reuses and adapts Yerkhan's existing implementation.
+- `images/`: existing team images; no remote image dependency.
+- `tests/check_links.py`: local files, anchors, IDs, alt text, validation constraints.
+- `tests/browser.cjs`: browser end-to-end and responsive tests.
+- `docs/`: report draft, defense notes and current testing evidence.
+
+## Important demo limitations
+
+KDK is fictional. Programs, prices, scholarships and application process are demonstration content. Contact and admission forms save locally; they do NOT submit to a university. Authentication is an assignment simulation, NOT secure real authentication. Passwords are salted/derived with PBKDF2 before local storage, but browser storage is user-controlled and does not protect an actual account. Use fake personal details and a unique sample password only. Clearing browser data removes accounts, requests, filters and preferences.
+
+## API
+
+Open Library: `https://openlibrary.org/subjects/computer_science.json?limit=3` (subject chosen by the user). `fetch` with a 12-second timeout; visible loading, retry, empty and failure states. Cached API responses live in localStorage for 24 hours and are labelled when reused. No secret API key. Public network requests can fail, but the rest of the site remains usable.
+
+## Tests
+
+```sh
+npm install
+npx playwright install chromium
+npm test
+npm run test:forms
+python tests/check_links.py
 ```
 
-Then open `index.html` in a browser or use Live Server in VS Code.
+To use installed Edge, set `BROWSER_EXECUTABLE` to its executable path. Exact results are in `docs/TEST_RESULTS.txt`; live API observations are separate in `docs/BROWSER_API_RUN.txt`. Mocked API tests verify failure/retry behaviours, not external API uptime.
 
-## What I Learned
+## Deployment / submission
 
-This project gave me practical experience with building responsive web pages and working in a team repository.
+This local integrated version has NOT been pushed, deployed or submitted. Existing repository: https://github.com/wwezzy/kdk-university-project . Existing public URL: https://wwezzy.github.io/kdk-university-project/ (may show the older version until deployed).
 
-I learned how HTML and CSS work together, when to use Flexbox or CSS Grid, how Media Queries change layouts for different screen sizes, and how Bootstrap can be used to build responsive components faster.
-
-I also practiced using Git for commits, pulling changes from other team members, resolving project changes and pushing updates to GitHub.
+After team review, publish this directory as a static site, verify the public version, then update the links TXT and final report PDF. Each teammate must submit their own required package. The report draft needs team verification of contributions; final integration was AI-assisted. Do not claim personally written code that you cannot explain.

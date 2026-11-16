@@ -1,0 +1,27 @@
+/* Final integration: readable shared UI, account dialog and quiet motion. */
+body {font-family: Arial, Helvetica, sans-serif; font-size:16px; line-height:1.65}
+img {max-width:100%}
+figure {margin:0;min-width:0}
+figcaption {color:var(--yk-muted);padding-top:12px}
+.yk-three-column > figure .yk-rounded-image {height:230px;width:100%;object-fit:cover}
+.yk-two-column > img {align-self:center;max-height:480px;width:100%;object-fit:cover}
+.yk-three-column > article:not(.yk-program-card) {padding:26px;border:1px solid var(--yk-line);border-radius:12px;background:var(--yk-surface)}
+.yk-page details.yk-faq {border-bottom:1px solid var(--yk-line);padding:22px 0}
+.yk-page details.yk-faq summary {cursor:pointer;font-size:1.1rem;font-weight:700}
+.yk-page details.yk-faq p {padding-top:14px;max-width:760px;color:var(--yk-muted)}
+.kdk-auth-dialog {width:min(560px,calc(100% - 32px));max-height:90dvh;padding:36px;border:1px solid var(--yk-line);border-radius:20px;background:var(--yk-surface);color:var(--yk-text);box-shadow:0 24px 100px #0005;overflow-y:auto}
+.kdk-auth-dialog::backdrop {background:rgb(5 20 35 / 65%);backdrop-filter:blur(4px)}
+.kdk-dialog-close {float:right;width:40px;height:40px;border:1px solid var(--yk-line);background:var(--yk-soft);color:var(--yk-text);border-radius:50%;font-size:24px;line-height:1}
+.kdk-auth-dialog h2 {font-size:1.8rem;padding-right:35px}
+.kdk-auth-dialog h3 {font-size:1.3rem;margin-top:24px}
+.kdk-auth-dialog .yk-field {margin-bottom:14px}
+.kdk-auth-dialog .yk-error:empty,.kdk-auth-dialog small:empty {display:none}
+.kdk-auth-dialog .yk-muted {font-size:.9rem}
+.yk-footer a:hover {text-decoration:underline}
+.yk-program-card {transition:transform .2s,box-shadow .2s}
+.yk-program-card:hover {transform:translateY(-4px);box-shadow:var(--yk-shadow)}
+.yk-page p,.yk-page li,.yk-page h1,.yk-page h2,.yk-page h3 {overflow-wrap:break-word}
+.yk-page .yk-small {font-size:.88rem}
+.yk-theme [data-theme-label] {font-size:.8rem}
+@media(max-width:600px){.kdk-auth-dialog{padding:24px}.yk-three-column > figure .yk-rounded-image{height:230px}.yk-page .yk-button{font-size:.9rem}.yk-hero h1{font-size:clamp(2.25rem,9vw,3rem)}}
+@media(prefers-reduced-motion:reduce){.yk-program-card:hover {transform:none}}

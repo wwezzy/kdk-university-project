@@ -1,536 +1,867 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>KDK University | Programs</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/assignment5-yerkhan.css">
-
-  <!--  | Assignment 6 | Tasks 4, 5, 6 | HEAD -->
-  <link rel="stylesheet" href="css/assignment6-yerkhan.css">
-  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-</head>
-
-<body class="a4-programs">
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg bg-white assignment3-navbar" aria-label="Main navigation">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
-          <img src="images/kdk-logo.svg" alt="KDK University logo" class="brand-logo">
-          KDK University
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#programsNavbar"
-          aria-controls="programsNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="programsNavbar">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="about.html">About Us</a>
-            <a class="nav-link active" aria-current="page" href="programs.html">Programs</a>
-            <a class="nav-link" href="admissions.html">Admissions</a>
-            <a class="nav-link" href="campus-life.html">Campus Life</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-          </div>
-        </div>
-      </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Academic Programs at KDK University. Explore a future in technology, business and design." name="description"/>
+  <title>
+   Academic Programs | KDK University
+  </title>
+  <link href="images/kdk-logo.svg" rel="icon" type="image/svg+xml"/>
+  
+  
+ <link rel="stylesheet" href="css/yerkhan.css"><link rel="stylesheet" href="css/final.css"><script defer src="js/yerkhan.js"></script></head>
+ <body class="yk-page">
+  <a class="yk-skip" href="#main-content">
+   Skip to content
+  </a>
+  <header class="yk-header">
+   <div class="yk-nav-wrap">
+    <a class="yk-brand" href="index.html">
+     <img alt="" height="38" src="images/kdk-logo.svg" width="38"/>
+     <span>
+      KDK
+      <small>
+       UNIVERSITY
+      </small>
+     </span>
+    </a>
+    <button aria-controls="yk-navigation" aria-expanded="false" class="yk-menu-toggle" type="button">
+     Menu
+     <span aria-hidden="true">
+      ☰
+     </span>
+    </button>
+    <nav aria-label="Main navigation" class="yk-navigation" id="yk-navigation">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="about.html">
+      About Us
+     </a>
+     <a aria-current="page" href="programs.html">
+      Programs
+     </a>
+     <a href="admissions.html">
+      Admissions
+     </a>
+     <a href="campus-life.html">
+      Campus Life
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
     </nav>
-  </header>
-
-  <main>
-    <section id="programs-hero" class="page-banner programs-banner">
-      <img class="banner-image" src="images/kdk-campus-wide.png" alt="Wide view of the KDK University campus">
-      <div class="banner-shade"></div>
-      <div class="banner-title">
-        <p>ACADEMICS AT KDK</p>
-        <h1>Academic Programs</h1>
-      </div>
-    </section>
-
-    <section class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center">
-          <p class="eyebrow mb-2">DISCOVER YOUR DIRECTION</p>
-          <h2 class="assignment3-heading mb-3">Find Your Field of Study</h2>
-          <p class="assignment3-copy mb-4">
-            Choose a future-focused degree built around practical learning,
-            modern technology and skills that prepare you for the professional world.
-          </p>
-          <a class="btn btn-primary btn-lg" href="admissions.html">View Admissions</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="kdk-soft-bg py-5">
-      <div class="container px-sm-2 px-md-4">
-        <div class="mb-4">
-          <p class="eyebrow mb-2">FEATURED STUDY AREAS</p>
-          <h2 class="mb-2">Explore Popular Programs</h2>
-          <p class="mb-0">
-            Discover several study directions and learn where each program can take you.
-          </p>
-        </div>
-        <div class="row g-4 mt-lg-4">
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card h-100 shadow-sm">
-              <img src="images/soft_eng.jpg" class="card-img-top" alt="Students studying software engineering">
-              <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Software Engineering</h3>
-                <p class="card-text">
-                  Build practical skills in software development,
-                  databases and modern web technologies.
-                </p>
-                <a href="#program-list" class="btn btn-primary mt-auto">Learn More</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card h-100 shadow-sm">
-              <img src="images/com_sci.jpg" class="card-img-top" alt="Students studying computer science">
-              <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Computer Science</h3>
-                <p class="card-text">
-                  Study algorithms, operating systems and intelligent systems
-                  through hands-on projects.
-                </p>
-                <a href="#program-list" class="btn btn-primary mt-auto">Learn More</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card h-100 shadow-sm">
-              <img src="images/dig_media.jpg" class="card-img-top" alt="Students working on digital design">
-              <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Digital Media &amp; Design</h3>
-                <p class="card-text">
-                  Combine creativity and technology to design useful digital
-                  products and experiences.
-                </p>
-                <a href="#program-list" class="btn btn-primary mt-auto">Learn More</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container py-5" id="program-list">
-      <div class="mb-4">
-        <p class="eyebrow mb-2">BACHELOR'S DEGREES</p>
-        <h2 class="mb-2">Our Programs</h2>
-        <p>
-          Students combine academic knowledge with practical projects,
-          teamwork and modern digital tools.
-        </p>
-      </div>
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">Software Engineering</h3>
-              <p class="card-text">
-                Learn to design, develop and maintain modern software systems.
-              </p>
-              <ul>
-                <li>Web Development</li>
-                <li>Databases</li>
-                <li>Algorithms &amp; Data Structures</li>
-              </ul>
-              <p class="fw-bold text-primary mt-auto mb-0">4 years · English</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">Computer Science</h3>
-              <p class="card-text">
-                Build a strong foundation in computing, algorithms and intelligent systems.
-              </p>
-              <ul>
-                <li>Programming Fundamentals</li>
-                <li>Operating Systems</li>
-                <li>Artificial Intelligence</li>
-              </ul>
-              <p class="fw-bold text-primary mt-auto mb-0">4 years · English</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">Cybersecurity</h3>
-              <p class="card-text">
-                Learn how to protect networks, applications and digital information.
-              </p>
-              <ul>
-                <li>Network Security</li>
-                <li>Cryptography</li>
-                <li>Digital Forensics</li>
-              </ul>
-              <p class="fw-bold text-primary mt-auto mb-0">4 years · English</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">Data Science</h3>
-              <p class="card-text">
-                Turn data into useful insights with statistics,
-                programming and machine learning.
-              </p>
-              <ul>
-                <li>Python Programming</li>
-                <li>Machine Learning</li>
-                <li>Data Visualization</li>
-              </ul>
-              <p class="fw-bold text-primary mt-auto mb-0">4 years · English</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">Business Analytics</h3>
-              <p class="card-text">
-                Combine business knowledge with data analysis and digital strategy.
-              </p>
-              <ul>
-                <li>Business Intelligence</li>
-                <li>Data Analytics</li>
-                <li>Project Management</li>
-              </ul>
-              <p class="fw-bold text-primary mt-auto mb-0">4 years · English</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card h-100">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">Digital Media &amp; Design</h3>
-              <p class="card-text">
-                Develop creative and technical skills for modern digital products.
-              </p>
-              <ul>
-                <li>UI/UX Design</li>
-                <li>Web Design</li>
-                <li>Digital Media</li>
-              </ul>
-              <p class="fw-bold text-primary mt-auto mb-0">4 years · English</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="kdk-soft-bg py-5">
-      <div class="container">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-12 col-lg-6">
-            <div class="p-4 bg-white border rounded-3 h-100">
-              <p class="eyebrow mb-2">PROGRAM GUIDE</p>
-              <h2>Study Areas</h2>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Software Development</li>
-                <li class="list-group-item">Computer Science</li>
-                <li class="list-group-item">Cybersecurity</li>
-                <li class="list-group-item">Data &amp; Analytics</li>
-                <li class="list-group-item">Digital Design</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="p-4 bg-white border rounded-3 h-100">
-              <p class="eyebrow mb-2">YOUR FUTURE</p>
-              <h2>Choose the Right Direction</h2>
-              <p>
-                Compare the programs, explore the subjects you will study
-                and choose a direction that matches your interests and career goals.
-              </p>
-              <div class="btn-group mt-3" role="group" aria-label="Program actions">
-                <a href="admissions.html" class="btn btn-primary">Admissions</a>
-                <a href="contact.html" class="btn btn-outline-primary">Contact</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container py-5">
-      <div class="mb-4">
-        <p class="eyebrow mb-2">LEARNING AT KDK</p>
-        <h2>Program Gallery</h2>
-        <p>
-          Explore learning spaces, student projects and campus experiences at KDK University.
-        </p>
-      </div>
-      <div id="programsCarousel" class="carousel slide assignment3-carousel" role="region"
-        aria-label="KDK University program gallery">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-          <button type="button" data-bs-target="#programsCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
-        </div>
-        <div class="carousel-inner rounded-4">
-          <div class="carousel-item active">
-            <img src="images/gallery1.jpg" class="d-block w-100" alt="KDK University campus">
-          </div>
-          <div class="carousel-item">
-            <img src="images/team_study.jpg" class="d-block w-100" alt="Students studying together">
-          </div>
-          <div class="carousel-item">
-            <img src="images/library.jpg" class="d-block w-100" alt="University library">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery4.jpg" class="d-block w-100" alt="University workshop">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery5.jpg" class="d-block w-100" alt="Student project activity">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery6.jpg" class="d-block w-100" alt="Students collaborating">
-          </div>
-          <div class="carousel-item">
-            <img src="images/basketball.jpg" class="d-block w-100" alt="Students taking part in sports">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery8.jpg" class="d-block w-100" alt="Modern university space">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gym.jpg" class="d-block w-100" alt="University gym">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#programsCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#programsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-
-    <section class="mq-section">
-      <div class="mq-section-heading">
-        <p class="eyebrow">WHY KDK?</p>
-        <h2>Learn by Doing</h2>
-        <p>These cards use CSS Media Queries instead of the Bootstrap grid.</p>
-      </div>
-      <div class="mq-card-group">
-        <article class="mq-card">
-          <h3>Practical Learning</h3>
-          <p>
-            Students work on projects and build a professional portfolio before graduation.
-          </p>
-        </article>
-        <article class="mq-card">
-          <h3>Modern Campus</h3>
-          <p>
-            Technology-equipped classrooms and collaborative spaces support everyday learning.
-          </p>
-        </article>
-        <article class="mq-card">
-          <h3>Career Opportunities</h3>
-          <p>
-            Internships, workshops and networking events help students prepare for their careers.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="a5-program-explorer" class="a5-widget container my-5 p-4 p-lg-5 rounded-4"
-      aria-labelledby="a5-explorer-title">
-      <div class="a5-heading">
-        <div>
-          <p class="eyebrow mb-2">ASSIGNMENT 5 · INTERACTIVE WEB APP</p>
-          <h2 id="a5-explorer-title">KDK Smart Program Explorer</h2>
-          <p>Search degrees, discover your interests and rate this tool.</p>
-        </div>
-        <button type="button" class="btn btn-outline-primary a5-theme-button" data-a5-theme-toggle
-          aria-pressed="false">Switch to Night Mode</button>
-      </div>
-
-      <div class="a5-panel mb-4">
-        <h3>Browse Bachelor's Programs</h3>
-        <div class="a5-control-row">
-          <div>
-            <label for="a5-category" class="form-label">Field of study</label>
-            <select id="a5-category" class="form-select">
-              <option value="all">All fields</option>
-              <option value="technology">Technology</option>
-              <option value="business">Business</option>
-              <option value="creative">Creative</option>
-            </select>
-          </div>
-          <div>
-            <label for="a5-search" class="form-label">Search by name or skill</label>
-            <input id="a5-search" class="form-control" type="search" placeholder="Try: Python, security, design..."
-              autocomplete="off">
-          </div>
-        </div>
-        <p id="a5-program-count" class="a5-muted" role="status" aria-live="polite"></p>
-        <div id="a5-program-results" class="a5-program-grid" aria-label="Filtered programs"></div>
-      </div>
-
-      <div class="a5-bottom-grid">
-        <div class="a5-panel" id="a5-wizard">
-          <h3>Find Your Program</h3>
-          <p class="a5-muted">Answer two questions for a simple recommendation.</p>
-          <p id="a5-step-indicator" class="a5-step-label">Step 1 of 3</p>
-
-          <div data-a5-wizard-step="0">
-            <label for="a5-interest" class="form-label">What interests you most?</label>
-            <select id="a5-interest" class="form-select" required>
-              <option value="">Choose an interest</option>
-              <option value="building">Building websites and applications</option>
-              <option value="systems">Understanding computers and AI</option>
-              <option value="security">Protecting data and networks</option>
-              <option value="numbers">Analyzing numbers and trends</option>
-              <option value="creative">Designing digital experiences</option>
-            </select>
-          </div>
-          <div data-a5-wizard-step="1" hidden>
-            <label for="a5-strength" class="form-label">Which skill describes you best?</label>
-            <select id="a5-strength" class="form-select" required>
-              <option value="">Choose a strength</option>
-              <option value="logic">Logical problem solving</option>
-              <option value="communication">Communication and business thinking</option>
-              <option value="creativity">Creativity and visual thinking</option>
-            </select>
-          </div>
-          <div data-a5-wizard-step="2" hidden>
-            <p class="fw-bold mb-2">Review your choices</p>
-            <p id="a5-wizard-review" class="a5-muted"></p>
-            <p class="a5-muted mb-0">Select “See My Match” to get a recommendation.</p>
-          </div>
-          <p id="a5-wizard-message" class="a5-error" role="alert"></p>
-          <div class="a5-action-row">
-            <button id="a5-wizard-back" type="button" class="btn btn-outline-primary" hidden>Back</button>
-            <button id="a5-wizard-next" type="button" class="btn btn-primary">Next</button>
-          </div>
-          <p id="a5-wizard-result" class="a5-result" role="status" aria-live="polite" hidden></p>
-        </div>
-
-        <div class="a5-panel">
-          <h3>Interactive Tools</h3>
-          <p>Display the current time without reloading the page.</p>
-          <button id="a5-show-time" type="button" class="btn btn-primary">Show Current Time</button>
-          <output id="a5-current-time" class="a5-time" aria-live="polite">Click the button</output>
-          <hr>
-          <h3 class="a5-small-heading">Rate This Explorer</h3>
-          <div class="a5-stars" role="group" aria-label="Rate this explorer from 1 to 5 stars">
-            <button type="button" data-a5-star="1" aria-label="1 star" aria-pressed="false">★</button>
-            <button type="button" data-a5-star="2" aria-label="2 stars" aria-pressed="false">★</button>
-            <button type="button" data-a5-star="3" aria-label="3 stars" aria-pressed="false">★</button>
-            <button type="button" data-a5-star="4" aria-label="4 stars" aria-pressed="false">★</button>
-            <button type="button" data-a5-star="5" aria-label="5 stars" aria-pressed="false">★</button>
-          </div>
-          <p id="a5-rating-status" class="a5-muted" role="status" aria-live="polite">Choose a rating.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container py-5" aria-labelledby="programToolsHeading">
-      <p class="eyebrow mb-2">INTERACTIVE FEATURES</p>
-      <h2 id="programToolsHeading">Explore KDK Online</h2>
-      <p>Contact us or personalize the page background.</p>
-      <div class="a4-tools">
-        <button id="openContactPopup" type="button" class="btn btn-primary">Contact an Advisor</button>
-        <button id="changeBgColor" type="button" class="btn btn-outline-primary">Change Background Color</button>
-      </div>
-      <p class="mt-3 mb-0">
-        Your local date and time:
-        <time class="a4-clock" data-current-datetime>Loading...</time>
-      </p>
-    </section>
-
-    <section class="container mb-5">
-      <div class="kdk-cta text-center p-5 rounded-4">
-        <h2 class="text-white">Ready to start your journey?</h2>
-        <p class="text-white-50">
-          Explore admission requirements and become part of KDK University.
-        </p>
-        <a class="btn btn-light btn-lg" href="admissions.html">View Admissions</a>
-      </div>
-    </section>
-
-    <!--  | Assignment 6 | Tasks 4, 5, 6 | STATISTICS -->
-    <section class="container yerkhan-a6-stat-section" aria-labelledby="yerkhan-a6-stats-heading">
-      <h2 id="yerkhan-a6-stats-heading">KDK Programs in Numbers</h2>
-      <div class="yerkhan-a6-stat-grid">
-        <div class="yerkhan-a6-stat-card">
-          <span class="yerkhan-a6-stat-number" data-yerkhan-a6-count="6">0</span>
-          <span class="yerkhan-a6-stat-label">Bachelor's programs</span>
-        </div>
-        <div class="yerkhan-a6-stat-card">
-          <span class="yerkhan-a6-stat-number" data-yerkhan-a6-count="4">0</span>
-          <span class="yerkhan-a6-stat-label">Years per degree</span>
-        </div>
-        <div class="yerkhan-a6-stat-card">
-          <span class="yerkhan-a6-stat-number" data-yerkhan-a6-count="3">0</span>
-          <span class="yerkhan-a6-stat-label">Fields of study</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div id="a4-popup" class="a4-modal" role="dialog" aria-modal="true" aria-labelledby="a4-popup-title" hidden>
-    <div class="a4-modal-dialog">
-      <button type="button" class="a4-close" data-close-popup aria-label="Close popup">&times;</button>
-      <h2 id="a4-popup-title">Contact an Academic Advisor</h2>
-      <p>Ask a question about KDK University's programs.</p>
-      <form id="a4-contact-form">
-        <div class="mb-3">
-          <label for="contactName" class="form-label">Your name</label>
-          <input id="contactName" name="contactName" class="form-control" type="text" minlength="2" required>
-        </div>
-        <div class="mb-3">
-          <label for="contactEmail" class="form-label">Email</label>
-          <input id="contactEmail" name="contactEmail" class="form-control" type="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="contactMessage" class="form-label">Message</label>
-          <textarea id="contactMessage" name="contactMessage" class="form-control" rows="4" minlength="10"
-            required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit Message</button>
-        <button type="button" class="btn btn-outline-secondary ms-2" data-close-popup>Cancel</button>
-        <p id="a4-popup-status" class="a4-popup-status mt-3" role="status" aria-live="polite"></p>
-      </form>
+    <div class="yk-header-actions">
+     <button aria-label="Switch to dark mode" aria-pressed="false" class="yk-theme" data-theme-toggle="" type="button">
+      <span aria-hidden="true">
+       ◐
+      </span>
+      <span data-theme-label="">
+       Dark mode
+      </span>
+     </button>
+     <a class="yk-account" data-account-link="" href="profile.html?auth=login" data-open-auth="login">
+      Log in
+      <span aria-hidden="true">
+       →
+      </span>
+     </a>
     </div>
-  </div>
-
-  <footer>
-    <p><strong>KDK University</strong></p>
-    <p>Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan</p>
-    <p>&copy; 2026 KDK University. Student project.</p>
+   </div>
+  </header>
+  <main id="main-content">
+   <section class="yk-hero">
+    <img alt="KDK University campus" class="yk-hero-background" height="700" src="images/kdk-campus-wide.png" width="1600"/>
+    <div class="yk-container yk-hero-inner">
+     <p class="yk-eyebrow">
+      ACADEMICS AT KDK
+     </p>
+     <h1>
+      Find your field.
+      <br/>
+      <span>
+       Build your future.
+      </span>
+     </h1>
+     <p>
+      Six degrees. One shared approach: practical learning,
+      <br class="yk-desktop"/>
+      real projects and space to discover what you do best.
+     </p>
+     <div class="yk-actions">
+      <a class="yk-button" href="#program-list">
+       Explore programs
+       <span aria-hidden="true">
+        ↓
+       </span>
+      </a>
+      <a class="yk-button yk-button-glass" href="admissions.html">
+       How to apply →
+      </a>
+     </div>
+    </div>
+   </section>
+   <div aria-label="Program overview" class="yk-facts yk-container">
+    <div>
+     <strong>
+      06
+     </strong>
+     <span>
+      Bachelor's programs
+     </span>
+    </div>
+    <div>
+     <strong>
+      04
+     </strong>
+     <span>
+      Years of study
+     </span>
+    </div>
+    <div>
+     <strong>
+      03
+     </strong>
+     <span>
+      Fields to explore
+     </span>
+    </div>
+    <div>
+     <strong>
+      EN
+     </strong>
+     <span>
+      English-taught degrees
+     </span>
+    </div>
+   </div>
+   <section class="yk-section yk-container" id="program-list">
+    <div class="yk-section-heading">
+     <p class="yk-eyebrow">
+      DISCOVER YOUR DIRECTION
+     </p>
+     <h2>
+      A degree that fits your ambition.
+     </h2>
+     <p>
+      Search by subject, skill or career. Save your favorites to revisit them later.
+     </p>
+    </div>
+    <div class="yk-filter-panel">
+     <div class="yk-filter-fields">
+      <div class="yk-field">
+       <label for="program-search">
+        Search programs
+       </label>
+       <input autocomplete="off" id="program-search" placeholder="Try Python, security or design" type="search"/>
+      </div>
+      <div class="yk-field">
+       <label for="program-category">
+        Field of study
+       </label>
+       <select id="program-category">
+        <option value="all">
+         All fields
+        </option>
+        <option value="technology">
+         Technology
+        </option>
+        <option value="business">
+         Business
+        </option>
+        <option value="creative">
+         Creative
+        </option>
+       </select>
+      </div>
+     </div>
+     <div class="yk-filter-bottom">
+      <p aria-live="polite" id="program-count" role="status">
+       6 programs available
+      </p>
+      <div class="yk-actions">
+       <label class="yk-check-inline">
+        <input id="saved-only" type="checkbox"/>
+        Saved only
+        <span id="saved-count">
+         (0)
+        </span>
+       </label>
+       <button class="yk-text-button" id="reset-filters" type="button">
+        Reset filters
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="yk-program-grid" id="program-results">
+     <article class="yk-program-card" data-category="technology" data-program="software">
+      <div class="yk-program-image">
+       <img alt="Learning and collaboration in Software Engineering" height="400" loading="lazy" src="images/soft_eng.jpg" width="640"/>
+       <span class="yk-tag">
+        Technology
+       </span>
+      </div>
+      <div class="yk-card-content">
+       <div class="yk-card-top">
+        <span aria-hidden="true" class="yk-program-icon">
+         ⌘
+        </span>
+        <button aria-label="Save Software Engineering" aria-pressed="false" class="yk-save" data-save="software" type="button">
+         ♡
+         <span>
+          Save
+         </span>
+        </button>
+       </div>
+       <h3>
+        Software Engineering
+       </h3>
+       <p>
+        Design, build and maintain software that people rely on.
+       </p>
+       <ul class="yk-skill-list">
+        <li>
+         Web Development
+        </li>
+        <li>
+         Databases
+        </li>
+        <li>
+         Algorithms &amp; Data Structures
+        </li>
+       </ul>
+       <p class="yk-program-meta">
+        4 years
+        <span>
+         ·
+        </span>
+        English
+        <span>
+         ·
+        </span>
+        Bachelor
+       </p>
+       <div class="yk-card-bottom">
+        <strong>
+         2.6M ₸
+         <small>
+          / year
+         </small>
+        </strong>
+        <button class="yk-text-button" data-details="software" type="button">
+         Explore
+         <span aria-hidden="true">
+          →
+         </span>
+         <span class="yk-sr">
+          Software Engineering
+         </span>
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="yk-program-card" data-category="technology" data-program="computer">
+      <div class="yk-program-image">
+       <img alt="Learning and collaboration in Computer Science" height="400" loading="lazy" src="images/com_sci.jpg" width="640"/>
+       <span class="yk-tag">
+        Technology
+       </span>
+      </div>
+      <div class="yk-card-content">
+       <div class="yk-card-top">
+        <span aria-hidden="true" class="yk-program-icon">
+         ◈
+        </span>
+        <button aria-label="Save Computer Science" aria-pressed="false" class="yk-save" data-save="computer" type="button">
+         ♡
+         <span>
+          Save
+         </span>
+        </button>
+       </div>
+       <h3>
+        Computer Science
+       </h3>
+       <p>
+        Understand the ideas behind computing and intelligent systems.
+       </p>
+       <ul class="yk-skill-list">
+        <li>
+         Programming Fundamentals
+        </li>
+        <li>
+         Operating Systems
+        </li>
+        <li>
+         Artificial Intelligence
+        </li>
+       </ul>
+       <p class="yk-program-meta">
+        4 years
+        <span>
+         ·
+        </span>
+        English
+        <span>
+         ·
+        </span>
+        Bachelor
+       </p>
+       <div class="yk-card-bottom">
+        <strong>
+         2.5M ₸
+         <small>
+          / year
+         </small>
+        </strong>
+        <button class="yk-text-button" data-details="computer" type="button">
+         Explore
+         <span aria-hidden="true">
+          →
+         </span>
+         <span class="yk-sr">
+          Computer Science
+         </span>
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="yk-program-card" data-category="technology" data-program="cyber">
+      <div class="yk-program-image">
+       <img alt="Learning and collaboration in Cybersecurity" height="400" loading="lazy" src="images/research-lab.jpg" width="640"/>
+       <span class="yk-tag">
+        Technology
+       </span>
+      </div>
+      <div class="yk-card-content">
+       <div class="yk-card-top">
+        <span aria-hidden="true" class="yk-program-icon">
+         ◇
+        </span>
+        <button aria-label="Save Cybersecurity" aria-pressed="false" class="yk-save" data-save="cyber" type="button">
+         ♡
+         <span>
+          Save
+         </span>
+        </button>
+       </div>
+       <h3>
+        Cybersecurity
+       </h3>
+       <p>
+        Protect networks, applications and digital information.
+       </p>
+       <ul class="yk-skill-list">
+        <li>
+         Network Security
+        </li>
+        <li>
+         Cryptography
+        </li>
+        <li>
+         Digital Forensics
+        </li>
+       </ul>
+       <p class="yk-program-meta">
+        4 years
+        <span>
+         ·
+        </span>
+        English
+        <span>
+         ·
+        </span>
+        Bachelor
+       </p>
+       <div class="yk-card-bottom">
+        <strong>
+         2.7M ₸
+         <small>
+          / year
+         </small>
+        </strong>
+        <button class="yk-text-button" data-details="cyber" type="button">
+         Explore
+         <span aria-hidden="true">
+          →
+         </span>
+         <span class="yk-sr">
+          Cybersecurity
+         </span>
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="yk-program-card" data-category="technology" data-program="data">
+      <div class="yk-program-image">
+       <img alt="Learning and collaboration in Data Science" height="400" loading="lazy" src="images/team_study.jpg" width="640"/>
+       <span class="yk-tag">
+        Technology
+       </span>
+      </div>
+      <div class="yk-card-content">
+       <div class="yk-card-top">
+        <span aria-hidden="true" class="yk-program-icon">
+         ∑
+        </span>
+        <button aria-label="Save Data Science" aria-pressed="false" class="yk-save" data-save="data" type="button">
+         ♡
+         <span>
+          Save
+         </span>
+        </button>
+       </div>
+       <h3>
+        Data Science
+       </h3>
+       <p>
+        Turn data into useful insights with statistics and machine learning.
+       </p>
+       <ul class="yk-skill-list">
+        <li>
+         Python Programming
+        </li>
+        <li>
+         Machine Learning
+        </li>
+        <li>
+         Data Visualization
+        </li>
+       </ul>
+       <p class="yk-program-meta">
+        4 years
+        <span>
+         ·
+        </span>
+        English
+        <span>
+         ·
+        </span>
+        Bachelor
+       </p>
+       <div class="yk-card-bottom">
+        <strong>
+         2.7M ₸
+         <small>
+          / year
+         </small>
+        </strong>
+        <button class="yk-text-button" data-details="data" type="button">
+         Explore
+         <span aria-hidden="true">
+          →
+         </span>
+         <span class="yk-sr">
+          Data Science
+         </span>
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="yk-program-card" data-category="business" data-program="business">
+      <div class="yk-program-image">
+       <img alt="Learning and collaboration in Business Analytics" height="400" loading="lazy" src="images/gallery2.jpg" width="640"/>
+       <span class="yk-tag">
+        Business
+       </span>
+      </div>
+      <div class="yk-card-content">
+       <div class="yk-card-top">
+        <span aria-hidden="true" class="yk-program-icon">
+         →
+        </span>
+        <button aria-label="Save Business Analytics" aria-pressed="false" class="yk-save" data-save="business" type="button">
+         ♡
+         <span>
+          Save
+         </span>
+        </button>
+       </div>
+       <h3>
+        Business Analytics
+       </h3>
+       <p>
+        Connect business decisions with data and digital strategy.
+       </p>
+       <ul class="yk-skill-list">
+        <li>
+         Business Intelligence
+        </li>
+        <li>
+         Data Analytics
+        </li>
+        <li>
+         Project Management
+        </li>
+       </ul>
+       <p class="yk-program-meta">
+        4 years
+        <span>
+         ·
+        </span>
+        English
+        <span>
+         ·
+        </span>
+        Bachelor
+       </p>
+       <div class="yk-card-bottom">
+        <strong>
+         2.4M ₸
+         <small>
+          / year
+         </small>
+        </strong>
+        <button class="yk-text-button" data-details="business" type="button">
+         Explore
+         <span aria-hidden="true">
+          →
+         </span>
+         <span class="yk-sr">
+          Business Analytics
+         </span>
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="yk-program-card" data-category="creative" data-program="design">
+      <div class="yk-program-image">
+       <img alt="Learning and collaboration in Digital Media &amp; Design" height="400" loading="lazy" src="images/dig_media.jpg" width="640"/>
+       <span class="yk-tag">
+        Creative
+       </span>
+      </div>
+      <div class="yk-card-content">
+       <div class="yk-card-top">
+        <span aria-hidden="true" class="yk-program-icon">
+         ✳
+        </span>
+        <button aria-label="Save Digital Media &amp; Design" aria-pressed="false" class="yk-save" data-save="design" type="button">
+         ♡
+         <span>
+          Save
+         </span>
+        </button>
+       </div>
+       <h3>
+        Digital Media &amp; Design
+       </h3>
+       <p>
+        Combine creativity and technology to shape digital experiences.
+       </p>
+       <ul class="yk-skill-list">
+        <li>
+         UI/UX Design
+        </li>
+        <li>
+         Web Design
+        </li>
+        <li>
+         Digital Media
+        </li>
+       </ul>
+       <p class="yk-program-meta">
+        4 years
+        <span>
+         ·
+        </span>
+        English
+        <span>
+         ·
+        </span>
+        Bachelor
+       </p>
+       <div class="yk-card-bottom">
+        <strong>
+         2.3M ₸
+         <small>
+          / year
+         </small>
+        </strong>
+        <button class="yk-text-button" data-details="design" type="button">
+         Explore
+         <span aria-hidden="true">
+          →
+         </span>
+         <span class="yk-sr">
+          Digital Media &amp; Design
+         </span>
+        </button>
+       </div>
+      </div>
+     </article>
+    </div>
+    <div class="yk-empty" hidden="" id="program-empty">
+     <h3>
+      No programs match yet.
+     </h3>
+     <p>
+      Try a broader search or reset your filters.
+     </p>
+     <button class="yk-button yk-button-outline" data-reset-filters="" type="button">
+      Show all programs
+     </button>
+    </div>
+   </section>
+   <section class="yk-section yk-soft">
+    <div class="yk-container yk-two-column">
+     <div>
+      <p class="yk-eyebrow">
+       A LITTLE GUIDANCE
+      </p>
+      <h2>
+       Still finding
+       <br/>
+       your direction?
+      </h2>
+      <p>
+       Start with what you enjoy. This quick guide suggests a program to explore, based on your interests.
+      </p>
+      <p class="yk-small yk-muted">
+       A starting point for your research, not an aptitude assessment.
+      </p>
+     </div>
+     <div class="yk-panel">
+      <h3>
+       Find your program
+      </h3>
+      <div class="yk-field">
+       <label for="match-interest">
+        What would you enjoy working on?
+       </label>
+       <select id="match-interest">
+        <option value="">
+         Choose an interest
+        </option>
+        <option value="software">
+         Building websites and apps
+        </option>
+        <option value="computer">
+         Computers and artificial intelligence
+        </option>
+        <option value="cyber">
+         Protecting networks and data
+        </option>
+        <option value="data">
+         Numbers, patterns and predictions
+        </option>
+        <option value="business">
+         Business decisions and strategy
+        </option>
+        <option value="design">
+         Creative digital experiences
+        </option>
+       </select>
+      </div>
+      <button class="yk-button" id="find-match" type="button">
+       Find my direction →
+      </button>
+      <p aria-live="polite" class="yk-status" id="match-result" role="status">
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="yk-section yk-container" id="reading-resources">
+    <div class="yk-heading-row">
+     <div class="yk-section-heading">
+      <p class="yk-eyebrow">
+       BEFORE YOUR FIRST LECTURE
+      </p>
+      <h2>
+       Explore your subject.
+      </h2>
+      <p>
+       Discover books from Open Library related to your field. These are discovery suggestions, not an official reading list.
+      </p>
+     </div>
+     <a class="yk-source" href="https://openlibrary.org" rel="noopener noreferrer" target="_blank">
+      Open Library →
+     </a>
+    </div>
+    <div class="yk-api-controls">
+     <div class="yk-field">
+      <label for="reading-subject">
+       Choose a reading topic
+      </label>
+      <select id="reading-subject">
+       <option value="computer_science">
+        Computer science
+       </option>
+       <option value="programming">
+        Programming
+       </option>
+       <option value="computer_security">
+        Cybersecurity
+       </option>
+       <option value="data_science">
+        Data science
+       </option>
+       <option value="business">
+        Business
+       </option>
+       <option value="graphic_design">
+        Design
+       </option>
+      </select>
+     </div>
+     <button class="yk-button yk-button-outline" id="load-reading" type="button">
+      Discover books →
+     </button>
+    </div>
+    <p aria-live="polite" class="yk-status" id="reading-status" role="status">
+     Choose a topic and discover books. An internet connection is needed for new results.
+    </p>
+    <div aria-busy="false" class="yk-book-grid" id="reading-results">
+    </div>
+    <button class="yk-text-button" hidden="" id="reading-retry" type="button">
+     Try again ↻
+    </button>
+   </section>
+   <section class="yk-section yk-soft">
+    <div class="yk-container">
+     <div class="yk-section-heading">
+      <p class="yk-eyebrow">
+       LEARN BY DOING
+      </p>
+      <h2>
+       More than a classroom.
+      </h2>
+      <p>
+       Hands-on experiences connect your studies with the world beyond campus.
+      </p>
+     </div>
+     <div class="yk-three-column">
+      <article class="yk-feature">
+       <span aria-hidden="true">
+        01 /
+       </span>
+       <h3>
+        Practical projects
+       </h3>
+       <p>
+        Build a portfolio through teamwork, prototypes and real problem solving.
+       </p>
+      </article>
+      <article class="yk-feature">
+       <span aria-hidden="true">
+        02 /
+       </span>
+       <h3>
+        Space to collaborate
+       </h3>
+       <p>
+        Explore technology-equipped learning spaces and a community of curious people.
+       </p>
+       <a href="campus-life.html">
+        Explore campus →
+       </a>
+      </article>
+      <article class="yk-feature">
+       <span aria-hidden="true">
+        03 /
+       </span>
+       <h3>
+        Your next step
+       </h3>
+       <p>
+        Connect your interests with a study plan and a future career direction.
+       </p>
+       <a href="contact.html">
+        Ask a question →
+       </a>
+      </article>
+     </div>
+     <div class="yk-photo-strip">
+      <img alt="Students collaborating on a project" height="400" loading="lazy" src="images/team_study.jpg" width="600"/>
+      <img alt="University library study space" height="400" loading="lazy" src="images/library.jpg" width="600"/>
+      <img alt="Hands-on learning at university" height="400" loading="lazy" src="images/gallery4.jpg" width="600"/>
+     </div>
+    </div>
+   </section>
+   <section class="yk-container yk-section">
+    <div class="yk-cta">
+     <div>
+      <p class="yk-eyebrow">
+       YOUR NEXT CHAPTER
+      </p>
+      <h2>
+       Ready to take the first step?
+      </h2>
+      <p>
+       Explore requirements, tuition and scholarship options.
+      </p>
+     </div>
+     <a class="yk-button yk-button-white" href="admissions.html">
+      View admissions →
+     </a>
+    </div>
+   </section>
+   <dialog aria-labelledby="program-dialog-title" class="yk-dialog" id="program-dialog">
+    <button aria-label="Close program details" class="yk-close" data-close-dialog="" type="button">
+     ×
+    </button>
+    <p class="yk-eyebrow">
+     PROGRAM OVERVIEW
+    </p>
+    <h2 id="program-dialog-title">
+    </h2>
+    <div id="program-dialog-content">
+    </div>
+   </dialog>
+  </main>
+  <footer class="yk-footer">
+   <div class="yk-container yk-footer-grid">
+    <div>
+     <a class="yk-brand" href="index.html">
+      KDK University
+     </a>
+     <p>
+      A place to discover your direction.
+     </p>
+     <p class="yk-small">
+      Fictional university · Student project
+     </p>
+    </div>
+    <div>
+     <strong>
+      Explore KDK
+     </strong>
+     <p>
+      <a href="programs.html">
+       Programs
+      </a>
+      ·
+      <a href="admissions.html">
+       Admissions
+      </a>
+     </p>
+     <p>
+      <a href="campus-life.html">
+       Campus Life
+      </a>
+      ·
+      <a href="contact.html">
+       Contact
+      </a>
+     </p>
+    </div>
+    <div>
+     <strong>
+      Our team · SE-2515
+     </strong>
+     <p>
+      Kuat Allazhar · Dautbekov Yerkhan
+      <br/>
+      Khafiz Akylzhan
+     </p>
+     <p class="yk-small">
+      © 2026 KDK University
+     </p>
+    </div>
+   </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/yerkhan.js" defer></script>
-  <script src="js/assignment5-yerkhan.js" defer></script>
-
-  <!-- | Assignment 6 | Tasks 4, 5, 6 | BODY -->
-  <div id="yerkhan-a6-scroll-progress" class="yerkhan-a6-scroll-progress"
-    role="progressbar" aria-label="Page scroll progress"
-    aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-    <div class="yerkhan-a6-scroll-fill"></div>
+  <div aria-live="polite" class="yk-toast" id="yk-toast" role="status">
   </div>
-  <script src="js/assignment6-yerkhan.js"></script>
-</body>
-
+ </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "name": "kdk-university-final",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KDK University final project, SE-2515. Static HTML/CSS/JavaScript; no build required.",
+  "scripts": {
+    "test": "node tests/browser.cjs",
+    "check": "python tests/check_links.py",
+    "test:forms": "node tests/forms.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

@@ -1,374 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KDK University | Home</title>
-
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Project styles -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/allazhar.css">
-    <link rel="stylesheet" href="css/allazhar-assignment5.css">
-    <link rel="stylesheet" href="css/allazhar-assignment6.css">
-
-    <!-- Assignment 6 - Task 0: load jQuery before our external script. -->
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-    <script src="js/allazhar-assignment6.js"></script>
-</head>
-
-<body>
-
-    <!-- Assignment 3 - Task 5: Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white border-bottom assignment3-navbar" aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
-                <img class="brand-logo" src="images/kdk-logo.svg" alt="KDK University logo">
-                <span>KDK University</span>
-            </a>
-
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#homeNavbar"
-                    aria-controls="homeNavbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="homeNavbar">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link" href="about.html">About Us</a>
-                    <a class="nav-link" href="programs.html">Programs</a>
-                    <a class="nav-link" href="admissions.html">Admissions</a>
-                    <a class="nav-link" href="campus-life.html">Campus Life</a>
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </div>
-            </div>
-        </div>
+ <head>
+  
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   KDK University | Home
+  </title>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ <link rel="stylesheet" href="css/yerkhan.css"><link rel="stylesheet" href="css/final.css"><script defer src="js/yerkhan.js"></script></head>
+ <body class="yk-page">
+  
+  <a class="yk-skip" href="#main-content">
+   Skip to content
+  </a>
+  <header class="yk-header">
+   <div class="yk-nav-wrap">
+    <a class="yk-brand" href="index.html">
+     <img alt="" height="38" src="images/kdk-logo.svg" width="38"/>
+     <span>
+      KDK
+      <small>
+       UNIVERSITY
+      </small>
+     </span>
+    </a>
+    <button aria-controls="yk-navigation" aria-expanded="false" class="yk-menu-toggle" type="button">
+     Menu
+     <span aria-hidden="true">
+      ☰
+     </span>
+    </button>
+    <nav aria-label="Main navigation" class="yk-navigation" id="yk-navigation">
+     <a aria-current="page" href="index.html">
+      Home
+     </a>
+     <a href="about.html">
+      About Us
+     </a>
+     <a href="programs.html">
+      Programs
+     </a>
+     <a href="admissions.html">
+      Admissions
+     </a>
+     <a href="campus-life.html">
+      Campus Life
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
     </nav>
-
-    <section class="container py-4">
-
-        <p><a href="#visitKdk">Explore KDK and plan a visit</a></p>
-
-        <!-- Assignment 4 - Task 4: Change background -->
-        <button type="button" class="btn btn-primary" id="changeBackground">
-            Change background
-        </button>
-        
-        <!-- Assignment 4 - Task 5: Date and time -->
-        <p id="currentDatetime" class="mt-3"></p>
-
-        <!-- Assignment 4 - Task 3: Popup subscription form -->
-        <button type="button" class="btn btn-primary" id="openPopup">
-            Get KDK Updates
-        </button>
-
-        <!-- Assignment 4 - Task 2: FAQ accordion -->
-        <h2 class="mt-4">Frequently Asked Questions</h2>
-
-    <div class="faq-item mt-3">
-            <button type="button" 
-            class="faq-question btn btn-outline-primary">
-            What programs does KDK University offer?
-        </button>
-        <div class="faq-answer">
-            <p>
-                KDK University offers a wide range of undergraduate and graduate programs
-                in various fields, including science, technology, engineering, arts, and business.
-            </p>
-        </div>
+    <div class="yk-header-actions">
+     <button aria-label="Switch to dark mode" aria-pressed="false" class="yk-theme" data-theme-toggle="" type="button">
+      <span aria-hidden="true">
+       ◐
+      </span>
+      <span data-theme-label="">
+       Dark mode
+      </span>
+     </button>
+     <a class="yk-account" data-account-link="" href="profile.html?auth=login" data-open-auth="login">
+      Log in
+      <span aria-hidden="true">
+       →
+      </span>
+     </a>
     </div>
-
-        <div class="faq-item mt-3">
-            <button type="button" class="faq-question btn btn-outline-primary">
-                Where can I find admission requirements?
-            </button>
-            <div class="faq-answer">
-                <p>
-                    Visit our Admissions page to explore application requirements,
-                    tuition and scholarships.
-                </p>
-            </div>
-        </div>
-
-        <div class="faq-item mt-3">
-            <button type="button" class="faq-question btn btn-outline-primary">
-                Where can I learn about student life?
-            </button>
-            <div class="faq-answer">
-                <p>
-                    Visit our Campus Life page to explore student activities
-                    and campus facilities.
-                </p>
-            </div>
-        </div>
-
-        <!-- Assignment 4 - Task 1: JavaScript form validation -->
-        <div class="registration-card mt-4">
-            <h2>Applicant Registration</h2>
-            <p>Practice registration form. No account will be created.</p>
-            <form id="registrationForm" novalidate>
-                <div class="row g-3">
-                    <div class="col-12 col-md-6">
-                        <label for="registerName" class="form-label">Full name</label>
-                        <input type="text" class="form-control" id="registerName"
-                               name="fullName" autocomplete="name" required
-                               aria-describedby="registerNameError">
-                        <p id="registerNameError" class="validation-error"></p>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="registerEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="registerEmail"
-                               name="email" autocomplete="email" required
-                               aria-describedby="registerEmailError">
-                        <p id="registerEmailError" class="validation-error"></p>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="registerPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="registerPassword"
-                               name="password" autocomplete="new-password" minlength="8" required
-                               aria-describedby="registerPasswordHelp registerPasswordError">
-                        <p id="registerPasswordHelp" class="form-text mb-0">Use at least 8 characters.</p>
-                        <p id="registerPasswordError" class="validation-error"></p>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="confirmPassword" class="form-label">Confirm password</label>
-                        <input type="password" class="form-control" id="confirmPassword"
-                               name="confirmPassword" autocomplete="new-password" required
-                               aria-describedby="confirmPasswordError">
-                        <p id="confirmPasswordError" class="validation-error"></p>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary mt-3">Check Registration</button>
-                <p id="registrationMessage" class="form-message" role="status"></p>
-            </form>
-        </div>
-    </section>
-
-    <main>
-
-        <!-- Assignment 6 - Allazhar: notification and sharing tools. -->
-        <section id="a6Tools" class="a6-allazhar-tools" aria-labelledby="a6ToolsTitle">
-            <h2 id="a6ToolsTitle">KDK visitor tools</h2>
-            <p>Get a quick tip for planning your visit.</p>
-            <button id="a6ShowTip" class="btn btn-primary" type="button">Show visit tip</button>
-            <label for="a6ShareUrl" class="a6-allazhar-copy-label">Share the KDK website</label>
-            <div class="a6-allazhar-copy-row">
-                <input id="a6ShareUrl" class="form-control" type="text" value="https://wwezzy.github.io/kdk-university-project/" readonly>
-                <div class="a6-allazhar-copy-action">
-                    <button id="a6CopyLink" class="btn btn-outline-primary" type="button" aria-describedby="a6CopyTooltip">
-                        <span id="a6CopyIcon" aria-hidden="true">&#128203;</span> Copy link
-                    </button>
-                    <span id="a6CopyTooltip" class="a6-allazhar-copy-tooltip" role="tooltip">Copied to clipboard!</span>
-                </div>
-            </div>
-        </section>
-        <div id="a6Toast" class="a6-allazhar-toast" role="status" aria-live="polite"></div>
-
-        <!-- Assignment 5 - Kuat Allazhar: DOM, events, data, sound and animation -->
-        <section id="visitKdk" class="a5-experience" aria-labelledby="a5Title">
-            <h2 id="a5Title">Explore KDK. Plan your visit.</h2>
-            <p class="a5-intro">Take a look around campus, then build your own visit plan in three simple steps.</p>
-            <div class="a5-layout">
-                <div class="a5-gallery">
-                    <figure>
-                        <img id="a5MainImage" class="a5-main-image" src="images/Campus2All.jpg" alt="KDK University campus buildings">
-                        <figcaption id="a5PhotoCaption" aria-live="polite">1 / 3 - Explore our campus</figcaption>
-                    </figure>
-                    <div id="a5Thumbnails" class="a5-thumbnails" role="group" aria-label="Choose a campus photo"></div>
-                    <p class="a5-note">Choose a thumbnail to see a different part of university life.</p>
-                </div>
-                <div class="a5-planner">
-                    <form id="a5VisitForm" novalidate>
-                        <p id="a5Progress" class="a5-progress" aria-live="polite">Step 1 of 3</p>
-                        <div class="a5-step">
-                            <h3>Your details</h3>
-                            <label for="a5VisitorName">Name</label>
-                            <input id="a5VisitorName" name="visitorName" type="text" autocomplete="name" maxlength="80" required>
-                            <label for="a5VisitorEmail">Email</label>
-                            <input id="a5VisitorEmail" name="visitorEmail" type="email" autocomplete="email" maxlength="160" required>
-                        </div>
-                        <div class="a5-step" hidden>
-                            <h3>What would you like to explore?</h3>
-                            <label for="a5VisitInterest">Your interest</label>
-                            <select id="a5VisitInterest" name="visitInterest">
-                                <option>Campus tour</option>
-                                <option>Library and study spaces</option>
-                                <option>Sports and student life</option>
-                            </select>
-                            <p class="a5-note">You can go back at any time. Your entries stay in the form.</p>
-                        </div>
-                        <div class="a5-step" hidden>
-                            <h3 tabindex="-1">Review your plan</h3>
-                            <p id="a5Review"></p>
-                            <p class="a5-note">Check your details, then select Create plan.</p>
-                        </div>
-                        <p id="a5Error" class="a5-error" role="alert"></p>
-                        <div class="a5-actions">
-                            <button id="a5Back" class="a5-button a5-button-secondary" type="button" hidden>Back</button>
-                            <button id="a5Next" class="a5-button" type="button">Next</button>
-                            <button id="a5Finish" class="a5-button" type="submit" hidden>Create plan</button>
-                            <button id="a5Reset" class="a5-button a5-button-secondary" type="button">Reset</button>
-                        </div>
-                        <div class="a5-sound-controls">
-                            <label><input id="a5SoundEnabled" type="checkbox" checked> Sound on completion</label>
-                            <button id="a5PlaySound" class="a5-button a5-button-secondary" type="button">Play sound</button>
-                        </div>
-                        <p id="a5SoundMessage" class="a5-note" role="status"></p>
-                        <p id="a5Result" class="a5-success" tabindex="-1" role="status" hidden></p>
-                        <p class="a5-note">Preview only. Your details stay on this page; this form does not send a booking.</p>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Assignment 3 - Task 1: Responsive Typography -->
-        <section id="home-hero" class="home-hero">
-            <div class="home-hero-image">
-                <img src="images/kdk-campus-wide.png" alt="KDK University campus">
-            </div>
-
-            <div class="home-hero-content">
-                <p class="eyebrow">WELCOME TO KDK UNIVERSITY</p>
-
-                <h1 class="assignment3-title">Build Your Future With Us</h1>
-
-                <p class="home-description assignment3-lead">
-                    KDK University is a modern university where students
-                    learn new skills, gain practical experience and prepare
-                    for their future careers.
-                </p>
-
-                <div>
-                    <a class="btn btn-primary btn-lg" href="programs.html">
-                        Explore Programs
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section home-intro">
-            <p class="eyebrow">WHY KDK?</p>
-            <h2>A Place to Learn and Grow</h2>
-            <p class="home-description">
-                We provide students with modern education,
-                practical knowledge and opportunities for personal
-                and professional development.
-            </p>
-        </section>
-
-        <!-- Assignment 3 - Task 2: CSS-only responsive card group -->
-        <section class="section">
-            <div class="section-heading">
-                <p class="eyebrow">RESPONSIVE CARD GROUP</p>
-                <h2>University Opportunities</h2>
-                <p>
-                    The layout changes with CSS media queries:
-                    three cards on desktop, two on tablet and one on mobile.
-                </p>
-            </div>
-
-            <div class="flex-cards assignment3-card-group">
-                <article class="flex-card">
-                    <img id="a6LibraryPhoto" class="a6-allazhar-lazy" src="images/a6-lazy-placeholder.svg" data-src="images/LibraryAll.jpg" alt="KDK University library">
-                    <h3>Academic Programs</h3>
-                    <p>
-                        Explore our academic programs and choose
-                        the right direction for your future career.
-                    </p>
-                    <a class="btn btn-outline-primary btn-sm" href="programs.html">
-                        View Programs
-                    </a>
-                </article>
-
-                <article class="flex-card">
-                    <img class="a6-allazhar-lazy" src="images/a6-lazy-placeholder.svg" data-src="images/GymCelebAll.jpg" alt="KDK University sports complex">
-                    <h3>Campus Life</h3>
-                    <p>
-                        Discover student clubs, sports,
-                        activities and university community.
-                    </p>
-                    <a class="btn btn-outline-primary btn-sm" href="campus-life.html">
-                        Campus Life
-                    </a>
-                </article>
-
-                <article class="flex-card">
-                    <img class="a6-allazhar-lazy" src="images/a6-lazy-placeholder.svg" data-src="images/Campus2All.jpg" alt="KDK University campus">
-                    <h3>Admissions</h3>
-                    <p>
-                        Learn about admission requirements
-                        and the university application process.
-                    </p>
-                    <a class="btn btn-outline-primary btn-sm" href="admissions.html">
-                        Admissions
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Assignment 3 - Task 6: Bootstrap Buttons + Button Group -->
-        <section class="cta">
-            <h2>Start Your Journey at KDK</h2>
-            <p>Discover our academic programs and admission opportunities.</p>
-
-            <div class="btn-group" role="group" aria-label="University actions">
-                <a class="btn btn-light" href="programs.html">Programs</a>
-                <a class="btn btn-outline-light" href="admissions.html">Admissions</a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p><strong>KDK University</strong></p>
-        <p>Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan</p>
-        <p>&copy; 2026 KDK University Student project.</p>
-    </footer>
-
-    <!-- Assignment 4 - Task 3: Initially hidden popup -->
-    <div class="subscription-popup" id="subscriptionPopup">
-        <div class="subscription-popup-panel" role="dialog"
-             aria-modal="true" aria-labelledby="subscriptionTitle">
-            <button type="button" class="subscription-popup-close"
-                    id="closePopup" aria-label="Close subscription form">
-                &times;
-            </button>
-
-            <h2 id="subscriptionTitle">Get KDK Updates</h2>
-            <p>Practice subscription form. No subscription will be sent.</p>
-
-            <form id="subscriptionForm" novalidate>
-                <div class="mb-3">
-                    <label for="subscriptionName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="subscriptionName"
-                           name="name" autocomplete="name" required
-                           aria-describedby="subscriptionNameError">
-                    <p id="subscriptionNameError" class="validation-error"></p>
-                </div>
-                <div class="mb-3">
-                    <label for="subscriptionEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="subscriptionEmail"
-                           name="email" autocomplete="email" required
-                           aria-describedby="subscriptionEmailError">
-                    <p id="subscriptionEmailError" class="validation-error"></p>
-                </div>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-                <p id="subscriptionMessage" class="form-message mb-0" role="status"></p>
-            </form>
-        </div>
+   </div>
+  </header>
+  <main id="main-content"><section class="yk-hero"><img class="yk-hero-background" src="images/kdk-campus-wide.png" alt="Campus buildings and outdoor study spaces"><div class="yk-container yk-hero-inner"><p class="yk-eyebrow">KDK University</p><h1>Find your direction.<br><span>Build what comes next.</span></h1><p>Explore technology, develop practical skills and find your community. Your next chapter starts with a little curiosity.</p><div class="yk-actions"><a class="yk-button" href="programs.html">Explore programs</a><a class="yk-button yk-button-glass" href="admissions.html">How to apply</a></div></div></section><section class="yk-section yk-container"><div class="yk-section-heading"><p class="yk-eyebrow">Make it your own</p><h2>More than a place to study.</h2><p>Choose what you want to learn, meet people who share your interests and make room for the things you love.</p></div><div class="yk-three-column"><article class="yk-program-card"><div class="yk-program-image"><img src="images/LibraryAll.jpg" alt="Discover your subject" loading="lazy"></div><div class="yk-card-content"><h3>Discover your subject</h3><p>Compare our programs and find a course that fits your interests.</p><a href="programs.html">Browse programs &rarr;</a></div></article><article class="yk-program-card"><div class="yk-program-image"><img src="images/GymCelebAll.jpg" alt="Find your people" loading="lazy"></div><div class="yk-card-content"><h3>Find your people</h3><p>Explore clubs, sports and shared spaces beyond the classroom.</p><a href="campus-life.html">Explore campus life &rarr;</a></div></article><article class="yk-program-card"><div class="yk-program-image"><img src="images/Campus2All.jpg" alt="Take the next step" loading="lazy"></div><div class="yk-card-content"><h3>Take the next step</h3><p>See the application steps and prepare a local demo application.</p><a href="admissions.html">View admissions &rarr;</a></div></article></div></section><section class="yk-section yk-soft" id="reading-resources"><div class="yk-container"><div class="yk-section-heading"><p class="yk-eyebrow">Start learning today</p><h2>A good book is a good beginning.</h2><p>Discover reading ideas for your chosen subject from Open Library. These suggestions are not an official course reading list.</p></div><div class="yk-api-controls"><div class="yk-field"><label for="reading-subject">Choose a subject</label><select id="reading-subject"><option value="computer_science">Computer science</option><option value="programming">Programming</option><option value="computer_security">Cybersecurity</option><option value="data_science">Data science</option><option value="business">Business</option><option value="graphic_design">Graphic design</option></select></div><button class="yk-button" id="load-reading" type="button">Discover books</button></div><p class="yk-status" id="reading-status" role="status" aria-live="polite">Choose a subject, then select Discover books. New results need an internet connection.</p><div class="yk-book-grid" id="reading-results" aria-busy="false"></div><button class="yk-text-button" id="reading-retry" type="button" hidden>Try again</button><p class="yk-small"><a href="https://openlibrary.org" target="_blank" rel="noopener noreferrer">Explore Open Library &rarr;</a></p></div></section><section class="yk-section yk-container"><div class="yk-section-heading"><p class="yk-eyebrow">A few useful answers</p><h2>Before you begin.</h2></div><details class="yk-faq"><summary>How do I choose a program?</summary><p>Visit Programs to search by name or filter by subject. Open a program to compare the overview and study topics, then save your shortlist.</p></details><details class="yk-faq"><summary>Can I apply through this website?</summary><p>This is a fictional university built as a student project. The Admissions form demonstrates an application process and saves your entries only in this browser. No application is sent to a university.</p></details><details class="yk-faq"><summary>Where can I find my saved information?</summary><p>Create a demo account or log in from the header, then open Profile. Please use fictional details and a password you do not use elsewhere.</p></details></section><section class="yk-container yk-section"><div class="yk-cta"><div><h2>Ready to explore KDK?</h2><p>Start with your interests. We will help you find the next step.</p></div><a class="yk-button yk-button-white" href="programs.html">Find your program &rarr;</a></div></section></main>
+  <footer class="yk-footer">
+   <div class="yk-container yk-footer-grid">
+    <div>
+     <a class="yk-brand" href="index.html">
+      KDK University
+     </a>
+     <p>
+      A place to discover your direction.
+     </p>
+     <p class="yk-small">
+      Fictional university · Student project
+     </p>
     </div>
-
-    <!-- Bootstrap JavaScript is required for the navbar toggler -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/allazhar.js"></script>
-    <script src="js/allazhar-assignment5.js"></script>
-</body>
+    <div>
+     <strong>
+      Explore KDK
+     </strong>
+     <p>
+      <a href="programs.html">
+       Programs
+      </a>
+      ·
+      <a href="admissions.html">
+       Admissions
+      </a>
+     </p>
+     <p>
+      <a href="campus-life.html">
+       Campus Life
+      </a>
+      ·
+      <a href="contact.html">
+       Contact
+      </a>
+     </p>
+    </div>
+    <div>
+     <strong>
+      Our team · SE-2515
+     </strong>
+     <p>
+      Kuat Allazhar · Dautbekov Yerkhan
+      <br/>
+      Khafiz Akylzhan
+     </p>
+     <p class="yk-small">
+      © 2026 KDK University
+     </p>
+    </div>
+   </div>
+  </footer>
+  
+  
+  
+  <div aria-live="polite" class="yk-toast" id="yk-toast" role="status">
+  </div>
+ </body>
 </html>

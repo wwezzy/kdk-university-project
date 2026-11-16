@@ -1,0 +1,20 @@
+2026-11-16T10:14:02.522Z
+Focused runtime form audit
+PASS index.html / login-form: novalidate=true; prohibited attributes=0; JS-rule fields=2
+PASS index.html / signup-form: novalidate=true; prohibited attributes=0; JS-rule fields=5
+PASS about.html / login-form: novalidate=true; prohibited attributes=0; JS-rule fields=2
+PASS about.html / signup-form: novalidate=true; prohibited attributes=0; JS-rule fields=5
+PASS programs.html / login-form: novalidate=true; prohibited attributes=0; JS-rule fields=2
+PASS programs.html / signup-form: novalidate=true; prohibited attributes=0; JS-rule fields=5
+PASS admissions.html / information-form: novalidate=true; prohibited attributes=0; JS-rule fields=6
+PASS admissions.html / login-form: novalidate=true; prohibited attributes=0; JS-rule fields=2
+PASS admissions.html / signup-form: novalidate=true; prohibited attributes=0; JS-rule fields=5
+PASS campus-life.html / login-form: novalidate=true; prohibited attributes=0; JS-rule fields=2
+PASS campus-life.html / signup-form: novalidate=true; prohibited attributes=0; JS-rule fields=5
+PASS contact.html / contact-form: novalidate=true; prohibited attributes=0; JS-rule fields=4
+PASS contact.html / login-form: novalidate=true; prohibited attributes=0; JS-rule fields=2
+PASS contact.html / signup-form: novalidate=true; prohibited attributes=0; JS-rule fields=5
+PASS profile.html / login-form: novalidate=true; prohibited attributes=0; JS-rule fields=2
+PASS profile.html / signup-form: novalidate=true; prohibited attributes=0; JS-rule fields=5
+PASS 16 runtime form instances; empty-submit inline JS validation checked for every form on every content page
+PASS active shared JavaScript has no checkValidity(), reportValidity() or validity-property dependency

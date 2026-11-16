@@ -1,789 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- KDK University Student Project -->
-    <title>Campus Life - KDK University</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-</head>
-
-<body class="campus-page">
-
-    <!-- Assignment 3 - Bootstrap Navbar -->
-<nav class="navbar navbar-expand-lg bg-white">
-    <div class="container">
-
-        <a class="navbar-brand fw-bold" href="index.html">
-            KDK University
-        </a>
-
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="about.html">About Us</a>
-                <a class="nav-link" href="programs.html">Programs</a>
-                <a class="nav-link" href="admissions.html">Admissions</a>
-                <a class="nav-link active"
-                   aria-current="page"
-                   href="campus-life.html">Campus Life</a>
-                <a class="nav-link" href="contact.html">Contact</a>
-            </div>
-        </div>
-
+ <head>
+  
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  
+  <title>
+   Campus Life - KDK University
+  </title>
+  
+  
+  
+  
+ <link rel="stylesheet" href="css/yerkhan.css"><link rel="stylesheet" href="css/final.css"><script defer src="js/yerkhan.js"></script></head>
+ <body class="yk-page">
+  
+  <a class="yk-skip" href="#main-content">
+   Skip to content
+  </a>
+  <header class="yk-header">
+   <div class="yk-nav-wrap">
+    <a class="yk-brand" href="index.html">
+     <img alt="" height="38" src="images/kdk-logo.svg" width="38"/>
+     <span>
+      KDK
+      <small>
+       UNIVERSITY
+      </small>
+     </span>
+    </a>
+    <button aria-controls="yk-navigation" aria-expanded="false" class="yk-menu-toggle" type="button">
+     Menu
+     <span aria-hidden="true">
+      ☰
+     </span>
+    </button>
+    <nav aria-label="Main navigation" class="yk-navigation" id="yk-navigation">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="about.html">
+      About Us
+     </a>
+     <a href="programs.html">
+      Programs
+     </a>
+     <a href="admissions.html">
+      Admissions
+     </a>
+     <a aria-current="page" href="campus-life.html">
+      Campus Life
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
+    </nav>
+    <div class="yk-header-actions">
+     <button aria-label="Switch to dark mode" aria-pressed="false" class="yk-theme" data-theme-toggle="" type="button">
+      <span aria-hidden="true">
+       ◐
+      </span>
+      <span data-theme-label="">
+       Dark mode
+      </span>
+     </button>
+     <a class="yk-account" data-account-link="" href="profile.html?auth=login" data-open-auth="login">
+      Log in
+      <span aria-hidden="true">
+       →
+      </span>
+     </a>
     </div>
-</nav>
-
-
-
-    <main>
-
-  <!-- Campus Life Hero -->
-<section class="campus-hero">
-
-    <div class="campus-hero-text">
-
-        <p class="eyebrow">CAMPUS LIFE</p>
-
-        <h1>Life at KDK University</h1>
-
-        <p>
-            University life is more than studying.
-            Discover student clubs, activities, campus facilities
-            and opportunities to connect with our community.
-        </p>
-
-        <a href="#student-life" class="btn btn-primary btn-lg">Explore Campus Life</a>
-
-    </div>
-
-    <div class="campus-hero-image">
-        <img src="images/campus-life.png"
-             alt="Students at KDK University campus">
-    </div>
-
+   </div>
+  </header>
+  <main id="main-content">
+<section class="yk-hero">
+<img class="yk-hero-background" src="images/Campus2All.jpg" alt="Open spaces and buildings on the KDK campus" width="1600" height="900">
+<div class="yk-container yk-hero-inner"><p class="yk-eyebrow">LIFE AT KDK</p><h1>Find your people.<br><span>Make it your campus.</span></h1><p>Study together, try something new and make room for life beyond the classroom.</p><div class="yk-actions"><a class="yk-button" href="#student-life">Explore campus life</a><a class="yk-button yk-button-glass" href="contact.html">Ask about a visit</a></div></div>
 </section>
-
-<!-- Assignment 3 - Bootstrap Grid: Two Columns -->
-<section class="container my-5 px-sm-2 px-md-4">
-    <div class="row align-items-center mt-lg-4">
-        <div class="col-12 col-lg-6">
-            <h2>Study and Connect</h2>
-            <p>
-                KDK University gives students opportunities to study,
-                collaborate and become part of the campus community.
-            </p>
-        </div>
-
-        <div class="col-12 col-lg-6">
-            <h2>Campus Opportunities</h2>
-            <p>
-                Students can join clubs, attend events and use modern
-                facilities throughout the university.
-            </p>
-            <div class="btn-group mt-3" role="group" aria-label="Campus options">
-    <a href="#student-life" class="btn btn-primary">Student Life</a>
-    <a href="#campus-moments" class="btn btn-outline-primary">Gallery</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Assignment 3 - Bootstrap Grid: Three Columns -->
-<section class="container mb-5">
-    <div class="row g-4">
-
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="p-4 border rounded h-100">
-                <h3>Study</h3>
-                <p>Modern spaces help students focus and work together.</p>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="p-4 border rounded h-100">
-                <h3>Connect</h3>
-                <p>Meet other students through clubs and campus activities.</p>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="p-4 border rounded h-100">
-                <h3>Grow</h3>
-                <p>Develop new skills through events, projects and teamwork.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-        <!-- Student Life -->
-        <section class="section soft-section" id="student-life">
-
-            <div class="section-heading">
-                <p class="eyebrow">STUDENT EXPERIENCE</p>
-                <h2>Student Life</h2>
-
-                <p>
-                    Explore opportunities outside the classroom
-                    and become part of our university community.
-                </p>
-            </div>
-
-            <!-- Assignment 3 - Task 8: Bootstrap Cards -->
-<div class="row g-4">
-
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100">
-            <img src="images/student-clubs.jpg"
-                 class="card-img-top"
-                 alt="KDK University student clubs">
-
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Student Clubs</h3>
-
-                <p class="card-text">
-                    Join student clubs, meet people with similar interests
-                    and participate in university projects.
-                </p>
-
-                <a href="#campus-moments"
-                   class="btn btn-primary mt-auto">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100">
-            <img src="images/sports-wellness.jpg"
-                 class="card-img-top"
-                 alt="Students doing sports">
-
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Sports & Wellness</h3>
-
-                <p class="card-text">
-                    Stay active through sports activities and opportunities
-                    that support a healthy student lifestyle.
-                </p>
-
-                <a href="#campus-moments"
-                   class="btn btn-primary mt-auto">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100">
-            <img src="images/campus-events.jpg"
-                 class="card-img-top"
-                 alt="University student event">
-
-            <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Events</h3>
-
-                <p class="card-text">
-                    Take part in university events, workshops,
-                    competitions and student celebrations.
-                </p>
-
-                <a href="#campus-moments"
-                   class="btn btn-primary mt-auto">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </div>
-
+<section class="yk-section yk-container" id="student-life">
+<div class="yk-section-heading"><p class="yk-eyebrow">A PLACE TO BELONG</p><h2>More than your timetable.</h2><p>There is no single way to be a KDK student. Find a community that shares your interests, or discover a new one.</p></div>
+<div class="yk-three-column">
+<article class="yk-program-card"><div class="yk-program-image"><img src="images/student-clubs.jpg" alt="Students spending time together" loading="lazy" width="800" height="500"></div><div class="yk-card-content"><h3>Clubs &amp; communities</h3><p>Meet students interested in technology, creative work and community projects. Collaborate on ideas outside your degree.</p><a class="yk-text-button" href="contact.html">Ask about student clubs</a></div></article>
+<article class="yk-program-card"><div class="yk-program-image"><img src="images/SportfieldAll.jpg" alt="Outdoor campus sports field" loading="lazy" width="800" height="500"></div><div class="yk-card-content"><h3>Sport &amp; wellbeing</h3><p>Take a study break with team sports, a gym session or time outdoors. Build healthy habits alongside your studies.</p><a class="yk-text-button" href="contact.html">Ask about sports facilities</a></div></article>
+<article class="yk-program-card"><div class="yk-program-image"><img src="images/campus-events.jpg" alt="Students participating in a campus event" loading="lazy" width="800" height="500"></div><div class="yk-card-content"><h3>Events &amp; experiences</h3><p>Exchange ideas at student-led workshops, creative activities and campus gatherings. Bring your curiosity and get involved.</p><a class="yk-text-button" href="contact.html">Ask about campus events</a></div></article>
 </div>
-
-        </section>
-
-        <!-- Campus Facilities -->
-        <section class="section">
-
-            <div class="section-heading">
-                <p class="eyebrow">OUR CAMPUS</p>
-                <h2>Campus Facilities</h2>
-
-                <p>
-                    Our campus provides spaces where students can study,
-                    collaborate, relax and spend time together.
-                </p>
-            </div>
-
-            <div class="feature-grid responsive-facilities">
-
-                <div class="feature-card">
-                    <h3>Library</h3>
-                    <p>
-                        A quiet environment for reading,
-                        studying and academic research.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Study Spaces</h3>
-                    <p>
-                        Comfortable areas for individual study
-                        and teamwork with classmates.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Cafeteria</h3>
-                    <p>
-                        A place where students can have meals,
-                        relax and spend time with friends.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="text-center mt-4">
-                <button id="read-more-btn" class="btn btn-primary" type="button">
-                    Read More
-                </button>
-
-                <p id="extra-campus-info" hidden class="mt-3">
-                    KDK University also offers student workshops,
-                    collaborative learning areas, and community events
-                    to help students develop their skills.
-                </p>
-            </div>
-
-        </section>
-
-<!-- Assignment 2 - Grid Areas -->
-<section class="section">
-
-    <div class="campus-layout">
-
-        <div class="grid-header">
-            <p class="eyebrow">CAMPUS GUIDE</p>
-            <h2>Explore Our Campus</h2>
-        </div>
-
-        <aside class="grid-sidebar">
-            <h3>Quick Links</h3>
-            <ul>
-                <li>Library</li>
-                <li>Study Areas</li>
-                <li>Student Clubs</li>
-                <li>Sports Facilities</li>
-            </ul>
-        </aside>
-
-        <div class="grid-main">
-            <h3>Everything You Need in One Place</h3>
-            <p>
-                KDK University provides students with comfortable spaces
-                for studying, collaboration, activities and relaxation.
-            </p>
-        </div>
-
-        <div class="grid-footer">
-            <p>Discover more opportunities around KDK University campus.</p>
-        </div>
-
+</section>
+<section class="yk-soft"><div class="yk-section yk-container yk-two-column">
+<div><p class="yk-eyebrow">SPACE TO FOCUS</p><h2>Your next idea starts here.</h2><p class="yk-muted">From a quiet library corner to a shared study table, choose the space that helps you do your best work.</p><div class="yk-faq"><details open><summary>Library &amp; independent study</summary><p>Make time for reading, research and focused work between classes. Find related reading with the book discovery tool on our Home page.</p></details><details><summary>Collaboration spaces</summary><p>Work through a problem with classmates, rehearse a presentation or develop your next team project.</p></details><details><summary>Time outdoors</summary><p>Take a break from the screen and reconnect with friends in the campus outdoor spaces.</p></details></div><p style="margin-top:24px"><a class="yk-text-button" href="index.html#reading-resources">Discover study books</a></p></div>
+<figure style="margin:0"><img src="images/LibraryAll.jpg" alt="A bright library with places to read and study" loading="lazy" width="900" height="1000" style="display:block;width:100%;height:440px;object-fit:cover;border-radius:8px"><figcaption class="yk-small yk-muted" style="margin-top:12px">Room to read, think and work together.</figcaption></figure>
+</div></section>
+<section class="yk-section yk-container"><div class="yk-cta"><div><p class="yk-eyebrow">TAKE THE NEXT STEP</p><h2>Picture yourself at KDK.</h2><p>Explore your study options and find out how to apply.</p></div><a class="yk-button yk-button-white" href="admissions.html">Explore admissions</a></div></section>
+</main>
+  <footer class="yk-footer">
+   <div class="yk-container yk-footer-grid">
+    <div>
+     <a class="yk-brand" href="index.html">
+      KDK University
+     </a>
+     <p>
+      A place to discover your direction.
+     </p>
+     <p class="yk-small">
+      Fictional university · Student project
+     </p>
     </div>
-
-</section>
-
-
-
-<!-- Assignment 2 - Grid Image Gallery -->
-<section class="section soft-section" id="campus-moments">
-
-    <div class="section-heading">
-        <p class="eyebrow">CAMPUS MOMENTS</p>
-        <h2>Life Around KDK</h2>
-        <p>
-            Take a look at student life, activities and everyday moments
-            around KDK University.
-        </p>
+    <div>
+     <strong>
+      Explore KDK
+     </strong>
+     <p>
+      <a href="programs.html">
+       Programs
+      </a>
+      ·
+      <a href="admissions.html">
+       Admissions
+      </a>
+     </p>
+     <p>
+      <a href="campus-life.html">
+       Campus Life
+      </a>
+      ·
+      <a href="contact.html">
+       Contact
+      </a>
+     </p>
     </div>
-
-    <!-- Assignment 3 - Bootstrap Carousel -->
-<div id="campusCarousel"
-     class="carousel slide mb-4"
-     role="region"
-     aria-label="KDK University campus gallery">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="1" aria-label="Slide 2"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="2" aria-label="Slide 3"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="3" aria-label="Slide 4"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="4" aria-label="Slide 5"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="5" aria-label="Slide 6"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="6" aria-label="Slide 7"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="7" aria-label="Slide 8"></button>
-
-        <button type="button" data-bs-target="#campusCarousel"
-                data-bs-slide-to="8" aria-label="Slide 9"></button>
+    <div>
+     <strong>
+      Our team · SE-2515
+     </strong>
+     <p>
+      Kuat Allazhar · Dautbekov Yerkhan
+      <br/>
+      Khafiz Akylzhan
+     </p>
+     <p class="yk-small">
+      © 2026 KDK University
+     </p>
     </div>
-
-    <div class="carousel-inner">
-
-        <div class="carousel-item active">
-            <img src="images/gallery1.jpg"
-                 class="d-block w-100"
-                 alt="KDK campus life">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery2.jpg"
-                 class="d-block w-100"
-                 alt="Students studying together">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery3.jpg"
-                 class="d-block w-100"
-                 alt="University facilities">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery4.jpg"
-                 class="d-block w-100"
-                 alt="Student event">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery5.jpg"
-                 class="d-block w-100"
-                 alt="University sports">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery6.jpg"
-                 class="d-block w-100"
-                 alt="Campus spaces">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery7.jpg"
-                 class="d-block w-100"
-                 alt="Student activities">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery8.jpg"
-                 class="d-block w-100"
-                 alt="Study area">
-        </div>
-
-        <div class="carousel-item">
-            <img src="images/gallery9.jpg"
-                 class="d-block w-100"
-                 alt="KDK community">
-        </div>
-
-    </div>
-
-    <button class="carousel-control-prev"
-            type="button"
-            data-bs-target="#campusCarousel"
-            data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-
-    <button class="carousel-control-next"
-            type="button"
-            data-bs-target="#campusCarousel"
-            data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
-    <div class="campus-gallery">
-
-        <div class="gallery-item">
-            <img src="images/gallery1.jpg" alt="Students on campus">
-            <div class="gallery-caption">Campus Life</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery2.jpg" alt="Students studying">
-            <div class="gallery-caption">Study Together</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery3.jpg" alt="University library">
-            <div class="gallery-caption">Library</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery4.jpg" alt="Student event">
-            <div class="gallery-caption">Student Events</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery7.jpg" alt="University sports">
-            <div class="gallery-caption">Sports</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery6.jpg" alt="Student club">
-            <div class="gallery-caption">Student Clubs</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery10.jpg" alt="Students collaborating">
-            <div class="gallery-caption">Assembly Hall</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery8.jpg" alt="Campus facilities">
-            <div class="gallery-caption">Campus Spaces</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/gallery9.jpg" alt="University community">
-            <div class="gallery-caption">KDK Community</div>
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- Why students enjoy campus -->
-        <section class="section soft-section">
-
-            <div class="two-column">
-
-                <div>
-                    <p class="eyebrow">CAMPUS COMMUNITY</p>
-                    <h2>Why Students Enjoy Campus Life</h2>
-
-                    <ul class="check-list">
-                        <li>Friendly student community</li>
-                        <li>Student clubs and activities</li>
-                        <li>Comfortable study areas</li>
-                        <li>University events and workshops</li>
-                        <li>Opportunities to make new friends</li>
-                    </ul>
-                </div>
-
-                <div class="info-box">
-                    <h3>Get Involved</h3>
-
-                    <p>
-                        Campus life gives students the opportunity
-                        to develop new skills, make connections
-                        and create memorable university experiences.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-<!-- Assignment 4 - Task 4: Background Color -->
-<section class="container text-center my-5">
-    <h2>Customize Your Campus Experience</h2>
-    <p>Click the button to change the background color.</p>
-
-    <button type="button" id="change-bg" class="btn btn-primary">
-        Change Background Color
-    </button>
-</section>
-
-        <!-- Contact CTA -->
-        <section class="cta">
-
-            <h2>Want to know more about student life?</h2>
-
-            <p>
-                Contact our university team and learn more about
-                campus activities and student opportunities.
-            </p>
-
-            <button type="button" class="button" id="open-popup"> Contact Us </button>
-
-        </section>
-
-
-        <section class="section campus-rating">
-            <h2>Rate Your Campus Experience</h2>
-            <p>How would you rate student life at KDK University?</p>
-
-            <div id="rating-stars">
-                <button class="rating-star" data-rating="1">★</button>
-                <button class="rating-star" data-rating="2">★</button>
-                <button class="rating-star" data-rating="3">★</button>
-                <button class="rating-star" data-rating="4">★</button>
-                <button class="rating-star" data-rating="5">★</button>
-            </div>
-
-            <p id="rating-result">Click a star to rate!</p>
-        </section>
-
-
-        <section class="section theme-section">
-            <h2>Choose Your Theme</h2>
-            <p>Switch between light and dark mode.</p>
-
-            <button id="theme-toggle" type="button">
-                Switch to Dark Mode
-            </button>
-        </section>
-
-
-<!-- Assignment 6: jQuery Features -->
-
-<div id="a6-scroll-progress"></div>
-
-<section class="section text-center" id="a6-search-section">
-    <h2>Find Campus Activities</h2>
-    <p>Search student clubs and activities.</p>
-
-    <div class="a6-search-container">
-        <input type="text" id="a6-search"
-               class="form-control"
-               placeholder="Search activities..."
-               autocomplete="off">
-
-        <div id="a6-suggestions"></div>
-
-        <p id="a6-search-status" class="mt-3"></p>
-
-        <div id="a6-activity-list">
-            <div class="a6-activity">Football Club</div>
-            <div class="a6-activity">Basketball Club</div>
-            <div class="a6-activity">Programming Workshop</div>
-            <div class="a6-activity">Music Club</div>
-            <div class="a6-activity">Art Club</div>
-            <div class="a6-activity">Tech Workshop</div>
-        </div>
-    </div>
-</section>
-
-<section class="section text-center">
-    <h2>Campus Statistics</h2>
-    <p>Discover our student community.</p>
-
-    <div class="a6-stats">
-        <div class="a6-stat">
-            <h3 class="a6-counter" data-target="1200">0</h3>
-            <p>Students</p>
-        </div>
-
-        <div class="a6-stat">
-            <h3 class="a6-counter" data-target="25">0</h3>
-            <p>Student Clubs</p>
-        </div>
-
-        <div class="a6-stat">
-            <h3 class="a6-counter" data-target="50">0</h3>
-            <p>Campus Events</p>
-        </div>
-    </div>
-    <p class="a6-demo-note">Demo statistics for this student project.</p>
-</section>
-
-<section class="section text-center">
-    <h2>Share Our University</h2>
-    <p>Copy the KDK University website address.</p>
-
-    <div class="a6-copy-box">
-        <input id="a6-copy-text"
-               class="form-control"
-               type="text"
-               value="https://wwezzy.github.io/kdk-university-project/"
-               readonly>
-
-        <button id="a6-copy-btn"
-                type="button"
-                class="btn btn-primary">
-            Copy
-        </button>
-    </div>
-
-    <p id="a6-copy-status" role="status"></p>
-</section>
-
-<div id="a6-toast" role="status" aria-live="polite"></div>
-
-        
-<!-- Assignment 5 - Task 6: Callback Functions -->
-<section class="section text-center">
-    <h2>Register for a Campus Event</h2>
-    <p>Choose an event and enter your name.</p>
-
-    <div class="mx-auto event-form-container">
-        <input
-            type="text"
-            id="event-name"
-            class="form-control mb-3"
-            placeholder="Your name"
-        >
-
-        <select id="event-choice" class="form-select mb-3">
-            <option value="">Select an event</option>
-            <option value="Sports Day">Sports Day</option>
-            <option value="Tech Workshop">Tech Workshop</option>
-            <option value="Student Festival">Student Festival</option>
-        </select>
-
-        <button id="event-register" class="btn btn-primary" type="button">
-            <span id="a6-register-text">Register</span>
-            <span id="a6-register-spinner"
-                class="spinner-border spinner-border-sm d-none"
-                aria-hidden="true"></span>
-        </button>
-
-        <p id="event-result" class="mt-3" aria-live="polite"></p>
-    </div>
-</section>
-
-<section class="section text-center">
-    <h2>Welcome to KDK University</h2>
-    <p id="time-greeting"></p>
-</section>
-
-<!-- Assignment 5 - Task 8: JavaScript Objects -->
-<section class="section text-center">
-    <h2>Campus Information</h2>
-    <p>Learn more about our university campus.</p>
-
-    <button id="campus-info-btn" class="btn btn-primary" type="button">
-        Show Campus Information
-    </button>
-
-    <div id="campus-info-result" class="mt-3"></div>
-</section>
-
-<!-- Assignment 5 - Task 9: Arrays and Loops -->
-<section class="section text-center">
-    <h2>Campus Activities</h2>
-    <p>Explore student activities at KDK University.</p>
-
-    <button id="activities-btn" class="btn btn-primary" type="button">
-        Show Activities
-    </button>
-
-    <div id="activities-list" class="mt-4"></div>
-</section>
-
-<!-- Assignment 5 - Task 10: Sounds and Animations -->
-<section class="section text-center">
-    <h2>Celebrate Campus Life 🎉</h2>
-    <p>Click the button for a surprise!</p>
-
-    <button id="celebrate-btn" class="btn btn-primary" type="button">
-        Celebrate!
-    </button>
-
-    <p id="celebrate-message" aria-live="polite">
-        Welcome to KDK University!
-    </p>
-</section>
-
-    </main>
-
-<!-- Assignment 4 - Task 3: Popup Form -->
-<div class="popup-overlay" id="contact-popup">
-
-    <div class="popup-content" role="dialog"
-         aria-modal="true" aria-labelledby="popup-title">
-
-        <button type="button" class="popup-close"
-                id="close-popup" aria-label="Close popup">
-            &times;
-        </button>
-
-        <h2 id="popup-title">Contact KDK University</h2>
-        <p>Have a question about campus life? Send us a message!</p>
-
-        <form id="popup-form">
-            <label for="popup-name">Your Name</label>
-            <input type="text" id="popup-name"
-                   placeholder="Enter your name" required>
-
-            <label for="popup-email">Email Address</label>
-            <input type="email" id="popup-email"
-                   placeholder="Enter your email" required>
-
-            <label for="popup-message">Your Message</label>
-            <textarea id="popup-message"
-                      placeholder="Write your message" required></textarea>
-
-            <button type="submit" class="btn btn-primary">
-                Send Message
-            </button>
-        </form>
-
-    </div>
-
-</div>
-
-<!-- Assignment 4 - Task 5: Current Date and Time -->
-<section class="container text-center my-4">
-    <h3>Current Date & Time</h3>
-    <p id="current-datetime" aria-live="off"></p>
-    <button id="show-time-btn" class="btn btn-primary" type="button">
-        Show Current Time
-    </button>
-
-    <p id="clicked-time" class="mt-3"></p>
-</section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p><strong>KDK University</strong></p>
-
-        <p>
-            Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan
-        </p>
-
-        <p>
-           &copy; 2026 KDK University Student project.
-        </p>
-
-    </footer>
-
-    <script src="js/akylzhan-assignment6.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/akylzhan.js"></script>
-</body>
+   </div>
+  </footer>
+  
+  
+  
+  <div aria-live="polite" class="yk-toast" id="yk-toast" role="status">
+  </div>
+ </body>
 </html>

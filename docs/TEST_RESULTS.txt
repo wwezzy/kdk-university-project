@@ -1,0 +1,25 @@
+Browser acceptance checks
+2026-11-16T10:09:42.076Z
+Browser 157.0.4341.60
+
+PASS 7 pages: light, 1440px, no overflow, loaded images, JS-only forms
+PASS 7 pages: light, 768px, no overflow, loaded images, JS-only forms
+PASS 7 pages: light, 375px, no overflow, loaded images, JS-only forms
+PASS 7 pages: light, 320px, no overflow, loaded images, JS-only forms
+PASS 7 pages: dark, 1440px, no overflow, loaded images, JS-only forms
+PASS 7 pages: dark, 768px, no overflow, loaded images, JS-only forms
+PASS 7 pages: dark, 375px, no overflow, loaded images, JS-only forms
+PASS 7 pages: dark, 320px, no overflow, loaded images, JS-only forms
+PASS No uncaught JS errors or local HTTP 404s
+PASS Mobile menu opens, Escape closes
+PASS Search, category, empty state, save persistence, program dialog and recommendation
+PASS Real Open Library request rendered books
+PASS API HTTP error, retry, successful rendering and cache
+PASS Checklist persists and resets; admissions FAQ opens
+PASS Required/email/phone/password/confirmation validation; signup, wrong password and login redirect
+PASS Request form prefills, saves and appears in matching profile; logout blocks profile
+PASS Contact form validates and saves locally
+PASS Home page public API section renders response
+PASS Account dialogs open/switch/close with Escape and fit mobile
+PASS Duplicate accounts rejected with inline explanation
+PASS API empty and malformed responses handled without breaking page

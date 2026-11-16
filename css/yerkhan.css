@@ -1,0 +1,354 @@
+/* KDK final project · Dautbekov Yerkhan
+   Shared navigation and theme; Programs, Admissions and applicant account pages. */
+:root {
+  color-scheme: light;
+  --yk-bg: #ffffff;
+  --yk-soft: #f2f6f9;
+  --yk-surface: #ffffff;
+  --yk-text: #153048;
+  --yk-muted: #526779;
+  --yk-line: #d6e1e9;
+  --yk-brand: #096ca8;
+  --yk-brand-hover: #075583;
+  --yk-accent: #c2f0d1;
+  --yk-error: #b32632;
+  --yk-success: #166441;
+  --yk-shadow: 0 16px 40px rgb(20 48 72 / 7%);
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --yk-bg: #101c29;
+  --yk-soft: #152435;
+  --yk-surface: #1b2d40;
+  --yk-text: #edf4fa;
+  --yk-muted: #b2c3d3;
+  --yk-line: #3a5065;
+  --yk-brand: #8fd2ff;
+  --yk-brand-hover: #bce5ff;
+  --yk-accent: #b9edcc;
+  --yk-error: #ffb3b9;
+  --yk-success: #9de5bc;
+  --yk-shadow: 0 16px 40px rgb(0 0 0 / 15%);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { margin: 0; background: var(--yk-bg); color: var(--yk-text); }
+.yk-page { font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.65; }
+.yk-page h1, .yk-page h2, .yk-page h3 { color: var(--yk-text); font-weight: 700; line-height: 1.17; margin: 0 0 20px; letter-spacing: -.035em; }
+.yk-page h1 { font-size: clamp(2.5rem, 4.7vw, 4.3rem); }
+.yk-page h2 { font-size: clamp(2rem, 3.2vw, 3rem); }
+.yk-page h3 { font-size: 1.35rem; letter-spacing: -.02em; }
+.yk-page p { margin: 0 0 20px; }
+a { color: var(--yk-brand); }
+.yk-page a { text-decoration: none; }
+.yk-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .7; }
+:focus-visible { outline: 3px solid var(--yk-brand); outline-offset: 4px; }
+[hidden] { display: none !important; }
+.yk-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.yk-skip { position: fixed; top: -80px; left: 16px; z-index: 999; background: var(--yk-surface); padding: 12px 20px; }
+.yk-skip:focus { top: 12px; }
+.yk-container { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
+.yk-header { position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--yk-line); background: var(--yk-bg); color: var(--yk-text); }
+.yk-nav-wrap { max-width: 1380px; padding: 16px 32px; margin-inline: auto; min-height: 86px; display: flex; align-items: center; gap: 28px; }
+.yk-brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.6rem; line-height: 1.05; color: var(--yk-text); text-decoration: none; white-space: nowrap; }
+.yk-brand small { display: block; letter-spacing: .2em; font-size: .59rem; margin-top: 5px; }
+.yk-navigation { display: flex; align-items: center; justify-content: center; gap: 22px; margin-left: auto; }
+.yk-navigation a { color: var(--yk-text); font-size: .86rem; font-weight: 600; text-decoration: none; padding: 10px 0; white-space: nowrap; }
+.yk-navigation a:hover, .yk-navigation a[aria-current] { color: var(--yk-brand); text-decoration: underline; text-underline-offset: 8px; }
+.yk-header-actions { display: flex; align-items: center; gap: 18px; }
+.yk-theme { display: inline-flex; align-items: center; gap: 6px; border: 0; padding: 8px 0; color: var(--yk-text); background: none; font-size: .8rem; white-space: nowrap; }
+.yk-theme > span:first-child { font-size: 1.25rem; }
+.yk-account { color: var(--yk-brand); font-weight: 700; font-size: .87rem; white-space: nowrap; }
+.yk-menu-toggle { display: none; background: none; color: var(--yk-text); border: 1px solid var(--yk-line); border-radius: 5px; padding: 8px 12px; }
+.yk-hero { min-height: 520px; position: relative; isolation: isolate; color: white; background: #12374d; display: flex; align-items: center; }
+.yk-hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(9 31 48 / 94%), rgb(9 31 48 / 77%) 45%, rgb(9 31 48 / 22%)); }
+.yk-hero-background { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center; z-index: -2; }
+.yk-hero-inner { padding-block: 72px 86px; }
+.yk-hero h1 { color: white; font-size: clamp(2.7rem, 5.1vw, 4.8rem); max-width: 800px; margin-block: 18px 24px; }
+.yk-hero h1 span { color: var(--yk-accent); }
+.yk-hero p { color: #e1eaf1; max-width: 630px; font-size: 1.05rem; }
+.yk-eyebrow { font-size: .7rem !important; font-weight: 800; text-transform: uppercase; letter-spacing: .17em; color: var(--yk-brand); margin-bottom: 14px !important; }
+.yk-hero .yk-eyebrow, .yk-cta .yk-eyebrow { color: var(--yk-accent); }
+.yk-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.yk-button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 48px; border: 1px solid transparent; border-radius: 5px; padding: 12px 22px; background: var(--yk-brand); color: white; font-size: .86rem; font-weight: 700; text-decoration: none !important; transition: transform .2s, box-shadow .2s, background .2s; }
+.yk-button:hover { transform: translateY(-2px); background: var(--yk-brand-hover); box-shadow: 0 6px 16px rgb(0 0 0 / 12%); color: white; }
+[data-theme="dark"] .yk-button { color: #102638; }
+.yk-hero .yk-button, .yk-cta .yk-button-white { background: var(--yk-accent); color: #123d2a; }
+.yk-button-outline { background: transparent; border-color: var(--yk-brand); color: var(--yk-brand); }
+.yk-button-outline:hover { background: var(--yk-soft); color: var(--yk-brand); }
+.yk-hero .yk-button-glass { border-color: #93a6b5; background: transparent; color: white; }
+.yk-button-full { width: 100%; }
+.yk-text-button { display: inline-flex; gap: 6px; align-items: center; border: 0; background: transparent; color: var(--yk-brand); font-weight: 700; padding: 4px 0; font-size: .87rem; text-align: left; }
+.yk-text-button:hover { text-decoration: underline; text-underline-offset: 4px; }
+.yk-facts { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--yk-line); }
+.yk-facts > div { display: flex; gap: 14px; align-items: center; padding: 28px 16px; }
+.yk-facts > div:first-child { padding-left: 0; }
+.yk-facts strong { font-size: 2rem; letter-spacing: -.05em; }
+.yk-facts span { font-size: .8rem; color: var(--yk-muted); max-width: 120px; }
+.yk-section { padding-block: 84px; }
+.yk-section-heading { max-width: 710px; margin-bottom: 34px; }
+.yk-section-heading h2 { margin-bottom: 16px; }
+.yk-section-heading > p:last-child { color: var(--yk-muted); margin-bottom: 0; }
+.yk-heading-row { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.yk-small { font-size: .8rem; }
+.yk-muted { color: var(--yk-muted); }
+.yk-soft { background: var(--yk-soft); }
+.yk-filter-panel { border: 1px solid var(--yk-line); background: var(--yk-soft); padding: 24px; border-radius: 8px; margin-bottom: 28px; }
+.yk-filter-fields { display: grid; grid-template-columns: 2fr 1fr; gap: 22px; }
+.yk-field { margin-bottom: 18px; min-width: 0; }
+.yk-field label, form:not([data-form]) label:not(.form-check-label) { display: block; font-size: .86rem; font-weight: 600; margin-bottom: 7px; }
+.yk-field input, .yk-field select, .yk-field textarea { display: block; width: 100%; border: 1px solid var(--yk-line); border-radius: 5px; color: var(--yk-text); background: var(--yk-surface); padding: 11px 13px; min-height: 48px; }
+.yk-field textarea { resize: vertical; }
+.yk-field small { display: block; font-size: .75rem; margin-top: 7px; }
+.yk-filter-panel .yk-field { margin-bottom: 16px; }
+.yk-filter-bottom { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.yk-filter-bottom > p { margin: 0; font-size: .83rem; color: var(--yk-muted); }
+.yk-check-inline { display: inline-flex !important; gap: 9px; align-items: flex-start; font-size: .83rem; cursor: pointer; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--yk-brand); width: 18px; height: 18px; flex: 0 0 auto; margin-top: 4px; }
+.yk-program-grid, .yk-three-column, .yk-book-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.yk-program-card { border: 1px solid var(--yk-line); border-radius: 9px; overflow: hidden; display: flex; flex-direction: column; background: var(--yk-surface); transition: box-shadow .2s, transform .2s; }
+.yk-program-card:hover { transform: translateY(-3px); box-shadow: var(--yk-shadow); }
+.yk-program-image { position: relative; height: 190px; overflow: hidden; }
+.yk-program-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.yk-program-card:hover img { transform: scale(1.035); }
+.yk-tag { position: absolute; left: 16px; bottom: 14px; font-size: .67rem; letter-spacing: .03em; padding: 5px 10px; border-radius: 3px; background: #fff; color: #183d56; font-weight: 700; }
+.yk-card-content { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.yk-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.yk-program-icon { color: var(--yk-brand); font-size: 1.6rem; line-height: 1; }
+.yk-save { border: 1px solid var(--yk-line); background: var(--yk-soft); color: var(--yk-muted); border-radius: 4px; padding: 5px 8px; font-size: .75rem; }
+.yk-save[aria-pressed="true"] { background: #dbf3e4; color: #185634; border-color: #8ac4a2; }
+.yk-program-card h3 { font-size: 1.35rem; margin-bottom: 13px; }
+.yk-program-card p { font-size: .86rem; color: var(--yk-muted); }
+.yk-skill-list { list-style: none; padding: 0; margin: 0 0 20px; display: flex; gap: 6px; flex-wrap: wrap; }
+.yk-skill-list li { background: var(--yk-soft); border-radius: 3px; padding: 4px 7px; font-size: .65rem; }
+.yk-program-meta { font-size: .75rem !important; margin-top: auto !important; }
+.yk-program-meta span { margin-inline: 5px; }
+.yk-card-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--yk-line); padding-top: 18px; gap: 8px; }
+.yk-card-bottom strong { font-size: .95rem; }
+.yk-card-bottom small { font-weight: 400; font-size: .7rem; color: var(--yk-muted); }
+.yk-empty { padding: 60px 24px; text-align: center; border: 1px dashed var(--yk-line); border-radius: 8px; }
+.yk-center { justify-content: center; }
+.yk-two-column { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 72px; }
+.yk-panel { background: var(--yk-surface); padding: 32px; border: 1px solid var(--yk-line); border-radius: 8px; }
+.yk-panel h3 { font-size: 1.4rem; }
+.yk-panel p:last-child { margin-bottom: 0; }
+.yk-status { margin-top: 16px !important; font-size: .86rem; color: var(--yk-muted); overflow-wrap: anywhere; }
+.yk-status:empty { display: none; }
+.yk-error { color: var(--yk-error) !important; font-size: .78rem; margin: 6px 0 0 !important; }
+.yk-error:empty { display: none; }
+[aria-invalid="true"] { border: 2px solid var(--yk-error) !important; }
+.yk-success { color: var(--yk-success) !important; }
+.yk-api-controls { display: flex; gap: 18px; align-items: flex-start; }
+.yk-api-controls .yk-field { flex: 0 1 340px; }
+.yk-api-controls button { margin-top: 29px; }
+.yk-source { font-size: .8rem; white-space: nowrap; }
+.yk-book { border: 1px solid var(--yk-line); border-radius: 6px; padding: 24px; background: var(--yk-soft); }
+.yk-book .yk-book-icon { color: var(--yk-brand); font-size: 1.5rem; margin-bottom: 12px; }
+.yk-book h3 { font-size: 1.15rem; }
+.yk-book p { font-size: .83rem; color: var(--yk-muted); }
+.yk-book a { font-size: .83rem; font-weight: 700; }
+.yk-feature { padding-block: 22px; border-top: 1px solid var(--yk-line); }
+.yk-feature > span { color: var(--yk-brand); font-size: .8rem; }
+.yk-feature h3 { margin-top: 18px; }
+.yk-feature p { color: var(--yk-muted); font-size: .9rem; }
+.yk-feature a { font-size: .85rem; font-weight: 700; }
+.yk-photo-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 26px; }
+.yk-photo-strip img { height: 210px; width: 100%; object-fit: cover; border-radius: 6px; }
+.yk-cta { display: flex; justify-content: space-between; align-items: center; gap: 32px; padding: 48px; background: #12354b; border-radius: 8px; }
+.yk-cta h2 { color: white; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.yk-cta p { color: #d2e1eb; margin-bottom: 0; }
+.yk-cta a { flex-shrink: 0; }
+.yk-footer { background: var(--yk-soft); color: var(--yk-muted); border-top: 1px solid var(--yk-line); padding: 42px 0; font-family: Arial, sans-serif; text-align: left; }
+.yk-footer-grid { display: grid; grid-template-columns: 1.1fr .8fr 1.1fr; gap: 44px; }
+.yk-footer strong { color: var(--yk-text); font-size: .85rem; }
+.yk-footer p { font-size: .8rem; margin: 12px 0 0; }
+.yk-footer .yk-brand { color: var(--yk-text); font-size: 1.3rem; }
+.yk-footer a { color: var(--yk-brand); }
+.yk-dialog { max-width: 620px; width: calc(100% - 32px); max-height: 85vh; overflow: auto; background: var(--yk-surface); color: var(--yk-text); border: 1px solid var(--yk-line); padding: 42px; border-radius: 10px; }
+.yk-dialog::backdrop { background: rgb(7 21 32 / 70%); }
+.yk-close { position: absolute; top: 10px; right: 15px; border: 0; background: none; color: var(--yk-text); font-size: 1.8rem; width: 38px; height: 38px; }
+.yk-dialog h2 { font-size: 2rem; }
+.yk-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 200; background: #133e2a; color: #fff; border: 1px solid #8ac4a2; box-shadow: var(--yk-shadow); padding: 12px 20px; border-radius: 6px; width: max-content; max-width: calc(100% - 32px); font-size: .86rem; pointer-events: none; opacity: 0; transition: opacity .2s; }
+.yk-toast.is-visible { opacity: 1; }
+.yk-section-nav { border-bottom: 1px solid var(--yk-line); background: var(--yk-soft); }
+.yk-section-nav > div { display: flex; gap: 34px; padding-block: 20px; flex-wrap: wrap; }
+.yk-section-nav a { font-size: .8rem; font-weight: 700; }
+.yk-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.yk-steps > li { padding-top: 22px; border-top: 1px solid var(--yk-line); }
+.yk-steps span { font-size: 1.7rem; color: var(--yk-brand); }
+.yk-steps h3 { font-size: 1.15rem; margin-top: 16px; }
+.yk-steps p { font-size: .87rem; color: var(--yk-muted); }
+.yk-steps a { font-size: .8rem; font-weight: 700; }
+.yk-requirements { padding-left: 20px; color: var(--yk-muted); font-size: .9rem; margin-bottom: 28px; }
+.yk-requirements li { padding-block: 4px; }
+.yk-rounded-image { display: block; width: 100%; height: 260px; object-fit: cover; border-radius: 6px; margin-block: 22px; }
+.yk-checklist-panel h3 { font-size: 1.7rem; }
+.yk-checklist { display: flex; flex-direction: column; gap: 16px; padding-block: 12px 26px; }
+.yk-checklist label { display: flex; align-items: flex-start; gap: 12px; font-size: .9rem; cursor: pointer; }
+.yk-progress { display: block; width: 100%; height: 10px; border: 0; border-radius: 8px; overflow: hidden; accent-color: #178254; background: var(--yk-soft); }
+.yk-progress::-webkit-progress-bar { background: var(--yk-soft); }
+.yk-progress::-webkit-progress-value { background: #178254; transition: width .25s; }
+.yk-progress::-moz-progress-bar { background: #178254; }
+#checklist-status { margin-block: 12px; font-size: .8rem; color: var(--yk-muted); }
+.yk-checklist-panel .yk-small { margin-top: 18px; }
+.yk-table-wrap { overflow-x: auto; border: 1px solid var(--yk-line); border-radius: 8px; }
+.yk-table { border-collapse: collapse; width: 100%; min-width: 580px; font-size: .87rem; }
+.yk-table caption { text-align: left; background: var(--yk-soft); font-size: .8rem; padding: 14px 20px; color: var(--yk-muted); }
+.yk-table th, .yk-table td { padding: 18px 22px; text-align: left; border-top: 1px solid var(--yk-line); }
+.yk-table thead { background: var(--yk-soft); color: var(--yk-brand); }
+.yk-table tbody th { font-weight: 600; }
+.yk-table tbody tr:hover { background: var(--yk-soft); }
+.yk-award { font-size: 1.9rem; font-weight: 700; color: var(--yk-brand); letter-spacing: -.04em; }
+.yk-form-layout { grid-template-columns: .85fr 1.15fr; gap: 60px; }
+.yk-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.yk-faq-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; }
+.yk-faq details { border-top: 1px solid var(--yk-line); padding: 21px 0; }
+.yk-faq details:last-child { border-bottom: 1px solid var(--yk-line); }
+.yk-faq summary { font-size: .94rem; font-weight: 700; cursor: pointer; }
+.yk-faq details p { margin: 18px 0 0; color: var(--yk-muted); font-size: .9rem; animation: yk-reveal .2s ease; }
+.yk-auth-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 100px; max-width: 1080px; }
+.yk-auth-intro { padding-top: 24px; }
+.yk-auth-layout h2 { font-size: 1.9rem; }
+.yk-auth-intro .yk-rounded-image { height: 300px; }
+.yk-password-toggle { display: block; margin: 0 0 18px; }
+.yk-profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 38px; }
+.yk-profile-grid h2 { font-size: 1.5rem; }
+.yk-profile-details { overflow-wrap: anywhere; }
+.yk-profile-details dt { font-size: .78rem; color: var(--yk-muted); }
+.yk-profile-details dd { margin: 4px 0 18px; }
+.yk-profile-grid .yk-actions { margin-bottom: 22px; }
+.yk-request-card { overflow-wrap: anywhere; }
+.yk-request-card h3 { font-size: 1.15rem; }
+.yk-request-card p { font-size: .87rem; }
+.yk-spinner { display: inline-block; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; width: 16px; height: 16px; animation: yk-spin .7s linear infinite; vertical-align: middle; margin-right: 7px; }
+@keyframes yk-spin { to { transform: rotate(360deg); } }
+@keyframes yk-reveal { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+/* Compatibility with the team's existing pages. Their content and styles remain in place. */
+body:not(.yk-page) { --bs-body-bg: var(--yk-bg); --bs-body-color: var(--yk-text); --bs-border-color: var(--yk-line); }
+body:not(.yk-page) .yk-header .yk-nav-wrap { line-height: 1.5; }
+body:not(.yk-page) .yk-header a:hover { text-decoration: none; }
+body:not(.yk-page) main { min-width: 0; }
+body:not(.yk-page) img { max-width: 100%; }
+body:not(.yk-page) .yk-error { line-height: 1.5; }
+form:not([data-form]) input:not([type="checkbox"]):not([type="radio"]), form:not([data-form]) select, form:not([data-form]) textarea { max-width: 100%; }
+:root[data-theme="dark"] body:not(.yk-page) { background: var(--yk-bg) !important; color: var(--yk-text); }
+:root[data-theme="dark"] body:not(.yk-page) :is(h1,h2,h3,h4,p,li,label,figcaption,dt,dd) { color: var(--yk-text); }
+:root[data-theme="dark"] body:not(.yk-page) :is(.soft-section,.home-hero,.about-overview,.intro-card,.info-box,.contact-form-box,.contact-info,.flex-card,.card,.registration-card,.a5-experience,.a5-planner,.a5-gallery,.a6-allazhar-tools,.popup-content,.popup-box,.faq-item,.facility-card,.campus-info-card,.a6-activity,.a6-stat,.activity-card,.a6-search-container) { background: var(--yk-surface) !important; color: var(--yk-text); border-color: var(--yk-line); }
+:root[data-theme="dark"] body:not(.yk-page) :is(input,select,textarea) { background-color: var(--yk-bg) !important; color: var(--yk-text) !important; border-color: var(--yk-line); }
+:root[data-theme="dark"] body:not(.yk-page) a { color: var(--yk-brand); }
+:root[data-theme="dark"] body:not(.yk-page) :is(.text-muted,.home-description,.a5-note,.form-text) { color: var(--yk-muted) !important; }
+:root[data-theme="dark"] body:not(.yk-page) :is(.btn-primary,.a5-button) { color: white; }
+:root[data-theme="dark"] body:not(.yk-page) :is(.cta-section,.kdk-cta) :is(h1,h2,h3,p) { color: white; }
+:root[data-theme="dark"] body:not(.yk-page) .bg-white { background: var(--yk-surface) !important; }
+:root[data-theme="dark"] body:not(.yk-page) .yk-header { background: var(--yk-bg); }
+:root[data-theme="dark"] body:not(.yk-page) .yk-navigation { background: var(--yk-bg); }
+.yk-legacy-phone { margin-top: 14px; }
+.yk-legacy-note { font-size: .8rem; color: var(--yk-muted); }
+@media (max-width: 1190px) {
+  .yk-nav-wrap { gap: 16px; padding-inline: 24px; }
+  .yk-navigation { gap: 14px; }
+  .yk-header-actions { gap: 14px; }
+  .yk-theme [data-theme-label] { display: none; }
+  .yk-two-column, .yk-auth-layout { gap: 42px; }
+}
+@media (max-width: 960px) {
+  .yk-nav-wrap { flex-wrap: wrap; min-height: 76px; padding-block: 13px; }
+  .yk-menu-toggle { display: block; margin-left: auto; }
+  .yk-header-actions { margin-left: 0; }
+  .yk-navigation { display: none; order: 4; width: 100%; margin: 0; padding-top: 12px; border-top: 1px solid var(--yk-line); flex-wrap: wrap; justify-content: flex-start; gap: 8px 26px; }
+  .yk-navigation.is-open { display: flex; }
+  .yk-program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .yk-facts > div { flex-direction: column; gap: 2px; align-items: flex-start; }
+  .yk-facts span { max-width: none; }
+  .yk-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .yk-three-column { gap: 16px; }
+  .yk-panel { padding: 24px; }
+  .yk-faq-layout { gap: 38px; }
+  .yk-footer-grid { grid-template-columns: 1fr 1fr; }
+  .yk-form-grid { grid-template-columns: 1fr; }
+  .yk-cta { padding: 36px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 680px) {
+  html { scroll-padding-top: 94px; }
+  .yk-container { width: calc(100% - 36px); }
+  .yk-nav-wrap { padding-inline: 18px; gap: 12px; }
+  .yk-brand { font-size: 1.35rem; gap: 6px; }
+  .yk-brand img { width: 30px; height: 30px; }
+  .yk-brand small { font-size: .5rem; }
+  .yk-menu-toggle { font-size: .75rem; padding: 7px 8px; }
+  .yk-account { font-size: .75rem; }
+  .yk-header-actions { gap: 12px; }
+  .yk-theme { padding: 4px; }
+  .yk-hero { min-height: 460px; }
+  .yk-hero-inner { padding-block: 60px; }
+  .yk-hero h1 { font-size: 2.7rem; }
+  .yk-hero::after { background: rgb(9 31 48 / 78%); }
+  .yk-hero p { font-size: .95rem; }
+  .yk-desktop { display: none; }
+  .yk-button { padding: 11px 16px; font-size: .82rem; gap: 10px; }
+  .yk-facts { grid-template-columns: 1fr 1fr; }
+  .yk-facts > div, .yk-facts > div:first-child { padding: 18px 8px; }
+  .yk-facts > div:nth-child(-n+2) { border-bottom: 1px solid var(--yk-line); }
+  .yk-facts strong { font-size: 1.65rem; }
+  .yk-section { padding-block: 54px; }
+  .yk-filter-fields, .yk-program-grid, .yk-two-column, .yk-three-column, .yk-book-grid, .yk-faq-layout, .yk-auth-layout, .yk-profile-grid { grid-template-columns: 1fr; }
+  .yk-filter-panel { padding: 18px; }
+  .yk-filter-fields { gap: 0; }
+  .yk-filter-bottom { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .yk-filter-bottom .yk-actions { justify-content: space-between; width: 100%; gap: 8px; }
+  .yk-program-image { height: 210px; }
+  .yk-card-content { padding: 22px; }
+  .yk-heading-row { align-items: flex-start; flex-direction: column; gap: 0; }
+  .yk-source { margin-bottom: 22px; }
+  .yk-api-controls { flex-direction: column; gap: 0; }
+  .yk-api-controls .yk-field { flex-basis: auto; width: 100%; }
+  .yk-api-controls button { margin-top: 0; }
+  .yk-two-column, .yk-auth-layout, .yk-faq-layout { gap: 28px; }
+  .yk-three-column .yk-panel { padding: 26px; }
+  .yk-photo-strip { gap: 10px; }
+  .yk-photo-strip img { height: 120px; }
+  .yk-cta { padding: 30px 24px; gap: 24px; }
+  .yk-footer-grid { grid-template-columns: 1fr; gap: 26px; }
+  .yk-section-nav > div { gap: 12px 22px; padding-block: 16px; }
+  .yk-steps { gap: 24px 18px; }
+  .yk-steps h3 { font-size: 1.05rem; }
+  .yk-steps p { font-size: .8rem; }
+  .yk-table th, .yk-table td { padding: 15px; }
+  .yk-dialog { padding: 36px 24px 24px; }
+  .yk-auth-intro { padding-top: 0; }
+  .yk-auth-intro .yk-rounded-image { height: 200px; }
+  #logout { margin-block: 12px 8px; }
+  .yk-profile-grid { margin-top: 22px; }
+}
+@media (max-width: 370px) {
+  .yk-header-actions { gap: 4px; }
+  .yk-brand img { display: none; }
+  .yk-nav-wrap { gap: 8px; }
+  .yk-hero h1 { font-size: 2.35rem; }
+  .yk-hero .yk-actions { align-items: stretch; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+/* Complete the shared dark palette on the original team layouts. */
+:root[data-theme="dark"] body:not(.yk-page) :is(.campus-hero,.hero-content,.feature-card,.grid-header,.grid-sidebar,.grid-main,.grid-footer,.about-info,.about-story,.team-member,.member-card,.stat-box,.a5-thumbnail,.a5-success,.a6-suggestion,#a6-suggestions) { background: var(--yk-surface) !important; color: var(--yk-text); border-color: var(--yk-line); }
+:root[data-theme="dark"] body:not(.yk-page) .a5-button-secondary { background: var(--yk-soft); color: var(--yk-brand); }
+:root[data-theme="dark"] body:not(.yk-page) :is(.validation-error,.yk-error,.a5-error) { color: var(--yk-error); }
+:root[data-theme="dark"] body:not(.yk-page) input::placeholder, :root[data-theme="dark"] body:not(.yk-page) textarea::placeholder { color: var(--yk-muted); }
+#information-form > button[type="submit"] { display: flex; margin-top: 22px; }
+.yk-theme:hover, .yk-save:hover { color: var(--yk-brand); }
+:root[data-theme="dark"] .yk-button-outline { color: var(--yk-brand); }
+:root[data-theme="dark"] .yk-hero .yk-button-glass { color: white; }
+:root[data-theme="dark"] #contact-form label { color: var(--yk-text); }
+:root[data-theme="dark"] body:not(.yk-page) .btn-outline-primary { color: var(--yk-brand); border-color: var(--yk-brand); }
+:root[data-theme="dark"] body:not(.yk-page) .btn-outline-primary:hover { color: #102638; background: var(--yk-brand); }
+:root[data-theme="dark"] body:not(.yk-page) .faq-question { background: var(--yk-surface); color: var(--yk-text); border-color: var(--yk-line); }
+:root[data-theme="dark"] body:not(.yk-page) .btn-light { background: #e8f3fa; color: #153048; }
+body:not(.yk-page) .eyebrow { color: var(--yk-brand); }
+body:not(.yk-page) :is(.button, #theme-toggle) { background: #096ca8; color: white; }
+:root[data-theme="dark"] body:not(.yk-page) .btn-secondary { color: white; }
+:root[data-theme="dark"] body:not(.yk-page) :is(.button, #theme-toggle) { background: var(--yk-brand); color: #102638; }

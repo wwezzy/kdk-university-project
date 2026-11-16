@@ -1,287 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- KDK University Student Project -->
-    <title>Contact - KDK University</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <header class="site-header">
-        <div class="navbar">
-
-            <a href="index.html" class="brand">KDK University</a>
-
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="campus-life.html">Campus Life</a>
-                <a href="contact.html" class="active">Contact</a>
-            </nav>
-
-        </div>
-    </header>
-
-
-    <main>
-
-        <!-- Contact Hero -->
-        <section class="section">
-
-            <div class="section-heading">
-                <p class="eyebrow">CONTACT US</p>
-                <h1>Get in Touch</h1>
-
-                <p>
-                    Have questions about admissions, programs or campus life?
-                    Send us a message and our university team will contact you.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- Contact Section -->
-        <section class="section soft-section">
-
-            <div class="contact-grid">
-
-                <!-- Contact Information -->
-                <div class="contact-info">
-
-                    <p class="eyebrow">KDK UNIVERSITY</p>
-                    <h2>Contact Information</h2>
-
-                    <div class="info-box">
-                        <h3>Admissions Office</h3>
-                        <p>Email: admissions@kdkuniversity.edu</p>
-                        <p>Phone: +7 700 123 45 67</p>
-                    </div>
-
-                    <div class="info-box">
-                        <h3>Campus Address</h3>
-                        <p>
-                            KDK University Campus<br>
-                            Astana, Kazakhstan
-                        </p>
-                    </div>
-
-                    <div class="info-box">
-                        <h3>Office Hours</h3>
-                        <p>
-                            Monday – Friday<br>
-                            9:00 AM – 6:00 PM
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <!-- Contact Form -->
-                <div class="contact-form-box">
-
-                    <p class="eyebrow">SEND A MESSAGE</p>
-                    <h2>Contact Form</h2>
-
-                    <!-- Assignment 3 - Task 9: Bootstrap Form -->
-                    <form id="contact-form" novalidate>
-
-    <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input
-            type="text"
-            class="form-control"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-        >
-    </div>
-
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-        >
-    </div>
-
-    <div class="mb-3">
-        <label for="interest" class="form-label">
-            I am interested in
-        </label>
-
-        <select
-            class="form-select"
-            id="interest"
-            name="interest"
-        >
-            <option value="admissions">Admissions</option>
-            <option value="programs">Programs</option>
-            <option value="campus-life">Campus Life</option>
-            <option value="other">Other</option>
-        </select>
-    </div>
-
-    <!-- Assignment 4: Password Validation -->
-<div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input
-        type="password"
-        class="form-control"
-        id="password"
-        placeholder="At least 8 characters"
-        required
-    >
-</div>
-
-<div class="mb-3">
-    <label for="confirm-password" class="form-label">
-        Confirm Password
-    </label>
-    <input
-        type="password"
-        class="form-control"
-        id="confirm-password"
-        placeholder="Repeat your password"
-        required
-    >
-</div>
-
-    <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea
-            class="form-control"
-            id="message"
-            name="message"
-            rows="6"
-            placeholder="Write your message here"
-            required
-        ></textarea>
-    </div>
-
-    <div class="form-check mb-3">
-        <input
-            class="form-check-input"
-            type="checkbox"
-            id="updates"
-        >
-
-        <label class="form-check-label" for="updates">
-            Send me university updates
-        </label>
-    </div>
-
-<p id="form-message" aria-live="polite"></p>
-
-    <button type="submit" class="btn btn-primary">
-        Send Message
+ <head>
+  
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  
+  <title>
+   Contact - KDK University
+  </title>
+  
+  
+  
+ <link rel="stylesheet" href="css/yerkhan.css"><link rel="stylesheet" href="css/final.css"><script defer src="js/yerkhan.js"></script></head>
+ <body class="yk-page">
+  
+  <a class="yk-skip" href="#main-content">
+   Skip to content
+  </a>
+  <header class="yk-header">
+   <div class="yk-nav-wrap">
+    <a class="yk-brand" href="index.html">
+     <img alt="" height="38" src="images/kdk-logo.svg" width="38"/>
+     <span>
+      KDK
+      <small>
+       UNIVERSITY
+      </small>
+     </span>
+    </a>
+    <button aria-controls="yk-navigation" aria-expanded="false" class="yk-menu-toggle" type="button">
+     Menu
+     <span aria-hidden="true">
+      ☰
+     </span>
     </button>
-
-</form>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-    <!-- Visit Campus -->
-<section class="section">
-
-    <div class="visit-campus">
-
-        <div class="section-heading">
-            <p class="eyebrow">VISIT US</p>
-            <h2>Visit Our Campus</h2>
-
-            <p>
-                We welcome future students and visitors to learn more
-                about KDK University and explore our campus.
-            </p>
-        </div>
-
-        <img
-            src="images/kdk-campus-wide.png"
-            alt="KDK University campus"
-            class="visit-campus-image"
-        >
-
+    <nav aria-label="Main navigation" class="yk-navigation" id="yk-navigation">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="about.html">
+      About Us
+     </a>
+     <a href="programs.html">
+      Programs
+     </a>
+     <a href="admissions.html">
+      Admissions
+     </a>
+     <a href="campus-life.html">
+      Campus Life
+     </a>
+     <a aria-current="page" href="contact.html">
+      Contact
+     </a>
+    </nav>
+    <div class="yk-header-actions">
+     <button aria-label="Switch to dark mode" aria-pressed="false" class="yk-theme" data-theme-toggle="" type="button">
+      <span aria-hidden="true">
+       ◐
+      </span>
+      <span data-theme-label="">
+       Dark mode
+      </span>
+     </button>
+     <a class="yk-account" data-account-link="" href="profile.html?auth=login" data-open-auth="login">
+      Log in
+      <span aria-hidden="true">
+       →
+      </span>
+     </a>
     </div>
-
+   </div>
+  </header>
+  <main id="main-content">
+<section class="yk-hero">
+<img class="yk-hero-background" src="images/kdk-campus-wide.png" alt="KDK University campus buildings" width="1600" height="700">
+<div class="yk-container yk-hero-inner"><p class="yk-eyebrow">CONTACT KDK</p><h1>A question is a<br><span>good place to start.</span></h1><p>Explore the answers below, or try our contact form to see how an admissions enquiry works.</p><a class="yk-button" href="#contact-form">Write a message</a></div>
 </section>
-
-<section class="section">
-    <div class="section-heading">
-        <p class="eyebrow mb-2">FREQUENTLY ASKED QUESTIONS</p>
-        <h2>Contact FAQ</h2>
-    </div>
-
-    <div class="faq">
-
-    <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            How can I apply to KDK University?
-        </button>
-        <div class="faq-answer">
-            <p>Visit our Admissions page for application details.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            Where is KDK University located?
-        </button>
-        <div class="faq-answer">
-            <p>Our campus is located in Astana, Kazakhstan.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            How can I contact the admissions office?
-        </button>
-        <div class="faq-answer">
-            <p>You can use our contact form or email the admissions office.</p>
-        </div>
-    </div>
-</div>
+<section class="yk-section yk-container yk-two-column">
+<div><p class="yk-eyebrow">LET'S TALK</p><h2>How can we help?</h2><p class="yk-muted">Choosing a university starts with finding the right information. These pages are a good first step.</p>
+<div class="yk-faq"><details open><summary>Which program is right for me?</summary><p>Compare subjects, skills and careers on the <a href="programs.html">Programs page</a>. Save the programs you like and revisit them in this browser.</p></details><details><summary>What do I need to apply?</summary><p>Explore the steps and use the checklist on the <a href="admissions.html">Admissions page</a>. You can also save a program information request.</p></details><details><summary>What is campus life like?</summary><p>Discover study spaces, student communities and activities on our <a href="campus-life.html">Campus Life page</a>.</p></details></div>
+<div class="yk-panel" style="margin-top:28px"><h3>About this website</h3><p class="yk-muted">KDK is a fictional university created for a student project. This is a demonstration, not an official admissions service.</p><p class="yk-small yk-muted">Messages stay on this device. No email is sent, no place is reserved and no real application is submitted.</p></div></div>
+<div class="yk-panel"><h2>Send an enquiry</h2><p class="yk-muted">Use example details only. Fields marked with an asterisk (*) must be completed.</p>
+<form id="contact-form" novalidate>
+<div class="yk-field"><label for="name">Full name *</label><input id="name" name="name" type="text" autocomplete="name" data-rule="required name" placeholder="Alex Morgan"></div>
+<div class="yk-field"><label for="email">Email address *</label><input id="email" name="email" type="text" inputmode="email" autocomplete="email" data-rule="required email" placeholder="alex@example.com"></div>
+<div class="yk-field"><label for="contact-phone">Phone number *</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" data-rule="required phone" placeholder="+7 700 123 45 67" aria-describedby="contact-phone-hint"><small class="yk-muted" id="contact-phone-hint">Use 10–15 digits. Spaces, brackets and a leading + are accepted.</small></div>
+<div class="yk-field"><label for="interest">What is your question about?</label><select id="interest" name="interest"><option value="admissions">Admissions</option><option value="programs">Academic programs</option><option value="campus-life">Campus life</option><option value="other">Something else</option></select></div>
+<div class="yk-field"><label for="message">Your message *</label><textarea id="message" name="message" rows="5" data-rule="required message" placeholder="Tell us what you would like to know." aria-describedby="contact-message-hint"></textarea><small class="yk-muted" id="contact-message-hint">Write 10–2,000 characters. Do not include sensitive personal details.</small></div>
+<button class="yk-button yk-button-full" type="submit">Save demo enquiry</button>
+<p class="yk-small yk-muted" style="margin-top:16px">Saved locally in your browser only. Nothing is sent to a university.</p>
+<p data-form-status role="status" aria-live="polite" class="yk-status"></p>
+</form></div>
 </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p><strong>KDK University</strong></p>
-
-        <p>
-            Team members: Kuat Allazhar · Dautbekov Yerkhan · Khafiz Akylzhan
-        </p>
-
-        <p>
-           &copy;2026 KDK University Student project.
-        </p>
-
-    </footer>
-
-<script src="js/akylzhan.js"></script>
-</body>
-
+</main>
+  <footer class="yk-footer">
+   <div class="yk-container yk-footer-grid">
+    <div>
+     <a class="yk-brand" href="index.html">
+      KDK University
+     </a>
+     <p>
+      A place to discover your direction.
+     </p>
+     <p class="yk-small">
+      Fictional university · Student project
+     </p>
+    </div>
+    <div>
+     <strong>
+      Explore KDK
+     </strong>
+     <p>
+      <a href="programs.html">
+       Programs
+      </a>
+      ·
+      <a href="admissions.html">
+       Admissions
+      </a>
+     </p>
+     <p>
+      <a href="campus-life.html">
+       Campus Life
+      </a>
+      ·
+      <a href="contact.html">
+       Contact
+      </a>
+     </p>
+    </div>
+    <div>
+     <strong>
+      Our team · SE-2515
+     </strong>
+     <p>
+      Kuat Allazhar · Dautbekov Yerkhan
+      <br/>
+      Khafiz Akylzhan
+     </p>
+     <p class="yk-small">
+      © 2026 KDK University
+     </p>
+    </div>
+   </div>
+  </footer>
+  
+  <div aria-live="polite" class="yk-toast" id="yk-toast" role="status">
+  </div>
+ </body>
 </html>
