@@ -56,6 +56,6 @@ To use installed Edge, set `BROWSER_EXECUTABLE` to its executable path. Exact re
 
 ## Deployment / submission
 
-This local integrated version has NOT been pushed, deployed or submitted. Existing repository: https://github.com/wwezzy/kdk-university-project . Existing public URL: https://wwezzy.github.io/kdk-university-project/ (may show the older version until deployed).
+The integrated website is published on GitHub Pages. Course submission is not performed by this project. Repository: https://github.com/wwezzy/kdk-university-project . Live website: https://wwezzy.github.io/kdk-university-project/ .
 
-After team review, publish this directory as a static site, verify the public version, then update the links TXT and final report PDF. Each teammate must submit their own required package. The report draft needs team verification of contributions; final integration was AI-assisted. Do not claim personally written code that you cannot explain.
+Each teammate must submit their own complete project ZIP, PDF report and links TXT. Responsibility areas follow the agreed team split; final integration was AI-assisted. Prepare to explain assigned functionality. Full test results and focused form audit are recorded in docs/.

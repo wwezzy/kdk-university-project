@@ -1,0 +1,12 @@
+Public verification, 16 November 2026
+Live URL: https://wwezzy.github.io/kdk-university-project/
+Repository: https://github.com/wwezzy/kdk-university-project
+Website commit: ff5466840731ebf614a541ebacab213a221d22e5
+Pages workflow: https://github.com/wwezzy/kdk-university-project/actions/runs/43853941465
+Workflow result: completed / success
+
+Full acceptance test ran against PUBLIC_BASE=https://wwezzy.github.io/kdk-university-project and passed. See TEST_RESULTS.txt. Real Open Library returned 3 books.
+
+An initial public run observed one transient failed image response for research-lab.jpg. A direct recheck returned HTTP 200 with 751825 bytes, and the complete repeated run passed without resource failures. No broken source path was found.
+
+No Moodle submission was performed.

@@ -22,14 +22,14 @@ const server = http.createServer((req, res) => {
 });
 (async () => {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const base = `http://127.0.0.1:${server.address().port}`;
+  const base = process.env.PUBLIC_BASE || `http://127.0.0.1:${server.address().port}`;
   const browser = await chromium.launch({ headless: true, ...(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {}), args: ['--no-sandbox'] });
   try {
     const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
     const page = await context.newPage();
     const errors = [], missing = [];
     page.on('pageerror', error => errors.push(error.message));
-    page.on('response', response => { if (response.url().startsWith(base) && response.status() >= 400) missing.push(response.url()); });
+    page.on('response', response => { if (response.url().startsWith(base) && response.status() >= 400) missing.push(`${response.status()} ${response.url()}`); });
     const go = slug => page.goto(`${base}/${slug}.html`);
     // Every page, two themes and three device sizes. Also force lazy images into view.
     for (const theme of ['light', 'dark']) {
@@ -174,6 +174,6 @@ const server = http.createServer((req, res) => {
     ok('API empty and malformed responses handled without breaking page');
     assert.deepEqual(errors, [], 'Uncaught browser errors after interactions');
     await context.close();
-    fs.writeFileSync(path.join(root, 'docs', 'TEST_RESULTS.txt'), `Browser acceptance checks\n${new Date().toISOString()}\nBrowser ${browser.version()}\n\n${checks.join('\n')}\n`);
+    fs.writeFileSync(path.join(root, 'docs', 'TEST_RESULTS.txt'), `Browser acceptance checks\n${new Date().toISOString()}\nBrowser ${browser.version()}\nBase ${base}\n\n${checks.join('\n')}\n`);
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

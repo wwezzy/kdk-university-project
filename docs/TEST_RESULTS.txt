@@ -1,6 +1,7 @@
 Browser acceptance checks
-2026-11-16T10:09:42.076Z
+2026-11-16T11:02:48.509Z
 Browser 157.0.4341.60
+Base https://wwezzy.github.io/kdk-university-project
 
 PASS 7 pages: light, 1440px, no overflow, loaded images, JS-only forms
 PASS 7 pages: light, 768px, no overflow, loaded images, JS-only forms

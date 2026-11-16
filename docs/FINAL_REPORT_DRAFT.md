@@ -1,10 +1,10 @@
-# KDK University — Final Project Report Draft
+# KDK University — Final Project Report Notes
 
 **Course:** Web Technologies  
 **Group:** SE-2515  
 **Team:** Kuat Allazhar, Dautbekov Yerkhan, Khafiz Akylzhan  
 **Project type:** Multi-page responsive website  
-**Status:** Draft for team review. Replace screenshot placeholders and verify final links before exporting to PDF.
+**Status:** Published on GitHub Pages. Illustrated PDF is delivered separately; course submission is still the students’ responsibility.
 
 ## 1. Goal and audience
 
@@ -32,7 +32,7 @@ The following is the **agreed responsibility split**, not a claim that every lin
 | Dautbekov Yerkhan | Programs, Admissions, program search/filter persistence, shared validation |
 | Khafiz Akylzhan | Campus Life, Contact, demo authentication and Profile |
 
-Existing team work and provided images were retained where useful. Final integration and revisions were AI-assisted. Each teammate must review, understand and test their assigned functionality before presenting. Adjust this section to describe actual completed work after the final team review. Do not present planned responsibilities as verified personal authorship.
+Existing team work and provided images were retained where useful. Final integration and revisions were AI-assisted. Each teammate must review, understand and test their assigned functionality before presenting. The responsibility split is not a claim of independently authored lines of code.
 
 ## 4. Functional implementation
 
@@ -72,7 +72,7 @@ Static HTML, CSS and JavaScript; no production backend is required. Shared asset
 
 ## 7. Verification — update after final test run
 
-The integrated version passed a new local browser acceptance run on 16 November 2026. See TEST_RESULTS.txt and BROWSER_API_RUN.txt. Public deployment remains unverified.
+The integrated version passed a new local browser acceptance run on 16 November 2026. See TEST_RESULTS.txt and BROWSER_API_RUN.txt. Public deployment has completed successfully.
 
 | Check | Final evidence/status |
 |---|---|
@@ -84,21 +84,13 @@ The integrated version passed a new local browser acceptance run on 16 November 
 | Program search, filtering, no-result state, persistence | Passed local acceptance checks |
 | API success, loading, failure/retry, cached result | Real Open Library response rendered 3 books; controlled mock tests verified error/retry/cache |
 | Console errors and broken local resources | Passed local acceptance checks |
-| Hosted build and deep links | Not verified; deployment not claimed |
+| Hosted build and deep links | Published; public verification recorded separately |
 
 Distinguish mocked API responses used for predictable UI tests from a live public API request. Record any environment-related network limitation explicitly.
 
-## 8. Screenshots to insert
+## 8. Screenshot evidence
 
-1. `[Insert Home desktop, light theme screenshot]`
-2. `[Insert Home phone screenshot]`
-3. `[Insert About Us screenshot]`
-4. `[Insert Programs with filtered results screenshot]`
-5. `[Insert Admissions inline validation screenshot]`
-6. `[Insert Campus Life and Contact screenshots]`
-7. `[Insert signup/login modal and Profile screenshots using fictional data]`
-8. `[Insert dark theme screenshot]`
-9. `[Insert API results and error-state screenshots]`
+The illustrated report PDF is delivered alongside the project ZIP. Browser checks generate screenshots under docs/screenshots locally; they are not committed to keep the repository lean.
 
 ## 9. Submission checklist
 
@@ -110,4 +102,4 @@ Distinguish mocked API responses used for predictable UI tests from a live publi
 - Check course submission deadline and required format against the official instructions.
 
 **Repository:** https://github.com/wwezzy/kdk-university-project  
-**Live URL:** [Insert and verify the final deployment URL. Do not assume an older deployment contains this version.]
+**Live URL:** https://wwezzy.github.io/kdk-university-project/
