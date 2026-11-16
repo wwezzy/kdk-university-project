@@ -1,48 +1,56 @@
-# KDK University · Final project
+# KDK University
 
-A responsive, seven-page fictional university website for Web Technologies, SE-2515.
+We built a seven-page website for a fictional university as our Web Technologies final project, group SE-2515.
+
+**Our team:** Kuat Allazhar, Dautbekov Yerkhan and Khafiz Akylzhan.
+
+- Website: https://wwezzy.github.io/kdk-university-project/
+- Repository: https://github.com/wwezzy/kdk-university-project
+
+## What we built
+
+- Home: campus introduction, Open Library book suggestions and FAQ.
+- About Us: the university concept, campus photos and team information.
+- Programs: search, category filters, saved programs and details dialogs.
+- Admissions: application steps, a saved checklist and an information-request form.
+- Campus Life: clubs, activities, facilities and useful questions.
+- Contact: a form with inline JavaScript validation.
+- Profile: demo user details and matching saved requests.
+
+We share the header, footer, light/dark theme and account dialogs across the pages. Login and signup open as modals; their old URLs redirect to Profile and open the relevant dialog.
 
 ## Run locally
 
-No build step or backend is required. In this directory run:
+The site uses HTML, CSS and JavaScript with no backend or build step.
 
 ```sh
 python -m http.server 8000
 ```
 
-Open http://localhost:8000. Use localhost or HTTPS, not a double-clicked file URL, for browser cryptography and consistent storage behaviour.
+Open http://localhost:8000. Use localhost or HTTPS rather than opening an HTML file directly, because the demo account flow uses browser cryptography.
 
-## Pages
+## Code structure
 
-- `index.html`: introduction, campus photos, public Open Library API reading suggestions, FAQ.
-- `about.html`: mission, values, study spaces, honest project/team description.
-- `programs.html`: dynamic search, category filter, shortlist, details dialog and subject match.
-- `admissions.html`: application steps, persistent checklist, fees, scholarships, validated information request.
-- `campus-life.html`: clubs, activities, facilities and useful FAQ.
-- `contact.html`: validated contact form and relevant navigation.
-- `profile.html`: stored demo user details and matching saved information requests.
+- `css/yerkhan.css`: shared layout and components retained from the existing project.
+- `css/final.css`: final styling adjustments and the account dialog.
+- `js/yerkhan.js`: theme, navigation, programs, API requests, validation and demo accounts.
+- `images/`: our existing team images.
+- `tests/`: static checks and browser tests.
+- `docs/`: report text and recorded test results.
 
-Sign up and log in are modal dialogs on every page. `login.html` and `signup.html` are small compatibility redirects, not extra content pages.
+## API and browser storage
 
-## Code map
+We use the Open Library subject API for book suggestions. Requests have a loading state, a 12-second timeout, error messages and a retry action. We cache results for 24 hours and label them when reused.
 
-- `css/yerkhan.css`: shared theme/layout plus original Programs/Admissions components.
-- `css/final.css`: final integration, readable dialog and responsive refinements.
-- `js/yerkhan.js`: shared theme, navigation, program data/filter, book API, JS validation, demo authentication and profile. Reuses and adapts Yerkhan's existing implementation.
-- `images/`: existing team images; no remote image dependency.
-- `tests/check_links.py`: local files, anchors, IDs, alt text, validation constraints.
-- `tests/browser.cjs`: browser end-to-end and responsive tests.
-- `docs/`: report draft, defense notes and current testing evidence.
+We also use localStorage for the selected theme, program filters, shortlist, checklist, demo accounts and requests. Clearing browser data removes those records.
 
-## Important demo limitations
+## Demo limits
 
-KDK is fictional. Programs, prices, scholarships and application process are demonstration content. Contact and admission forms save locally; they do NOT submit to a university. Authentication is an assignment simulation, NOT secure real authentication. Passwords are salted/derived with PBKDF2 before local storage, but browser storage is user-controlled and does not protect an actual account. Use fake personal details and a unique sample password only. Clearing browser data removes accounts, requests, filters and preferences.
+KDK is fictional. The program information, fees and application process are examples. Contact and admissions forms save locally and do not send messages.
 
-## API
+We derive demo passwords with PBKDF2 and a unique salt, but localStorage is not production authentication. Please use sample details and a throwaway password. A real version would need a backend, server-side validation and protected sessions.
 
-Open Library: `https://openlibrary.org/subjects/computer_science.json?limit=3` (subject chosen by the user). `fetch` with a 12-second timeout; visible loading, retry, empty and failure states. Cached API responses live in localStorage for 24 hours and are labelled when reused. No secret API key. Public network requests can fail, but the rest of the site remains usable.
-
-## Tests
+## Checks
 
 ```sh
 npm install
@@ -52,10 +60,10 @@ npm run test:forms
 python tests/check_links.py
 ```
 
-To use installed Edge, set `BROWSER_EXECUTABLE` to its executable path. Exact results are in `docs/TEST_RESULTS.txt`; live API observations are separate in `docs/BROWSER_API_RUN.txt`. Mocked API tests verify failure/retry behaviours, not external API uptime.
+Set `BROWSER_EXECUTABLE` to use an installed browser. Set `PUBLIC_BASE=https://wwezzy.github.io/kdk-university-project` to run the browser checks against the published site.
 
-## Deployment / submission
+Our recorded results are in `docs/TEST_RESULTS.txt`, `docs/FORM_AUDIT.txt`, `docs/BROWSER_API_RUN.txt` and `docs/PUBLIC_VERIFICATION.txt`. The public run passed at four viewport widths in both themes. We tested the real API as well as controlled failure and empty responses.
 
-The integrated website is published on GitHub Pages. Course submission is not performed by this project. Repository: https://github.com/wwezzy/kdk-university-project . Live website: https://wwezzy.github.io/kdk-university-project/ .
+## Team work and AI assistance
 
-Each teammate must submit their own complete project ZIP, PDF report and links TXT. Responsibility areas follow the agreed team split; final integration was AI-assisted. Prepare to explain assigned functionality. Full test results and focused form audit are recorded in docs/.
+We divided responsibility between Home/About and shared design (Allazhar), Programs/Admissions and validation (Yerkhan), and Campus/Contact and the account flow (Akylzhan). We retained useful earlier team code and images. We used AI tools to help with final integration, cleanup and testing. These responsibility areas do not imply exclusive authorship of every line.
